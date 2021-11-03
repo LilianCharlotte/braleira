@@ -230,7 +230,7 @@ footer .footer-nav {
 /*homepage styles*/
 
 .slogan {
-    background-image: url(Bilder/logo_dark.png);
+    background-image: url(/images/logo_dark.png);
     background-blend-mode: multiply;
     text-align: center;
     color: white;
