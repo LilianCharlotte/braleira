@@ -22,6 +22,7 @@ module.exports.routes = {
   
    '/': { view: 'pages/homepage' }, 
    'GET /test': {view: 'test'},
+   'POST /neueruser': {action: 'useranlegen'}
 
   /***************************************************************************
   *                                                                          *
