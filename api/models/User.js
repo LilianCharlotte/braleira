@@ -12,6 +12,15 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
+    bh:{
+      collection: 'bh',
+      via: 'owner'
+    },
+    groessenprofil:{
+      collection: 'groessenprofil',
+      via:'owner'
+    },
+
     emailAddress: {
       type: 'string',
       required: true,
