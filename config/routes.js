@@ -25,6 +25,14 @@ module.exports.routes = {
 
  'GET /':                                 { action: 'view-homepage-or-redirect' },
  'GET /welcome/:unused?':                 { action: 'dashboard/view-welcome' },
+
+
+
+
+
+
+ 'GET /bra/new':                       { view: 'pages/bra/new'},
+ 'POST /bra':                          { action: 'bra/create'},
  'GET /bra/:id/edit':                   { action: 'bra/edit'},
  'POST /bra/:id/update':                { action: 'bra/update'},
 
