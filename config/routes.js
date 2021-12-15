@@ -18,11 +18,15 @@ module.exports.routes = {
 //'/': { view: 'pages/homepage' }, 
 //'GET /test': {view: 'test'},
 //'POST /neueruser': {action: 'useranlegen'}
+// 'GET /meal/:id/edit': { action: 'meal/edit' },
+//'POST /meal/:id/update': { action: 'meal/update' },
 
 
- 'GET /':                   { action: 'view-homepage-or-redirect' },
- 'GET /welcome/:unused?':   { action: 'dashboard/view-welcome' },
- 'GET /admin/bra':                 {action: 'admin/create-bra'},
+
+ 'GET /':                                 { action: 'view-homepage-or-redirect' },
+ 'GET /welcome/:unused?':                 { action: 'dashboard/view-welcome' },
+ 'GET /bra/:id/edit':                   { action: 'bra/edit'},
+ 'POST /bra/:id/update':                { action: 'bra/update'},
 
  'GET /faq':                { action:   'view-faq' },
  'GET /legal/terms':        { action:   'legal/view-terms' },
