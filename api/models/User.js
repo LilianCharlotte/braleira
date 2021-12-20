@@ -12,8 +12,8 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    bh:{
-      collection: 'bh',
+    bra:{
+      collection: 'bra',
       via: 'owner'
     },
     groessenprofil:{

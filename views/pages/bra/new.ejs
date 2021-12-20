@@ -1,13 +1,13 @@
 <div id="bra">
-    <div class="container pt-5 pb-5">
-      
-      <!-- <form action="admin/create-bra/update" <% /* %> <%= bra.id %>  <% */ %> method="post"></form> -->
+  <div class="container pt-5 pb-5">
+    <form action="/bra" method="post">
+      <input type="hidden" name="_csrf" value="<%= _csrf %>" />
       <h1>create new bra</h1>
       <div>
-        <hr class="mt-4 mb-4"/>
+        <hr class="mt-4 mb-4" />
         <h4>Hier kannst du ein neues Bh-Model anlegen:</h4>
-       
-<!-- 
+
+        <!-- 
 
         <div class="container">
           <form action="/meal/  <% /* %>  <%= meal.id %>  /update" method="post">
@@ -49,17 +49,19 @@
 
 
         <div class="form-group">
-            <label for="bh-model">Bh Model Name</label>
-            <input class="form-control" id="bh-model" name="bh-model" type="text" placeholder="Bh Model" v-model.trim="formData.bhModel" autocomplete="name" focus-first>
-          </div>
+          <label for="bh-model">Bh Model Name</label>
+          <input type="text" class="form-control" id="bh-model" name="bhmodel" placeholder="Bh Model"
+            autocomplete="name" maxlength="120" focus-first>
+        </div>
 
-          
+
         <div class="form-group">
-            <label for="bh-marke">Bh Markenname</label>
-            <input class="form-control" id="bh-marke" name="bh-marke" type="text" placeholder="Bh Markenname" v-model.trim="formData.bhMarke" autocomplete="name" focus-first>
-          </div>
+          <label for="bh-marke">Bh Markenname</label>
+          <input class="form-control" id="bh-marke" name="bhmarke" type="text" placeholder="Bh Markenname"
+            autocomplete="name" maxlength="120" focus-first>
+        </div>
 
-<!--           
+        <!--           
         <div class="form-group">
             <label for="bh-form">Bh Form</label>
             <input class="form-control" id="bh-form" name="bh-form" type="text" placeholder="Bh Form" autocomplete="name" focus-first>
@@ -73,13 +75,18 @@
 
            -->
 
-          <!-- <ajax-button type="submit" :syncing="syncing" class="btn btn-dark">Save changes</ajax-button> -->
+        <!-- <ajax-button type="submit" :syncing="syncing" class="btn btn-dark">Save changes</ajax-button> -->
+
+
+
         <p> this page is not finished</p>
-    </ajax-form>
+        <button type="submit" class="btn btn-primary">Hinzufügen</button>
+
       </div>
-      
-    </div>
+
   </div>
+
+  </form>
 </div>
-  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
-  
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>

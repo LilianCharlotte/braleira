@@ -15,7 +15,7 @@ module.exports = {
         schalenfuelle: { type: 'string',  columnType: 'varchar(300)',  required: true},
     
         bh: {
-          collection:'bh',
+          collection:'bra',
           via: 'pf_bewertung'
           }
       },

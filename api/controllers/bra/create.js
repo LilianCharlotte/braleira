@@ -1,20 +1,24 @@
 module.exports = {
 
 
-    friendlyName: 'View admin page',
+    friendlyName: 'Create new bra',
 
 
-    description: 'Display the dashboard "Admin" page.',
+    description: 'Create new bra entry.',
 
 
     inputs: {
 
-        bhModel: {
-            type: 'string'
+        bhmodel: {
+            description: 'Name des BH-Models',
+            type: 'string',
+            required: true
         },
 
-        bhMarke: {
-            type: 'string'
+        bhmarke: {
+            description: 'Markenname des BHs',
+            type: 'string',
+            required: true
         },
 
     },
@@ -23,28 +27,42 @@ module.exports = {
     exits: {
 
         success: {
-            viewTemplatePath: 'pages/admin/bra',
-            description: 'Display the admin page for authenticated users.'
+            responseType: 'view',
+            viewTemplatePath: 'pages/bra/done',
+            description: 'Es wurde erfolgreich ein neuer Eintrag angelegt. '
         },
 
     },
 
 
-    fn: async function ({bhModel, bhMarke}) {
+    // fn: async function ({bhModel, bhMarke}) {
 
-        return {};
+    //     return {};
 
  //Start building the values to set in the db.
     // (We always set the fullName if provided.)
-    var valuesToSet = {
-        bhModel,
-        bhMarke
-      };
+    // var valuesToSet = {
+    //     bhModel,
+    //     bhMarke
+    //   };
 
 
 
-    }
-
+    // }
+    fn: async function (inputs) {
+        sails.log.debug("Create new bra....")
+        let bra = await Bra.create(inputs).fetch();
+        sails.log.debug("New bra....")
+        sails.log.debug(bra)
+        if (!bra) { throw 'notFound'; }
+        return {
+          message: "Successfully created.",
+          bra: bra
+        };
+      }
+    
+    
+    
 
    
 
