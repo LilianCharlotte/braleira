@@ -1,5 +1,6 @@
 module.exports = {
 
+    //Test
 
     friendlyName: 'View admin page',
 
