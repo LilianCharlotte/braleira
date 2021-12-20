@@ -1,0 +1,85 @@
+<div id="bra">
+    <div class="container pt-5 pb-5">
+      
+      <!-- <form action="admin/create-bra/update" <% /* %> <%= bra.id %>  <% */ %> method="post"></form> -->
+      <h1>create new bra</h1>
+      <div>
+        <hr class="mt-4 mb-4"/>
+        <h4>Hier kannst du ein neues Bh-Model anlegen:</h4>
+       
+<!-- 
+
+        <div class="container">
+          <form action="/meal/  <% /* %>  <%= meal.id %>  /update" method="post">
+              <div>
+                  <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+                  <input type="hidden" name="id" value="<%= meal.id %>">
+                  <div>
+                      <label>Name</label>
+                  </div>
+                  <div>
+                      <input type="text" maxlength="80" name="name" value="<%= meal.name %>">
+                  </div>
+                  <div>
+                      <label>Preis</label>
+                  </div>
+                  <div>
+                      <input type="text" maxlength="8" name="price" value="<%= meal.price %>">
+                  </div>
+                  <div>
+                      <label>Beschreibung</label>
+                  </div>
+                  <div>
+                      <input type="text" maxlength="255" size="40" name="description" value="<%= meal.description %>">
+                  </div>
+              </div>
+              <button type="submit">
+                  Aktualisieren
+              </button>
+              <% */ %>
+          </form>
+      </div>
+     -->
+
+
+
+
+
+
+
+
+        <div class="form-group">
+            <label for="bh-model">Bh Model Name</label>
+            <input class="form-control" id="bh-model" name="bh-model" type="text" placeholder="Bh Model" v-model.trim="formData.bhModel" autocomplete="name" focus-first>
+          </div>
+
+          
+        <div class="form-group">
+            <label for="bh-marke">Bh Markenname</label>
+            <input class="form-control" id="bh-marke" name="bh-marke" type="text" placeholder="Bh Markenname" v-model.trim="formData.bhMarke" autocomplete="name" focus-first>
+          </div>
+
+<!--           
+        <div class="form-group">
+            <label for="bh-form">Bh Form</label>
+            <input class="form-control" id="bh-form" name="bh-form" type="text" placeholder="Bh Form" autocomplete="name" focus-first>
+          </div>
+
+          
+        <div class="form-group">
+            <label for="bh-groesse">Bh Größe</label>
+            <input class="form-control" id="bh-groesse" name="bh-groesse" type="text" placeholder="Bh Größe" autocomplete="name" focus-first>
+          </div>
+
+           -->
+
+          <!-- <ajax-button type="submit" :syncing="syncing" class="btn btn-dark">Save changes</ajax-button> -->
+        <p> this page is not finished</p>
+    </ajax-form>
+      </div>
+      
+    </div>
+  </div>
+</div>
+  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
+  
