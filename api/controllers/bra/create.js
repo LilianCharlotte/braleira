@@ -22,6 +22,63 @@ module.exports = {
             required: true
         },
 
+        form: {
+            description: 'Form des BHs',
+            type: 'string',
+            required: true
+        },
+
+        groesse: {
+            description: 'Größe des BHs',
+            type: 'string',
+            required: true
+        },
+
+        stil: {
+            description: 'BH Stil',
+            type: 'string',
+            required: true
+        },
+
+        farbe: {
+            description: 'Farbe des BHs',
+            type: 'string',
+            required: true
+        },
+
+        muster: {
+            description: 'Muster des BHs',
+            type: 'string',
+            required: true
+        },
+
+        sternebewertung: {
+            description: 'Bewertung des BHs',
+            type: 'string',
+            required: true
+        },
+        
+        shoppingLink: {
+            description: 'Link zum shoppen des BHs',
+            type: 'string',
+            required: true
+        },
+
+       /*Beziehungstypen  */ 
+       /*  owner: {
+            description: 'Form des BHs',
+            type: 'string',
+            required: true
+        },
+
+        pf_bewertung: {
+            description: 'Form des BHs',
+            type: 'string',
+            required: true
+        }, */
+        
+
+
     },
 
 

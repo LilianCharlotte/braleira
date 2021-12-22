@@ -9,11 +9,11 @@ module.exports = {
 
     inputs: {
 
-        bhModel: {
+        model: {
             type: 'string'
         },
 
-        bhMarke: {
+        marke: {
             type: 'string'
         },
 
@@ -30,7 +30,7 @@ module.exports = {
     },
 
 
-    fn: async function ({bhModel, bhMarke}) {
+    fn: async function ({model, marke}) {
 
         return {};
 
@@ -39,8 +39,8 @@ module.exports = {
  //Start building the values to set in the db.
     // (We always set the fullName if provided.)
     var valuesToSet = {
-        bhModel,
-        bhMarke
+        model,
+        marke
       };
 
 
