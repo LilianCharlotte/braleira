@@ -1,7 +1,7 @@
 module.exports = {
     attributes: {
-        bhmarke: { type: 'string', columnType: 'varchar (200)'},
-        bhmodel: { type: 'string', columnType: 'varchar(200)' },
+        marke: { type: 'string', columnType: 'varchar (200)'},
+        model: { type: 'string', columnType: 'varchar(200)' },
         form: { type: 'string',  columnType: 'varchar(80)'},
         groesse: { type: 'string',  columnType: 'varchar(80)'},
         stil: { type: 'string',  columnType: 'varchar(80)'},

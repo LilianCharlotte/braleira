@@ -10,13 +10,13 @@ module.exports = {
 
     inputs: {
 
-        bhmodel: {
+        model: {
             description: 'Name des BH-Models',
             type: 'string',
             required: true
         },
 
-        bhmarke: {
+        marke: {
             description: 'Markenname des BHs',
             type: 'string',
             required: true
