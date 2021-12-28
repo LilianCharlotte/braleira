@@ -16,8 +16,8 @@ module.exports = {
       collection: 'bra',
       via: 'owner'
     },
-    groessenprofil:{
-      collection: 'groessenprofil',
+    quiz:{
+      collection: 'quiz',
       via:'owner'
     },
 

@@ -1,4 +1,4 @@
-const Groessenprofil = require("../../models/Groessenprofil");
+//const Groessenprofil = require("../../models/Quiz");
 
 module.exports = {
 
@@ -13,13 +13,13 @@ module.exports = {
 
         unterbrustbreite: {
             description: 'Unterbrustbreite',
-            type: 'string',
+            type: 'number',
             required: true
         },
 
         brustumfang: {
             description: 'Markenname des BHs',
-            type: 'string',
+            type: 'number',
             required: true
         },
 
@@ -70,13 +70,13 @@ module.exports = {
 
     fn: async function (inputs) {
         sails.log.debug("quiz...")
-        let size = await Size.create(inputs).fetch();
+        let quiz = await Quiz.create(inputs).fetch();
         sails.log.debug("New Groessenprofil....")
-        sails.log.debug(size)
-        if (!size) { throw 'notFound'; }
+        sails.log.debug(quiz)
+        if (!quiz) { throw 'notFound'; }
         return {
           message: "Successfully created.",
-          size: size
+          quiz: quiz
         };
       }
     

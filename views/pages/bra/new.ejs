@@ -75,8 +75,20 @@
 
           <div class="form-group">
             <label for="bh-farbe">Bh Farbe</label>
-            <input class="form-control" id="bh-farbe" name="farbe" type="text" placeholder="Bh Farbe" autocomplete="name" focus-first>
+            <div class="dropdown ">
+<!--              <input class="dropdown form-control dropdown-toggle" id="bh-farbe" name="farbe" type="text" placeholder="Bh Farbe" autocomplete="name" focus-first>
+ -->          
+              <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+              </button> 
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">Link 1</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+              </div>
+            </div>
           </div>
+
+          
 
           <div class="form-group">
             <label for="bh-muster">Bh Muster</label>
