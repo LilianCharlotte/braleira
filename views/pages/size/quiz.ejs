@@ -1,0 +1,46 @@
+<div id="bra">
+    <div class="container pt-5 pb-5">
+      <form action="/size" method="post">
+        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+        <h1>Viel Spaß beim Quiz</h1>
+        <div>
+          <hr class="mt-4 mb-4" />
+          <h4>Hier kannst du das Quiz machen:</h4>
+  
+          <div class="form-group">
+            <label for="unterbrustbreite">Unterbrustbreite</label>
+            <input type="text" class="form-control" id="unterbrustbreite" name="unterbrustbreite" placeholder="Unterbrustbreite"
+              autocomplete="name" maxlength="120" focus-first>
+          </div>
+  
+  
+          <div class="form-group">
+            <label for="b_umfang">Brustumfang</label>
+            <input class="form-control" id="b_umfang" name="brustumfang" type="text" placeholder="Brustumfang"
+              autocomplete="name" maxlength="120" focus-first>
+          </div>
+  
+                
+          <div class="form-group">
+              <label for="p_daten">Passformdaten</label>
+              <input class="form-control" id="p_daten" name="passformdaten" type="text" placeholder="Passformdaten" autocomplete="name" focus-first>
+            </div>
+   
+          <div class="form-group">
+              <label for="persDaten">Persönliche Angaben</label>
+              <input class="form-control" id="persDaten" name="persoenlicheAngaben" type="text" placeholder="Persönliche Angaben" autocomplete="name" focus-first>
+            </div>
+        
+  
+  
+          <p> this page is not finished</p>
+          <button type="submit" class="btn btn-primary">Hinzufügen</button>
+  
+        </div>
+  
+    </div>
+  
+    </form>
+  </div>
+  </div>
+  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
