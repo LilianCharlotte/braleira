@@ -41,9 +41,7 @@ p {
     
    
 }
-h1 {
-    color: black;
-}
+
 
 p {
     margin-bottom: .85em;
@@ -69,13 +67,12 @@ header {
 }
 
 .logo a {
-    color: black!important;
    /*   text-decoration: none!important;*/
 }
 
-li a{
-    color: --clr-primary!important;
-}
+ h1 a:link, h1 a:visited {
+    text-decoration: none!important;
+   }
 
 /*navigation */
 
@@ -94,7 +91,7 @@ nav ul {
 nav a {
     display: inline-block;
     padding: .5em;
-    color: black;
+    /*   color: black!important; */
     text-decoration: none;
 }
 

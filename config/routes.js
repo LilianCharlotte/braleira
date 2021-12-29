@@ -46,6 +46,7 @@ module.exports.routes = {
  'GET /contact':            { action:   'view-contact' },
 
  'GET /signup':             { action: 'entrance/view-signup' },
+ 'GET /signout':             { action: 'entrance/signout' },
  'GET /email/confirm':      { action: 'entrance/confirm-email' },
  'GET /email/confirmed':    { action: 'entrance/view-confirmed-email' },
 

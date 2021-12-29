@@ -84,91 +84,32 @@
       <header>
         <h1 class="logo"><a href="/">Braleïra</a></h1>
 
-        <nav class="menu">
+            <!-- LOGGED-IN NAVIGATION -->
+            <% if(me) { %> 
+              <nav class="menu">
+                <input type="checkbox" id="menuToggle">
+                <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Über Uns</a></li>
+                    <li><a href="#">Produkte</a></li>
+                    <!-- <li><a href="/signup">Anmelden</a></li> -->
+                    <li><a href="/signout">Abmelden</a></li>
+                </ul>
+           
+           <!-- LOGGED-OUT NAVIGATION -->
+           <% } else { %> 
+           <nav class="menu">
             <input type="checkbox" id="menuToggle">
             <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="/">Home</a></li>
                 <li><a href="#">Über Uns</a></li>
                 <li><a href="#">Produkte</a></li>
                 <li><a href="/signup">Anmelden</a></li>
+               <!--  <li><a href="/signout">Logout</a></li> -->
             </ul>
 
-            <!-- LOGGED-IN NAVIGATION -->
-            <% if(me) { %> 
-            <!-- <a class="nav-item nav-link ml-2 ml-md-0 mr-2 mr-md-0" href="/contact">Help</a>  -->
-           <!-- Only in desktop nav -->
-               <!-- <div class="nav-item dropdown d-none d-sm-block">
-             <a class="nav-link dropdown-toggle" id="header-account-menu-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Account</a>
-             <div style="left: auto; right: 0;" class="dropdown-menu" aria-labelledby="header-account-menu-link">
-               <a class="dropdown-item" href="/account">Einstellungen</a>
-               <a class="dropdown-item" href="/logout">Abmelden</a>
-             </div>
-           </div> -->
-           <!-- Only in mobile nav -->
-            <!-- <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/account">Account Settings</a>
-           <a class="nav-item nav-link ml-2 mr-2 d-block d-sm-none" href="/logout">Abmelden</a> -->
-
-
-
-           <% } else { %> 
-           <!-- LOGGED-OUT NAVIGATION -->
-           <!-- <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/faq">FAQ</a>
-           <a class="nav-item nav-link ml-2 ml-md-0 mr-2" href="/login">Anmelden</a> -->
-           <!-- Only in desktop nav -->
-           <!-- <div class="form-inline d-none ml-2 d-md-block" >
-             <a class="btn btn-outline-info" href="/signup">Registrieren</a>
-           </div> -->
-           <!-- Only in mobile nav -->
-           <!-- d-none: hidden on all; -->
-          <!--  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button> -->
-          
-          <!--   <div class="collapse navbar-collapse" id="navbarToggler">
-
-              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                <li class="nav-item active">
-                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Über Uns</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Produkte</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/signup">Anmelden</a>
-                </li> -->
-
-
-                <!-- <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
-                </li> -->
-
-
-              <!-- </ul>
-              </div> -->
-              <form class="form-inline my-2 my-lg-0">
-<!-- 
-                  <div class="row">
-                  <div class="col-3"> -->
-                    <!-- d-none = hidden on all; d-md-block = angezeigt auf medium; 
-                   d-lg-block angezeigt auf large...-->
-                  <!-- <a class="nav-item" href="#">Home</a> </div>
-                  <div class="col-3">
-                  <a class="nav-item" href="#">Über Uns</a> </div>
-                  <div class="col-3">
-                  <a class="nav-item" href="#">Produkte</a> </div>
-                  <div class="col-3">
-                  <a class="nav-item" href="/signup">Anmelden</a> </div>
-                 </div>
- -->
-
-
-              </form>
             </div>
           </nav>
 
