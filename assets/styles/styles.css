@@ -1,8 +1,17 @@
+:root{
+    --clr-text: #31241c;
+    --clr-primary:#31241c ;
+    --clr-secondary:#669f9a;
+    --clr-accent:#cea59b;
+}
+
+
 html {
     box-sizing: initial;
     font-family: sans-serif;
     color: black;
     font-size: 1.25rem;
+    
 }
 
 body {
@@ -29,7 +38,11 @@ h2,
 h3,
 p {
     margin: 0;
+    
    
+}
+h1 {
+    color: black;
 }
 
 p {
@@ -48,6 +61,7 @@ p {
 .logo {
     text-align: center;
     font-family: Garamond, serif;
+    color: --clr-primary!important;
 }
 
 header {
@@ -55,10 +69,13 @@ header {
 }
 
 .logo a {
-    color: black;
-    text-decoration: none;
+    color: black!important;
+   /*   text-decoration: none!important;*/
 }
 
+li a{
+    color: --clr-primary!important;
+}
 
 /*navigation */
 
