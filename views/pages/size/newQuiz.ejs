@@ -3,6 +3,33 @@
     <form action="/size" method="post">
       <input type="hidden" name="_csrf" value="<%= _csrf %>" />
       <h4>Erster Schritt</h4>
+
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <h5>Erster Schritt</h5>
+            <button type="submit" class="btn btn-primary">Schritt 1</button>
+          </div>
+
+          <div class="col-sm">
+            <h5>Zweiter Schritt</h5>
+            <button type="submit" disabled class="btn btn-primary">Schritt 2</button>
+          </div>
+
+          <div class="col-sm">
+            <h5>Dritter Schritt</h5>
+            <button type="submit" disabled class="btn btn-primary">Schritt 3</button>
+          </div>
+
+          <div class="col-sm">
+            <h5>Vierter Schritt</h5>
+            <button type="submit" disabled class="btn btn-primary">Schritt 4</button>
+          </div>
+        </div>
+
+      </div>
+
+
       <div>
         <hr class="mt-4 mb-4" />
         Als Erstes sammeln wir ein paar Zahlen und Daten über dich, um dir eine möglichst genaue Empfehlung
@@ -148,7 +175,8 @@
      </div>
    </div>
   </div>
-      <button type="submit" class="btn btn-primary">Weiter zu Schritt 2</button>
+
+      <button type="submit" class="btn btn-primary">Weiter zu Schritt 3</button>
 
 
       <h4>Dritter Schritt </h4>
