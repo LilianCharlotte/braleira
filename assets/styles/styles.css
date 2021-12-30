@@ -260,7 +260,9 @@ footer .footer-nav {
     padding: 0;
 }
 
-
+.radius{
+    border-radius: 5px;
+}
 
 .quiz-intro {
     background-image: url(Bilder/Maßband.jpg);
