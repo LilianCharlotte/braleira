@@ -73,6 +73,23 @@ header {
     margin:auto;
 }
 
+
+/* Btn Style */
+
+.btn_color{
+    color: white;
+    background-color: var(--clr-secondary);
+    border-color: var(--clr-secondary);
+}
+
+.max_width{
+    width: 100%;
+}
+
+.half_width{
+    width: 50%;
+}
+
 /*navigation */
 
 .menu {
