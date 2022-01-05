@@ -5,7 +5,7 @@
 } %><!DOCTYPE html>
 <html>
   <head>
-    <title>Braleïra</title>
+    <title >Braleïra</title>
 
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -82,7 +82,7 @@
       </header> --> <% */ %> 
        
       <header>
-        <h1 class="logo"><a href="/">Braleïra</a></h1>
+        <h1 class="logo m-2"><a href="/">Braleïra</a></h1>
 
             <!-- LOGGED-IN NAVIGATION -->
             <% if(me) { %> 
@@ -90,11 +90,11 @@
                 <input type="checkbox" id="menuToggle">
                 <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="#">Über Uns</a></li>
-                    <li><a href="#">Produkte</a></li>
+                    <li class = "m-1"><a href="/">Home</a></li>
+                    <li class = "m-1"><a href="#philosophie">Über Uns</a></li>
+                    <li class = "m-1"><a href="#quiz">zum Quiz</a></li>
                     <!-- <li><a href="/signup">Anmelden</a></li> -->
-                    <li><a href="/api/v1/account/logout">Abmelden</a></li>
+                    <li class = "m-1"><a href="/api/v1/account/logout">Abmelden</a></li>
                 </ul>
            
            <!-- LOGGED-OUT NAVIGATION -->
@@ -103,10 +103,10 @@
             <input type="checkbox" id="menuToggle">
             <label for="menuToggle" class="menu-icon"><i class="fa fa-bars"></i></label>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">Über Uns</a></li>
-                <li><a href="#">Produkte</a></li>
-                <li><a href="/signup">Anmelden</a></li>
+                <li class = "m-1"><a href="/">Home</a></li>
+                <li class = "m-1"><a href="#philosophie">Über Uns</a></li>
+                <li class = "m-1"><a href="#quiz">zum Quiz</a></li>
+                <li class = "m-1"><a href="/signup">Anmelden</a></li>
                <!--  <li><a href="/signout">Logout</a></li> -->
             </ul>
 
@@ -177,13 +177,13 @@
       <footer>
         <ul class="footer-nav">
             <li>
-                <a href="/pages/homepage">Home</a>
+                <a href="/">Home</a>
             </li>
             <li>
                 <a href="#">Social Media</a>
             </li>
             <li>
-                <a href="#">Produkte</a>
+                <a href="#quiz">zum Quiz</a>
             </li>
             <li>
                 <a href="#">Impressum</a>

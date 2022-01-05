@@ -67,6 +67,10 @@ header {
     padding: 1em 0 0;
 }
 
+.linksbuendig{
+    text-align: left;
+}
+
 /* style für den Btn auf Website zum Quiz  */
 #start_btn{
     border-radius: 50%!important;
