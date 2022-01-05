@@ -39,6 +39,7 @@ module.exports.routes = {
  'GET /faq':                { action:   'view-faq' },
  'GET /legal/terms':        { action:   'legal/view-terms' },
  'GET /legal/privacy':      { action:   'legal/view-privacy' },
+ 'GET /impressum':          { view:     'pages/legal/impressum'},
  'GET /contact':            { action:   'view-contact' },
 
  'GET /signup':             { action: 'entrance/view-signup' },

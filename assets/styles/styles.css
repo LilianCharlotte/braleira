@@ -3,6 +3,7 @@
     --clr-primary:#31241c ;
     --clr-secondary:#669f9a;
     --clr-accent:#cea59b;
+    --clr-nav: #9aaba7;
 }
 
 
@@ -66,6 +67,10 @@ header {
     padding: 1em 0 0;
 }
 
+.linksbuendig{
+    text-align: left;
+}
+
 /* style für den Btn auf Website zum Quiz  */
 #start_btn{
     border-radius: 50%!important;
@@ -73,11 +78,30 @@ header {
     margin:auto;
 }
 
+
+/* Btn Style */
+
+.btn_color{
+    color: white;
+    background-color: var(--clr-secondary);
+    border-color: var(--clr-secondary);
+}
+
+.max_width{
+    width: 100%;
+}
+
+.half_width{
+    width: 50%;
+}
+
 /*navigation */
 
 .menu {
     font-variant: small-caps;
+    background-color: var(--clr-nav);
 }
+
 
 nav ul {
     display: flex;
@@ -105,7 +129,7 @@ nav a:focus {
 
 footer {
     padding: 1em;
-    background-color: #9aaba7;
+    background-color: var(--clr-nav);
 }
 
 
