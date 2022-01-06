@@ -23,11 +23,17 @@ module.exports = {
             required: true
         },
 
-        // passformdaten: {
-        //     description: 'Form des BHs',
-        //     type: 'string',
-        //     required: true
-        // },
+        groesse: {
+            description: 'Unterbrustbandgröße',
+            type: 'number',
+            required: true
+        },
+
+        cup: {
+            description: 'Cupgröße',
+            type: 'string',
+            required: true
+        },
 
         // persoenlicheAngaben: {
         //     description: 'Größe des BHs',
