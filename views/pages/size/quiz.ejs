@@ -20,7 +20,7 @@
     <div id="app">
       <form action="/size" method="post">
         <input type="hidden" name="_csrf" value="<%= _csrf %>" />
-        <div v-if="step === 1">
+        <div v-show="step === 1">
           <div>
             <hr class="mt-4 mb-4" />
             Als Erstes sammeln wir ein paar Zahlen und Daten über dich, um dir eine möglichst genaue Empfehlung
@@ -71,7 +71,7 @@
           </div>
           <button class="btn btn_color" v-on:click.prevent="inc">Weiter zu Schritt 2</button>
         </div>
-        <div v-if="step === 2">
+        <div v-show="step === 2">
           Um dich noch besser kennezulernen, möchten wir noch wissen, welche BH-Größe du normalerweise trägst und wie
           zufrieden du mit dieser Größe und Passform bist. Gib ruhig mehrere Größen an, falls du verschiedene Größen
           in
@@ -160,7 +160,7 @@
           <button class="btn btn_color" v-on:click.prevent="dec">Zurück zu Schritt 1</button>
           <button class="btn btn_color" v-on:click.prevent="inc">Weiter zu Schritt 3</button>
         </div>
-        <div v-if="step === 3">
+        <div v-show="step === 3">
           Jetzt wissen wir schon einiges über deine Passform und Größe, was ist die bei einem BH am wichtigsten, damit
           du
           dich wohl fühlst?
@@ -188,7 +188,7 @@
           <button class="btn btn_color" v-on:click.prevent="dec">Zurück zu Schritt 2</button>
           <button class="btn btn_color" v-on:click.prevent="inc">Weiter zu Schritt 4</button>
         </div>
-        <div v-if="step === 4">
+        <div v-show="step === 4">
           <div>
             <p>Jetzt kommen wir zum Stil Abschnitt des Quizzes zu Farben, Mustern und Stoffen. Natürlich kannst du
               deine
