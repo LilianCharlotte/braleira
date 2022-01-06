@@ -1,23 +1,21 @@
 <div id="bra">
   <div class="container pt-5 pb-5">
-    <!-- <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <button class="btn btn_color max_width" v-on:click.disable="goto(1)">Schritt 1</button>
-          </div>
-          <div class="col-sm">
-            <button disabled class="btn btn_color max_width" v-on:click.disable="goto(2)">Schritt 2</button>
-          </div>
-          <div class="col-sm">
-            <button disabled class="btn btn_color max_width" v-on:click.disable="goto(3)">Schritt 3</button>
-          </div>
-          <div class="col-sm">
-            <button disabled class="btn btn_color max_width" v-on:click.disable="goto(4)">Schritt 4</button>
-          </div>
-        </div>
-      </div> -->
-    <!-- <button type="submit" class="btn btn_color">Weiter zu Schritt 2</button> -->
     <div id="app">
+      <div class="row">
+        <div class="col-sm">
+          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 1 }" v-on:click.disable="goto(1)">Schritt 1</button>
+        </div>
+        <div class="col-sm">
+          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 2 }" v-on:click.disable="goto(2)">Schritt 2</button>
+        </div>
+        <div class="col-sm">
+          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 3 }" v-on:click.disable="goto(3)">Schritt 3</button>
+        </div>
+        <div class="col-sm">
+          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 4 }" v-on:click.disable="goto(4)">Schritt 4</button>
+        </div>
+      </div>
+
       <form action="/size" method="post">
         <input type="hidden" name="_csrf" value="<%= _csrf %>" />
         <div v-show="step === 1">
@@ -69,7 +67,7 @@
               </div>
             </div>
           </div>
-          <button class="btn btn_color" v-on:click.prevent="inc">Weiter zu Schritt 2</button>
+          <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 2</button>
         </div>
         <div v-show="step === 2">
           Um dich noch besser kennezulernen, möchten wir noch wissen, welche BH-Größe du normalerweise trägst und wie
@@ -157,8 +155,8 @@
               </div>
             </div>
           </div>
-          <button class="btn btn_color" v-on:click.prevent="dec">Zurück zu Schritt 1</button>
-          <button class="btn btn_color" v-on:click.prevent="inc">Weiter zu Schritt 3</button>
+          <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 1</button>
+          <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 3</button>
         </div>
         <div v-show="step === 3">
           Jetzt wissen wir schon einiges über deine Passform und Größe, was ist die bei einem BH am wichtigsten, damit
@@ -185,8 +183,8 @@
             <button type="button" class="btn btn-outline-info m-1" input type="checkbox">soll nicht
               verrutschen</button>
           </div>
-          <button class="btn btn_color" v-on:click.prevent="dec">Zurück zu Schritt 2</button>
-          <button class="btn btn_color" v-on:click.prevent="inc">Weiter zu Schritt 4</button>
+          <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 2</button>
+          <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 4</button>
         </div>
         <div v-show="step === 4">
           <div>
@@ -223,8 +221,8 @@
             <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Sport BH</button>
             <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Plunge Neckline</button>
           </div>
-          <button class="btn btn_color" v-on:click.prevent="dec">Zurück zu Schritt 3</button>
-          <button class="btn btn_color" type="submit">Quiz beenden</button>
+          <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 3</button>
+          <button class="btn btn_color m-2" type="submit">Quiz beenden</button>
         </div>
       </form>
     </div>
@@ -241,9 +239,9 @@
           dec: function () {
             this.step = this.step - 1;
           },
-          // goto: function(n) {
-          //   this.step = step;
-          // }
+          goto: function(n) {
+            this.step = n;
+          }
         }
       })
     </script>
