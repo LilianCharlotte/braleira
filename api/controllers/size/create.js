@@ -1,5 +1,3 @@
-//const Groessenprofil = require("../../models/Quiz");
-
 module.exports = {
 
     //Test
@@ -76,8 +74,17 @@ module.exports = {
 
     fn: async function (inputs) {
         sails.log.debug("quiz...")
-        inputs.owner = this.req.session.userId;
-        let quiz = await Quiz.create(inputs).fetch();
+        const userId = this.req.session.userId;
+        inputs.owner = userId;
+        
+        let quiz;
+        const existingQuiz = await Quiz.findOne({ owner: userId });
+        if (existingQuiz) {
+            quiz = await Quiz.update({ owner: userId }).set(inputs).fetch();
+        } else {
+            quiz = await Quiz.create(inputs).fetch();
+        }
+
         sails.log.debug("New Groessenprofil....")
         sails.log.debug(quiz)
         if (!quiz) { throw 'notFound'; }
