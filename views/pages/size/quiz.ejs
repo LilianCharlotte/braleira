@@ -1,47 +1,291 @@
 <div id="bra">
-    <div class="container pt-5 pb-5">
-      <form action="/size" method="post">
-        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
-        <h1>Viel Spaß beim Quiz</h1>
-        <div>
-          <hr class="mt-4 mb-4" />
-          <h4>Hier kannst du das Quiz machen:</h4>
-  
-          <div class="form-group">
-            <label for="unterbrustbreite">Unterbrustbreite</label>
-            <input type="text" class="form-control" id="unterbrustbreite" name="unterbrustbreite" placeholder="Unterbrustbreite"
-              autocomplete="name" maxlength="120" focus-first>
-          </div>
-  
+  <div class="container pt-5 pb-5">
+    <form action="/size" method="post">
+      <input type="hidden" name="_csrf" value="<%= _csrf %>" />
 
-  
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <button type="submit" class="btn btn_color max_width">Schritt 1</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width">Schritt 2</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width" >Schritt 3</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width">Schritt 4</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <hr class="mt-4 mb-4" />
+        Als Erstes sammeln wir ein paar Zahlen und Daten über dich, um dir eine möglichst genaue Empfehlung
+        bereitstellen zu können. Aber keine Angst, nur du kannst deine Daten sehen und kein anderer User.
+        Alles was du benötigst ist ein Maßband und ein wenig Geduld. Und behalt gerne im Hinterkopf, es sind nur Zahlen!
+        <p>So kannst du dich richtig vermessen:</p>
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <img src="images/Wie-messe-ich-korrekt.jpg" alt="Bildanleitung Messen" />
+            </div>
+            <div class="col-sm">
+              <p><b>1. Miss deine Unterbrustweite</b> </p>
+              <p>
+                Um deine Unterbrustweite zu ermitteln, messe direkt unter deinen Brüsten um deinen Körper herum. Stelle
+                mithilfe vom Spiegel sicher, dass das Maßband gerade anliegt und ziehe weder zu straff, noch zu eng. Die
+                Unterbrustweite gibt die Größe des Unterbrustbandes deines BHs an und wird als Zentimeterzahl (ca.
+                60-135
+                cm) angegeben.
+              </p>
+              <p><b>2. Körbchengröße messen</b> </p>
+              <p>
+                Um deine Körbchengröße zu ermitteln, messe deinen Körperumfang an der weitesten Stelle deiner Brust.
+                Meist liegt diese Stelle auf der Höhe deiner Brustwarzen. Achte darauf, dass du das Maßband nicht zu straff
+                ziehst oder zu locker hältst. Auch hier hilft dir ein Spiegel dabei, das Maßband gerade zu halten.
+              </p>
+            </div>
+          </div>
+        </div>
+        <p>
+          <b>Unterbrustbreite und Brustumfang</b>
+        </p>
+
+        <div class="row justify-content-center">
           <div class="form-group">
-            <label for="b_umfang">Brustumfang</label>
-            <input class="form-control" id="b_umfang" name="brustumfang" type="text" placeholder="Brustumfang"
+            <input type="text" class="radius" id="unterbrustbreite" name="unterbrustbreite"
+              placeholder="Unterbrustbreite in cm" autocomplete="name" maxlength="120" focus-first>
+          </div>
+
+          <div class="form-group" style="margin-left: 1%;">
+            <input class="radius" id="b_umfang" name="brustumfang" type="text" placeholder="Brustumfang in cm"
               autocomplete="name" maxlength="120" focus-first>
           </div>
-  
-                
-          <div class="form-group">
-              <label for="p_daten">Passformdaten</label>
-              <input class="form-control" id="p_daten" name="passformdaten" type="text" placeholder="Passformdaten" autocomplete="name" focus-first>
-            </div>
-   
-          <div class="form-group">
-              <label for="persDaten">Persönliche Angaben</label>
-              <input class="form-control" id="persDaten" name="persoenlicheAngaben" type="text" placeholder="Persönliche Angaben" autocomplete="name" focus-first>
-            </div>
-        
-  
-  
-          <p> this page is not finished</p>
-          <button type="submit" class="btn btn-primary">Hinzufügen</button>
-  
         </div>
-  
-    </div>
-  
-    </form>
+      </div>
+
+
+      <button type="submit" class="btn btn_color">Weiter zu Schritt 2</button>
+
+
+      <div class="container" style = "margin-top:5%;">
+        <div class="row">
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width">Schritt 1</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit"  class ="btn btn_color max_width">Schritt 2</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width" >Schritt 3</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width">Schritt 4</button>
+          </div>
+        </div>
+      </div>
+
+      Um dich noch besser kennezulernen, möchten wir noch wissen, welche BH-Größe du normalerweise trägst und wie
+      zufrieden du mit dieser Größe und Passform bist. Gib ruhig mehrere Größen an, falls du verschiedene Größen in
+      verschiedenen Modellen hast und wie du damit zu Recht kommst.
+
+      <p> <b>Größe auswählen: </b> </p>
+
+      <div class="form-group">
+        <select class="radius" name="groesse" id="groesse">
+          <option value="65">65 </option>
+          <option value="70">70 </option>
+          <option value="75">75 </option>
+          <option value="80">80 </option>
+          <option value="85">85 </option>
+          <option value="90">90 </option>
+          <option value="95">95 </option>
+          <option value="100">100 </option>
+        </select>
+
+        <select class="radius" name="cup" id="cup">
+          <option value="A">A </option>
+          <option value="B">B </option>
+          <option value="C">C </option>
+          <option value="D">D </option>
+          <option value="E">E </option>
+          <option value="F">F </option>
+          <option value="G">G </option>
+        </select>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class= "col-sm" style="text-align: left;">
+            <p> <b>Körbchen sind eher:</b>  </p>
+      
+            <div>
+              <input type="checkbox" id="klein" name="klein" checked>
+              <label for="klein">zu klein</label>
+            </div>
+            <div>
+              <input type="checkbox" id="groß" name="groß">
+              <label for="groß">zu groß</label>
+            </div>
+            <div>
+              <input type="checkbox" id="n_ausgef" name="n_ausgef">
+              <label for="n_ausgef">nicht ausgefüllt</label>
+            </div>
+            <div>
+              <input type="checkbox" id="z_ausgef" name="z_ausgef">
+              <label for="z_ausgef"> sehr ausgefüllt, Brust quillt raus</label>
+            </div>
+            <div>
+              <input type="checkbox" id="zs_ausgef" name="zs_ausgef">
+              <label for="zs_ausgef">zu schmal, Brust fällt an der Seite raus</label>
+            </div>
+            <div>
+              <input type="checkbox" id="gut" name="gut" >
+              <label for="gut">passt sehr gut</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="gut" name="gut">
+              <label for="gut">passend</label>
+            </div>
+            </div>
+            <div class= "col-sm" style="text-align: left;">
+            <p> <b>Unterbrustband:</b></p>
+              <div>
+                <input type="checkbox" id="eng" name="eng" checked>
+                <label for="eng">sitzt zu eng</label>
+              </div>
+
+            <div>
+              <input type="checkbox" id="rutscht_h" name="rutscht_h">
+              <label for="rutscht_h"> bewegt sich und rutscht hinten hoch</label>
+            </div>
+
+            <div>
+              <input type="checkbox" id="rutscht_v" name="rutscht_v">
+              <label for="rutscht_v"> rutsch vorne hoch</label>
+            </div>
+          
+            <div>
+              <input type="checkbox" id="t_rutscht" name="t_rutscht">
+              <label for="t_rutscht"> Träger rutschen leicht ab</label>
+            </div>
+      
+            <div>
+              <input type="checkbox" id="gut" name="gut">
+              <label for="gut">passend</label>
+            </div>
+     </div>
+   </div>
   </div>
+
+      <button type="submit" class="btn btn_color">Weiter zu Schritt 3</button>
+
+
+      <div class="container" style = "margin-top : 5%">
+        <div class="row">
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width">Schritt 1</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width">Schritt 2</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit"  class="btn btn_color max_width" >Schritt 3</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width">Schritt 4</button>
+          </div>
+        </div>
+      </div>
+      Jetzt wissen wir schon einiges über deine Passform und Größe, was ist die bei einem BH am wichtigsten, damit du
+      dich wohl fühlst?
+
+      <div class="btn-group-toggle" data-toggle="buttons">
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">soll nicht drücken und nicht eng
+          sein</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">viel Push-Up</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">soll genügend Halt geben</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">meine Brüste sollen kleiner
+          aussehen</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Bewegungsfreiheit</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">der Stoff soll auch für sensible Haut
+          geeignet sein</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">meine Brüste sollen sehr gleichmäßig
+          aussehen</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">soll sich möglichst leicht
+          anfühlen</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">soll nicht verrutschen</button>
+      </div>
+
+      <div class="container" style = "margin-top : 5%">
+        <div class="row">
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width">Schritt 1</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width">Schritt 2</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit" disabled class="btn btn_color max_width" >Schritt 3</button>
+          </div>
+
+          <div class="col-sm">
+            <button type="submit"  class="btn btn_color max_width">Schritt 4</button>
+          </div>
+        </div>
+      </div>
+      <p>Jetzt kommen wir zum Stil Abschnitt des Quizzes zu Farben, Mustern und Stoffen. Natürlich kannst du deine
+        Präferenzen im Nachhinein auch immer ändern.</p>
+
+      <p>Bitte wähle Farben und Farbtöne aus, die dir gefallen:</p>
+      <p>schwarz</p>
+      <p>weiß</p>
+      <p>neutrale Töne(grau/dunkelblau)</p>
+      <p>neon-farben</p>
+      <p>rosatöne</p>
+      <p>rottöne</p>
+      <p>grün/türkis/blau/lila</p>
+
+      <p>Muster, die dir gefallen</p>
+      <p>gepunktet</p>
+      <p>gestreift</p>
+      <p>kariert</p>
+      <p>florales Muster</p>
+      <p>einfarbig</p>
+      <p>Design Print</p>
+      <p>mit Spitzendesign</p>
+
+      <p>Stoffe, die dir gefallen</p>
+      <p>Baumwolle</p>
+      <p>stretchy Stoff</p>
+      <p>Suchst du eine bestimmte BH-Art, oder möchtest du eine bestimmte BH-Art ausprobieren?</p>
+
+      <div class="btn-group-toggle" data-toggle="buttons">
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Bralette</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Balconette</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">T-Shirt BH</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Push-Up BH</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Trägerloser BH</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Sport BH</button>
+        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Plunge Neckline</button>
+      </div>
   </div>
-  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
+</div>
+
+</form>
+</div>
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
