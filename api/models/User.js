@@ -20,6 +20,10 @@ module.exports = {
       collection: 'quiz',
       via:'owner'
     },
+    options:{
+      collection: 'passformwohlfuehl',
+      via: 'users'
+    },
 
     emailAddress: {
       type: 'string',
