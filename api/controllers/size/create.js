@@ -76,6 +76,7 @@ module.exports = {
 
     fn: async function (inputs) {
         sails.log.debug("quiz...")
+        inputs.owner = this.req.session.userId;
         let quiz = await Quiz.create(inputs).fetch();
         sails.log.debug("New Groessenprofil....")
         sails.log.debug(quiz)
