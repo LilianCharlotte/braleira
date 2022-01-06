@@ -73,7 +73,8 @@
           </div>
           <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 2</button>
         </div>
-        <div v-show="step === 2">
+        <hr />
+        <div v-show="step === 2" class="m-4">
           Um dich noch besser kennezulernen, möchten wir noch wissen, welche BH-Größe du normalerweise trägst und wie
           zufrieden du mit dieser Größe und Passform bist. Gib ruhig mehrere Größen an, falls du verschiedene Größen
           in
@@ -163,11 +164,6 @@
           <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 3</button>
         </div>
         <div v-show="step === 3" class="m-2">
-          empty for now
-          <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 2</button>
-          <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 4</button>
-        </div>
-        <div v-show="step === 4">
           <div class="m-4">
             <b>Der Wohlfühl-Faktor</b>
             <p>Jetzt wissen wir schon einiges über deine Passform und Größe, was ist dir bei einem BH am wichtigsten,
@@ -194,38 +190,51 @@
                 verrutschen</button>
             </div>
           </div>
+
+          <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 2</button>
+          <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 4</button>
+        </div>
+        <div v-show="step === 4">
           <div class="m-4">
             <b>Lieblingslook</b>
             <!-- <p>Jetzt kommen wir zum Stil Abschnitt des Quizzes zu Farben, Mustern und Stoffen. Natürlich kannst du
               deine Präferenzen im Nachhinein auch immer ändern.</p> -->
             <div class="m-3">
               <p>Bitte wähle Farben und Farbtöne aus, die dir gefallen:</p>
-              <div class="round">
-            <input type="checkbox" checked id="checkbox" />
-            <label for="checkbox"></label>
-        </div>
-              <p>schwarz</p>
-              <p>weiß</p>
-              <p>neutrale Töne(grau/dunkelblau)</p>
-              <p>neon-farben</p>
-              <p>rosatöne</p>
-              <p>rottöne</p>
-              <p>grün/türkis/blau/lila</p>
+
+
+
+              <div class="btn-group-toggle" data-toggle="buttons">
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">schwarz</button>
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">weiß</button>
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">neutrale Töne
+                  (grau/dunkelblau)</button>
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">neon-farben</button>
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">rosatöne</button>
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">rottöne</button>
+                <button type="button" class="btn btn-outline-info m-1" input
+                  type="checkbox">blau/grün/türkis/lila</button>
+              </div>
             </div>
+
+
             <div class="m-3">
               <p>Muster, die dir gefallen</p>
-              <p>gepunktet</p>
-              <p>gestreift</p>
-              <p>kariert</p>
-              <p>florales Muster</p>
-              <p>einfarbig</p>
-              <p>Design Print</p>
-              <p>mit Spitzendesign</p>
+              <div class="btn-group-toggle" data-toggle="buttons">
+
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">einfarbig/ohne
+                  Muster</button>
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">gemustert</button>
+              </div>
             </div>
+
             <div class="m-3">
               <p>Stoffe, die dir gefallen</p>
-              <p>Baumwolle</p>
-              <p>stretchy Stoffe</p>
+              <div class="btn-group-toggle" data-toggle="buttons">
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Baumwolle</button>
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">mit Spitze</button>
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">stretchy Stoffe</button>
+              </div>
               <p>Suchst du eine bestimmte BH-Art, oder möchtest du eine bestimmte BH-Art ausprobieren?</p>
             </div>
           </div>
