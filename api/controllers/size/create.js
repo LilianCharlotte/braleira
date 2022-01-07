@@ -16,7 +16,7 @@ module.exports = {
         },
 
         brustumfang: {
-            description: 'Markenname des BHs',
+            description: 'Brustumfang',
             type: 'number',
             required: true
         },
