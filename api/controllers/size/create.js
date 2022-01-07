@@ -72,35 +72,43 @@ module.exports = {
     },
 
 
-
-
     fn: async function (inputs) {
         sails.log.debug("quiz...")
         const userId = this.req.session.userId;
         inputs.owner = userId;
-        
-        let quiz;
-        const existingQuiz = await Quiz.findOne({ owner: userId });
-        if (existingQuiz) {
-            quiz = await Quiz.update({ owner: userId }).set(inputs).fetch();
-        } else {
-            quiz = await Quiz.create(inputs).fetch();
-        }
 
+        const ubb = inputs.unterbrustbreite;
+        const bu = inputs.brustumfang;
+        const cup = inputs.cup;
+        const groesse = inputs.groesse;
+
+        let messdaten; 
+		let bpdaten; 
+		
+		const existingMessdaten = await Messdaten.findOne({ owner: userId});
+		if (existingMessdaten) {
+			messdaten = await Messdaten.update({ owner: userId }).set({unterbrustbreite:ubb, brustumfang:bu}).fetch();
+		} else {
+			messdaten= await Messdaten.create({unterbrustbreite:ubb, brustumfang:bu, owner:userId}).fetch();
+		}
+		
+		const existingBpdaten = await BraPassformdaten.findOne({ owner: userId});
+		if (existingBpdaten) {
+			bpdaten = await BraPassformdaten.update({ owner: userId }).set({cup:cup, groesse:groesse}).fetch();
+		} else {
+			bpdaten= await BraPassformdaten.create({cup:cup, groesse:groesse, owner:userId}).fetch();
+		}
+ 		
         sails.log.debug("New Groessenprofil....")
-        sails.log.debug(quiz)
-        if (!quiz) { throw 'notFound'; }
+        sails.log.debug(messdaten)
+        sails.log.debug(bpdaten)
+        if (!messdaten) { throw 'notFound'; }
         return {
           message: "Successfully created.",
-          quiz: quiz
+          messdaten: messdaten,
+          bpdaten: bpdaten
         };
       }
-    
-    
-    
-
-   
-
 
 };
 
