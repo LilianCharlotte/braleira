@@ -9,13 +9,15 @@
  * https://sailsjs.com/config/bootstrap
  */
 
+const BraTragekomfort = require('../api/models/BraTragekomfort');
+
 module.exports.bootstrap = async function() {
 
   // Import dependencies
   var path = require('path');
 
   // This bootstrap version indicates what version of fake data we're dealing with here.
-  var HARD_CODED_DATA_VERSION = 3;
+  var HARD_CODED_DATA_VERSION = 4;
 
   // This path indicates where to store/look for the JSON file that tracks the "last run bootstrap info"
   // locally on this development computer (if we happen to be on a development computer).
@@ -64,7 +66,7 @@ module.exports.bootstrap = async function() {
     { emailAddress: 'lisa@lindgren.com', fullName: 'Lisa Lindgren', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('muckefuck')}
   ]);
 
-  await Passformwohlfuehl.createEach([
+  await BraTragekomfort.createEach([
     { name: 'soll nicht drücken und nicht eng sein'},
     { name: 'viel Push-Up'},
     { name: 'soll genügend Halt geben'},
@@ -73,8 +75,43 @@ module.exports.bootstrap = async function() {
     { name: 'der Stoff soll auch für sensible Haut geeignet sein'},
     { name: 'meine Brüste sollen sehr gleichmäßig aussehen'},
     { name: 'soll sich möglichst leicht anfühlen'},
-    { name: 'soll nicht verrutschen'}
+    { name: 'soll nicht verrutschen'},
+    { name: 'bügellos'},
+    { name: 'mit Bügel'},
+
   ])
+
+  await Farbe.createEach([
+    { name: 'schwarz'},
+    { name: 'weiß'},
+    { name: 'neutrale Töne ( grau/dunkelblau)'},
+    { name: 'neon Farben'},
+    { name: 'Rosatöne'},
+    { name: 'Rottöne'},
+    { name: 'blau/grün/türkis/lila'},
+  ])
+
+  await Muster.createEach([
+    { name: 'einfarbig/ohne'},
+    { name: 'gemustert'},
+  ])
+
+  await Stoff.createEach([
+    { name: 'Baumwolle'},
+    { name: 'mit Spitze'},
+    { name: 'stretchy Stoffe'},
+  ])
+
+  await BhArt.createEach([
+    { name: 'Bralette'},
+    { name: 'Balconette'},
+    { name: 'T-Shirt BH'},
+    { name: 'Push-Up BH'},
+    { name: 'Trägerloser BH'},
+    { name: 'Sport-BH'},
+    { name: 'Plunge Neckline'},
+  ])
+  
 
   // Save new bootstrap version
   await sails.helpers.fs.writeJson.with({
