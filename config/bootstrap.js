@@ -9,8 +9,6 @@
  * https://sailsjs.com/config/bootstrap
  */
 
-const BraTragekomfort = require('../api/models/BraTragekomfort');
-
 module.exports.bootstrap = async function() {
 
   // Import dependencies
@@ -79,7 +77,7 @@ module.exports.bootstrap = async function() {
     { name: 'bügellos'},
     { name: 'mit Bügel'},
 
-  ])
+  ]);
 
   await Farbe.createEach([
     { name: 'schwarz'},
@@ -89,18 +87,18 @@ module.exports.bootstrap = async function() {
     { name: 'Rosatöne'},
     { name: 'Rottöne'},
     { name: 'blau/grün/türkis/lila'},
-  ])
+  ]);
 
   await Muster.createEach([
     { name: 'einfarbig/ohne'},
     { name: 'gemustert'},
-  ])
+  ]);
 
   await Stoff.createEach([
     { name: 'Baumwolle'},
     { name: 'mit Spitze'},
     { name: 'stretchy Stoffe'},
-  ])
+  ]);
 
   await BhArt.createEach([
     { name: 'Bralette'},
@@ -110,7 +108,7 @@ module.exports.bootstrap = async function() {
     { name: 'Trägerloser BH'},
     { name: 'Sport-BH'},
     { name: 'Plunge Neckline'},
-  ])
+  ]);
   
 
   // Save new bootstrap version

@@ -24,6 +24,27 @@ module.exports = {
       collection: 'passformwohlfuehl',
       via: 'users'
     },
+    komfort:{
+      collection: 'braTragekomfort',
+      via:'users'
+    },
+    bhArten:{
+      collection:'bhArt',
+      via: 'users'
+    },
+    bhmuster:{
+      collection: 'muster',
+      via: 'users'
+    },
+    bhfarbe:{
+      collection: 'farbe',
+      via: 'users'
+    },
+    bhstoff:{
+      collection: 'stoff',
+      via: 'users'
+    },
+
 
     emailAddress: {
       type: 'string',

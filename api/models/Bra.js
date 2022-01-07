@@ -12,11 +12,7 @@ module.exports = {
         owner: {
           collection: 'user',
           via:'bra'
-        },
-        pf_bewertung:{
-          model:'passformbewertungsprofil',
-          unique: true
-      }
+        }
   } 
 
 }

@@ -39,23 +39,23 @@ module.exports = {
         //     required: true
         // },
 
-       /*  stil: {
-            description: 'BH Stil',
-            type: 'string',
-            required: true
-        },
+        // farbe: {
+        //     description: 'Farbe des BHs',
+        //     type: 'string',
+        //     required: true
+        // },
 
-        farbe: {
-            description: 'Farbe des BHs',
-            type: 'string',
-            required: true
-        },
+        // muster: {
+        //     description: 'Muster des BHs',
+        //     type: 'string',
+        //     required: true
+        // }, 
 
-        muster: {
-            description: 'Muster des BHs',
-            type: 'string',
-            required: true
-        }, */
+        // stoff: {
+        //     description: 'Stoff des BHs',
+        //     type: 'string',
+        //     required: true
+        // }
 
 
     },
@@ -70,6 +70,8 @@ module.exports = {
         },
 
     },
+
+
 
 
     fn: async function (inputs) {
