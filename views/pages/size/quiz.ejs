@@ -249,61 +249,81 @@
             <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Sport BH</button>
             <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Plunge Neckline</button>
           </div>
-      <div class = "container">
-        <div class = "row">
-          <div class="card product col-sm">
-            <img class="card-img-top" src="images/bralette.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Bralette</h5>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+          <div class="container">
+            <div class="row">
+              <div class="col-md-3">
+
+                <div class="card">
+                  <img class="card-img-top" src="images/bralette.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                    <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Bralette</button>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card">
+                  <img class="card-img-top" src="images/balconette-bh.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                    
+            <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Balconette</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card">
+                  <img class="card-img-top" src="images/t-shirt-bra.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                    
+            <button type="button" class="btn btn-outline-info m-1" input type="checkbox">T-Shirt BH</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card">
+                  <img class="card-img-top" src="images/trägerloser-bh.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                    <a class="btn btn-primary">Trägerloser BH</a>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card">
+                  <img class="card-img-top" src="images/sport-bh_1.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                    <a class="btn btn-primary">Sport BH</a>
+                  </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="card">
+                  <img class="card-img-top" src="images/plunge-bh.jpg" alt="Card image cap">
+                  <div class="card-body">
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                    <a class="btn btn-primary">Plunge Neckline</a>
+                  </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="card product col-sm" >
-            <img class="card-img-top" src="images/balconette-bh.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Balconette</h5>
-        
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
-          <div class="card product col-sm">
-            <img class="card-img-top" src="images/t-shirt-bra.jpg" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">T-Shirt BH </h5>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
 
-        <div class="card product col-sm">
-          <img class="card-img-top" src="images/trägerloser-bh.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Trägerloser BH</h5>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+            <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 3</button>
+            <button class="btn btn_color m-2" type="submit">Quiz beenden</button>
           </div>
-        </div>
-
-        <div class="card product col-sm">
-          <img class="card-img-top" src="images/sport-bh_1.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Sport BH</h5>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-
-        <div class="card product col-sm">
-          <img class="card-img-top" src="images/plunge-bh.jpg" alt="Card image cap">
-          <div class="card-body">
-            <h5 class="card-title">Plunge Neckline</h5>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-          <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 3</button>
-          <button class="btn btn_color m-2" type="submit">Quiz beenden</button>
-        </div>
       </form>
     </div>
     <script>
