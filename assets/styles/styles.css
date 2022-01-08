@@ -330,6 +330,13 @@ footer .footer-nav {
     
 }
 
+.card_bh{
+    border-radius: 1em;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    /* margin: .5em;
+    padding: .5em; */
+}
+
 .product__img {
     height: 236px;
     width: 236px;
