@@ -168,42 +168,17 @@
             <b>Der Wohlfühl-Faktor</b>
             <p>Jetzt wissen wir schon einiges über deine Passform und Größe, was ist dir bei einem BH am wichtigsten,
               damit du dich wirklich wohl fühlst?</p>
-            <div class="btn-group-toggle" data-toggle="buttons">
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">soll nicht drücken und nicht
-                eng
-                sein</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">viel Push-Up</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">soll genügend Halt
-                geben</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">meine Brüste sollen kleiner
-                aussehen</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Bewegungsfreiheit</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">der Stoff soll auch für
-                sensible Haut
-                geeignet sein</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">meine Brüste sollen sehr
-                gleichmäßig
-                aussehen</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">soll sich möglichst leicht
-                anfühlen</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">soll nicht
-                verrutschen</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">bügellos</button>
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">mit Bügel</button>
-            </div>
+
+          <div class="btn-group-toggle" data-toggle="buttons">
+            <% optionen.forEach(function(bratragekomfort){ %>
+
+              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">
+                <%= bratragekomfort.name %>
+              </button>
+
+              <% }); %>
           </div>
 
-          <table class="table">
-            <tbody>
-                <% optionen.forEach(function(bratragekomfort){ %>
-                    <tr>
-                        <td>
-                            <%= bratragekomfort.name %> <BR>
-                        </td>
-                    </tr>
-                    <% }); %>
-            </tbody>
-        </table>
 
           <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 2</button>
           <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 4</button>
