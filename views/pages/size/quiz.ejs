@@ -169,19 +169,20 @@
             <p>Jetzt wissen wir schon einiges über deine Passform und Größe, was ist dir bei einem BH am wichtigsten,
               damit du dich wirklich wohl fühlst?</p>
 
-          <div class="btn-group-toggle m-4" data-toggle="buttons">
-            <% optionen.forEach(function(bratragekomfort){ %>
+            <div class="btn-group-toggle m-4" data-toggle="buttons">
+              <% optionen.forEach(function(bratragekomfort){ %>
 
-              <button type="button" class="btn btn-outline-info m-1" input type="checkbox">
-                <%= bratragekomfort.name %>
-              </button>
+                <button type="button" class="btn btn-outline-info m-1" input type="checkbox">
+                  <%= bratragekomfort.name %>
+                </button>
 
-              <% }); %>
+                <% }); %>
+            </div>
+
+            <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 2</button>
+            <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 4</button>
+
           </div>
-
-
-          <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 2</button>
-          <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 4</button>
         </div>
         <div v-show="step === 4">
           <div class="m-4">
