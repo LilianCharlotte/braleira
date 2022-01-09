@@ -86,7 +86,9 @@ header {
     background-color: var(--clr-nav);
 }
 
-
+.kursiv {
+    font-style:italic;
+}
 nav ul {
     display: flex;
     list-style: none;
