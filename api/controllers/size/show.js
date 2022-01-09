@@ -22,9 +22,23 @@ module.exports = {
     fn: async function (inputs) {
       sails.log("Controller called for getting options in BraTragekomfort:")
       let optionen = await BraTragekomfort.find();
-      sails.log.debug("Query result for all options in BraTragekomfort")
+      
+      sails.log.debug("Query result for all options")
       sails.log.debug(optionen)
-      return ( { optionen: optionen } );
+
+      sails.log("Controller called for getting options in Stoff:")
+      let stoffe = await Stoff.find();
+      
+
+      sails.log.debug("Query result for all stoffarten")
+      sails.log.debug(stoffe)
+
+      return ( { optionen: optionen, stoffe: stoffe} );
+
+
+
+
+
     }
   };
   
