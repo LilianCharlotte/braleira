@@ -1,0 +1,27 @@
+<div id = "impressum">
+
+    <h3 class = "m-4">Kontaktseite Braleira</h3>
+    <div class="container linksbuendig">
+        <div class = "container">
+            <p>Bei Fragen kannst du uns gerne kontaktieren! <br>Fülle bitte einfach untenstehendes Formular aus und wir werden uns schnellstmöglich darum bemühen, dein Anliegen zu bearbeiten und zu lösen.</p>
+            <div class="form-group">
+                <input type="text" class="radius kursiv" id="name" name="name"
+                 placeholder="Dein Name (erforderlich)" autocomplete="name" 
+                  maxlength="200" focus-first style = "width: 20em;">
+              </div>
+              <div class="form-group">
+                <input class="radius kursiv" id="b_umfang" name="email" type="text" placeholder="Deine E-Mail (erforderlich)"
+                  autocomplete="name" maxlength="200" focus-first style = "width: 20em;">
+               </div>
+
+               <div>  
+                <label for="text">Deine Nachricht oder dein Anliegen an uns:</label>
+                <textarea class = "kursiv" id="text" name="text" cols="50" rows="8" placeholder="Deine Nachricht (erforderlich)"></textarea> 	
+                <input type="submit" value="Nachricht senden" />
+             </div>
+        
+        </div> 
+   
+    </div>
+</div>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
