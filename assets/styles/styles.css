@@ -265,6 +265,40 @@ footer .footer-nav {
     border-color: var(--clr-secondary);
 }
 
+/*alles für runde Buttons*/
+.fancy-checkbox {
+    display: none;
+}
+
+.fancy-checkbox+label {
+    background-repeat: no-repeat;
+    background-size: cover;
+    clip-path: circle(50% at center);
+    height: 100px;
+    width: 100px;
+    display: inline-block;
+    padding: 0 0 0 0px;
+}
+
+.fancy-checkbox:checked+label {
+    filter: brightness(50%);
+}
+
+.fancy-checkbox-rosa+label {
+    background-image: url("/images/rosa.jpg");
+}
+
+.fancy-checkbox-rot+label {
+    background-image: url("/images/rot.jpg");
+}
+
+.fancy-checkbox-schwarz+label {
+    background-image: url("/images/schwarz.jpeg");
+}
+
+
+
+
 
 /*homepage styles*/
 

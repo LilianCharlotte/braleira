@@ -29,9 +29,10 @@ module.exports = {
       sails.log("Controller called for getting options in Stoff:")
       let stoffe = await Stoff.find();
       
-
       sails.log.debug("Query result for all stoffarten")
       sails.log.debug(stoffe)
+
+     
 
       return ( { optionen: optionen, stoffe: stoffe} );
 
