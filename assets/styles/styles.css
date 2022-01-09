@@ -287,13 +287,20 @@ footer .footer-nav {
 .fancy-checkbox-rosa+label {
     background-image: url("/images/rosa.jpg");
 }
-
 .fancy-checkbox-rot+label {
     background-image: url("/images/rot.jpg");
 }
-
 .fancy-checkbox-schwarz+label {
     background-image: url("/images/schwarz.jpeg");
+}
+.fancy-checkbox-weiss+label {
+    background-image: url("/images/weiß.jpg");
+}
+.fancy-checkbox-grau+label {
+    background-image: url("/images/grau.jpg");
+}
+.fancy-checkbox-neon+label {
+    background-image: url("/images/neon.jpg");
 }
 
 
