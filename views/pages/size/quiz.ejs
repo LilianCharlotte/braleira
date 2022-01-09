@@ -193,6 +193,18 @@
             </div>
           </div>
 
+          <table class="table">
+            <tbody>
+                <% optionen.forEach(function(bratragekomfort){ %>
+                    <tr>
+                        <td>
+                            <%= bratragekomfort.name %> <BR>
+                        </td>
+                    </tr>
+                    <% }); %>
+            </tbody>
+        </table>
+
           <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 2</button>
           <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 4</button>
         </div>
