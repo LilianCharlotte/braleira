@@ -302,6 +302,18 @@ footer .footer-nav {
 .fancy-checkbox-neon+label {
     background-image: url("/images/neon.jpg");
 }
+.fancy-checkbox-blau+label {
+    background-image: url("/images/blau.jpg");
+}
+.fancy-checkbox-grün+label {
+    background-image: url("/images/grün.jpg");
+}
+.fancy-checkbox-braun+label {
+    background-image: url("/images/braun.jpg");
+}
+.fancy-checkbox-lila+label {
+    background-image: url("/images/lila.jpg");
+}
 
 
 
