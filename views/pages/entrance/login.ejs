@@ -19,7 +19,7 @@
         <cloud-error v-if="cloudError==='badCombo'">Wir haben kein Konto unter der angegebenen E-Mail-Adresse registriert. Bitte schaue noch einmal nach, ob du deine E-Mail-Adresse und/oder Passwort richtig eingegeben hast und versuche es noch einmal.</cloud-error>
         <cloud-error v-else-if="cloudError"></cloud-error>
         <div class="form-group">
-          <ajax-button :syncing="syncing" class="btn-dark btn-lg btn-block">Anmelden</ajax-button>
+          <ajax-button :syncing="syncing" class="btn_color btn-lg btn-block">Anmelden</ajax-button>
         </div>
       </ajax-form>
       <p class="text-center"><a href="/password/forgot" style = "text-decoration:underline ;color:#9aaba7">Passwort vergessen?</a></p>

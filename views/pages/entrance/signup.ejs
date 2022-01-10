@@ -32,10 +32,10 @@
         <cloud-error v-if="cloudError==='emailAlreadyInUse'">It looks like there's already an account with your email address. If you forgot your password, you can recover it <a href="password/forgot">here</a>.</cloud-error>
         <cloud-error v-else-if="cloudError"></cloud-error>
         <div class="form-group">
-          <ajax-button type="submit" :syncing="syncing" class="btn-dark btn-lg btn-block">Registrieren</ajax-button>
+          <ajax-button type="submit" :syncing="syncing" class="btn_color btn-lg btn-block">Registrieren</ajax-button>
         </div>
       </ajax-form>
-      <p class="text-center">Du bist bereits registriert? <a href="/login">Hier kannst du dich anmelden.</a></p>
+      <p class="text-center">Du bist bereits registriert? <br><a href="/login" style = "text-decoration:underline ;color:#9aaba7">Hier kannst du dich anmelden</a></p>
     </div>
   </div>
   <div class="container-fluid pt-5 pb-5" v-if="cloudSuccess">
