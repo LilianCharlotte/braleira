@@ -34,8 +34,8 @@ module.exports = {
             required: true
         },
 
-        stil: {
-            description: 'BH Stil',
+        stoff: {
+            description: 'BH Stoff',
             type: 'string',
             required: true
         },
