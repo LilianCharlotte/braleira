@@ -65,7 +65,7 @@ module.exports = {
 
         success: {
             responseType: 'view',
-            viewTemplatePath: 'pages/size/done',
+            viewTemplatePath: 'pages/size/empfehlungen',
             description: 'Es wurde erfolgreich ein neuer Eintrag angelegt. '
         },
 
