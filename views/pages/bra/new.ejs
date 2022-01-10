@@ -1,66 +1,25 @@
 <div id="bra">
+  <h4>Hier kannst du ein neues Bh-Model anlegen, welches den Kunden als Auswahl dient:</h4>
   <div class="container pt-5 pb-5">
     <form action="/bra" method="post">
       <input type="hidden" name="_csrf" value="<%= _csrf %>" />
-      <h1>create new bra</h1>
-      <div>
+      <div class = linksbuendig>
         <hr class="mt-4 mb-4" />
-        <h4>Hier kannst du ein neues Bh-Model anlegen:</h4>
-
-        <!-- 
-
-        <div class="container">
-          <form action="/meal/  <% /* %>  <%= meal.id %>  /update" method="post">
-              <div>
-                  <input type="hidden" name="_csrf" value="<%= _csrf %>" />
-                  <input type="hidden" name="id" value="<%= meal.id %>">
-                  <div>
-                      <label>Name</label>
-                  </div>
-                  <div>
-                      <input type="text" maxlength="80" name="name" value="<%= meal.name %>">
-                  </div>
-                  <div>
-                      <label>Preis</label>
-                  </div>
-                  <div>
-                      <input type="text" maxlength="8" name="price" value="<%= meal.price %>">
-                  </div>
-                  <div>
-                      <label>Beschreibung</label>
-                  </div>
-                  <div>
-                      <input type="text" maxlength="255" size="40" name="description" value="<%= meal.description %>">
-                  </div>
-              </div>
-              <button type="submit">
-                  Aktualisieren
-              </button>
-              <% */ %>
-          </form>
-      </div>
-     -->
-
-
-
-
         <div class="form-group">
-          <label for="bh-model">Bh Model Name</label>
-          <input type="text" class="form-control" id="bh-model" name="model" placeholder="Bh Model"
+          <input type="text" class="form-control" id="bh-model" name="model" placeholder="BH-Model"
             autocomplete="name" maxlength="120" focus-first>
         </div>
 
 
         <div class="form-group">
-          <label for="bh-marke">Bh Markenname</label>
-          <input class="form-control" id="bh-marke" name="marke" type="text" placeholder="Bh Markenname"
+          <input class="form-control" id="bh-marke" name="marke" type="text" placeholder="BH-Markenname"
             autocomplete="name" maxlength="120" focus-first>
         </div>
 
               
         <div class="form-group">
-            <label for="bh-form">Bh Form</label>
             <select class = "form-control" name="form" id="form">
+              <option value="" disabled selected>BH-Form</option>
               <option value="rot">Push-Up</option>
               <option value="schwarz">T-Shirt</option>
               <option value="weiss">Bralette</option>
@@ -70,13 +29,12 @@
           </div>
  
         <div class="form-group">
-            <label for="bh-groesse">Bh Größe</label>
-            <input class="form-control" id="bh-groesse" name="groesse" type="text" placeholder="Bh Größe" autocomplete="name" focus-first>
+            <input class="form-control" id="bh-groesse" name="groesse" type="text" placeholder="BH-Größe" autocomplete="name" focus-first>
           </div>
         
           <div class="form-group">
-            <label for="bh-stil">Bh Stil</label>
             <select class = "form-control" name="stil" id="stil">
+              <option value="" disabled selected>Stil</option>
               <option value="verspielt">verspielt</option>
               <option value="schlicht">schlicht</option>
               <option value="sportlich">sportlich</option>
@@ -85,8 +43,8 @@
           </div>
 
           <div class="form-group">
-            <label for="bh-farbe">Bh Farbe</label>
             <select class = "form-control" name="farbe" id="farbe">
+              <option value="" disabled selected>Farbe</option>
               <option value="rot">Rot</option>
               <option value="schwarz">Schwarz</option>
               <option value="weiss">Weiß</option>
@@ -95,8 +53,8 @@
           </div>
 
           <div class="form-group">
-            <label for="bh-muster">Bh Muster</label>
               <select class = "form-control" name="muster" id="muster">
+                <option value="" disabled selected>Muster</option>
                 <option value="spitze">Spitze</option>
                 <option value="gepunktet">gepunktet</option>
                 <option value="keins">kein Muster</option>
@@ -105,23 +63,14 @@
           </div>
 
           <div class="form-group">
-            <label for="bh-bewertung">Bh Bewertung</label>
-            <input class="form-control" id="bh-bewertung" name="sternebewertung" type="text" placeholder="Bh Bewertung" autocomplete="name" focus-first>
+            <input class="form-control" id="bh-bewertung" name="sternebewertung" type="text" placeholder="BH-Bewertung" autocomplete="name" focus-first>
           </div>
 
           <div class="form-group">
-            <label for="bh-link">Shopping-Link</label>
             <input class="form-control" id="bh-link" name="shoppingLink" type="text" placeholder="Shopping-Link" autocomplete="name" focus-first>
           </div>
 
-
-
-        <!-- <ajax-button type="submit" :syncing="syncing" class="btn btn-dark">Save changes</ajax-button> -->
-
-
-
-        <p> this page is not finished</p>
-        <button type="submit" class="btn btn-primary">Hinzufügen</button>
+          <button type="submit" class="btn btn-primary btn_color">Hinzufügen</button>
 
       </div>
 
