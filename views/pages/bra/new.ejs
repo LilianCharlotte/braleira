@@ -1,9 +1,10 @@
 <div id="bra">
-  <h4>Hier kannst du ein neues Bh-Model anlegen, welches den Kunden als Auswahl dient:</h4>
   <div class="container pt-5 pb-5">
     <form action="/bra" method="post">
       <input type="hidden" name="_csrf" value="<%= _csrf %>" />
       <div class = linksbuendig>
+        <h4>Hier kannst du ein neues Bh-Model anlegen, welches den Kunden als Auswahl dient:</h4>
+
         <hr class="mt-4 mb-4" />
         <div class="form-group">
           <input type="text" class="form-control" id="bh-model" name="model" placeholder="BH-Model"
@@ -23,8 +24,11 @@
               <option value="rot">Push-Up</option>
               <option value="schwarz">T-Shirt</option>
               <option value="weiss">Bralette</option>
-              <option value="bunt">Neckholder</option>
-              <option value="bunt">Balconette</option>
+              <option value="weiss">Balconette</option>
+              <option value="bunt">Bustier</option>
+              <option value="bunt">Trägerloser BH</option>
+              <option value="bunt">Sport BH</option>
+              <option value="bunt">Plunge Necklinge</option>
             </select>
           </div>
  
@@ -33,32 +37,35 @@
           </div>
         
           <div class="form-group">
-            <select class = "form-control" name="stil" id="stil">
-              <option value="" disabled selected>Stil</option>
-              <option value="verspielt">verspielt</option>
-              <option value="schlicht">schlicht</option>
-              <option value="sportlich">sportlich</option>
-              <option value="sexy">sexy</option>
+            <select class = "form-control" name="stoff" id="stoff">
+              <option value="" disabled selected>Stoff</option>
+              <option value="bwolle">Baumwolle</option>
+              <option value="spitze">mit Spitze</option>
+              <option value="strechy">stretchy</option>
             </select>
           </div>
 
           <div class="form-group">
             <select class = "form-control" name="farbe" id="farbe">
               <option value="" disabled selected>Farbe</option>
-              <option value="rot">Rot</option>
-              <option value="schwarz">Schwarz</option>
-              <option value="weiss">Weiß</option>
-              <option value="bunt">Bunt</option>
+              <option value="rosa">rosatöne</option>
+              <option value="rot">rottöne</option>
+              <option value="schwarz">schwarz</option>
+              <option value="weiss">weiß</option>
+              <option value="grau">grau/dunkelblau</option>
+              <option value="neon">neon Töne</option>
+              <option value="blau">blau</option>
+              <option value="braun">brauntöne</option>
+              <option value="lila">lilatöne</option>
+            
             </select>
           </div>
 
           <div class="form-group">
               <select class = "form-control" name="muster" id="muster">
                 <option value="" disabled selected>Muster</option>
-                <option value="spitze">Spitze</option>
-                <option value="gepunktet">gepunktet</option>
-                <option value="keins">kein Muster</option>
-                <option value="gestreift">gestreift</option>
+                <option value="gemustert">gemustert</option>
+                <option value="ohne_m">kein Muster</option>
               </select>
           </div>
 
