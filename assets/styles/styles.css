@@ -261,6 +261,11 @@ footer .footer-nav {
    border-color: var(--clr-accent);
 }
 
+.welcome_page_btn:hover{
+    background-color: var(--clr-nav);
+   border-color: var(--clr-nav);
+}
+
 /*alles für runde Buttons*/
 .fancy-checkbox {
     display: none;
