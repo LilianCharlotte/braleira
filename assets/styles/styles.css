@@ -383,6 +383,12 @@ footer .footer-nav {
     padding: .5em; */
 }
 
+.farbbox{
+    border: solid#669f9a 1px; 
+    border-radius: 10px;
+    box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+}
+
 .product__img {
     height: 236px;
     width: 236px;
