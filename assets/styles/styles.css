@@ -256,6 +256,11 @@ footer .footer-nav {
     border-color: var(--clr-secondary);
 }
 
+.welcome_page_btn{
+   background-color: var(--clr-accent);
+   border-color: var(--clr-accent);
+}
+
 /*alles für runde Buttons*/
 .fancy-checkbox {
     display: none;
@@ -384,7 +389,7 @@ footer .footer-nav {
 }
 
 .farbbox{
-    border: solid#669f9a 1px; 
+    border: solid var(--clr-secondary) 1px;
     border-radius: 10px;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
 }
