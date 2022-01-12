@@ -83,7 +83,6 @@ module.exports.bootstrap = async function() {
     { name: 'schwarz'},
     { name: 'weiß'},
     { name: 'neutrale Töne (grau / dunkelblau)'},
-    { name: 'neon Farben'},
     { name: 'Rosatöne'},
     { name: 'Rottöne'},
     { name: 'blau /grün /türkis /lila'},
