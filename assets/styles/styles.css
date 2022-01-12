@@ -261,9 +261,11 @@ footer .footer-nav {
    border-color: var(--clr-accent);
 }
 
-.welcome_page_btn:hover{
-    background-color: var(--clr-nav);
-   border-color: var(--clr-nav);
+.welcome_page_btn:hover, 
+.welcome_page_btn:focus,
+welcome_page_btn:active {
+    background-color: var(--clr-nav)!important;
+   border-color: var(--clr-nav)!important;
 }
 
 /*alles für runde Buttons*/
