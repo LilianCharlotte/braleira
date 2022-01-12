@@ -33,6 +33,61 @@ module.exports = {
             required: true
         },
 
+        tragekomfortbra1: {
+            description: 'tragekomfortbra1',
+            type: 'number',
+        },
+
+        tragekomfortbra2: {
+            description: 'tragekomfortbra2',
+            type: 'number',
+        },
+
+        tragekomfortbra3: {
+            description: 'tragekomfortbra3',
+            type: 'number',
+        },
+
+        tragekomfortbra4: {
+            description: 'tragekomfortbra4',
+            type: 'number',
+        },
+
+        tragekomfortbra5: {
+            description: 'tragekomfortbra5',
+            type: 'number',
+        },
+
+        tragekomfortbra6: {
+            description: 'tragekomfortbra6',
+            type: 'number',
+        },
+
+        tragekomfortbra7: {
+            description: 'tragekomfortbra7',
+            type: 'number',
+        },
+
+        tragekomfortbra8: {
+            description: 'tragekomfortbra8',
+            type: 'number',
+        },
+
+        tragekomfortbra9: {
+            description: 'tragekomfortbra9',
+            type: 'number',
+        },
+
+        tragekomfortbra10: {
+            description: 'tragekomfortbra10',
+            type: 'number',
+        },
+
+        tragekomfortbra11: {
+            description: 'tragekomfortbra11',
+            type: 'number',
+        },
+
         // tragekomfortbra: {
         //     description: 'Tragekomfort',
         //     type: 'string',
@@ -92,7 +147,7 @@ module.exports = {
         const groesse = inputs.groesse;
 
         let messdaten; 
-		let bpdaten; 
+		let bpdaten;
 		
 		const existingMessdaten = await Messdaten.findOne({ owner: userId});
 		if (existingMessdaten) {
@@ -107,6 +162,14 @@ module.exports = {
 		} else {
 			bpdaten = await BraPassformdaten.create({cup:cup, groesse:groesse, owner:userId}).fetch();
 		}
+
+        const komfortOptionen = [];
+        for (i = 1; i <= 11; i++) {
+            if (inputs["tragekomfortbra" + i]) {
+                komfortOptionen.push(i);
+            }
+        }
+        await User.replaceCollection(userId, 'komfort').members(komfortOptionen);
  		
         sails.log.debug("New Groessenprofil....")
         sails.log.debug(messdaten)

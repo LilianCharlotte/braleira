@@ -62,12 +62,12 @@
             </p>
             <div class="row justify-content-center">
               <div class="form-group">
-                <input type="text" class="radius" id="unterbrustbreite" name="unterbrustbreite"
-                  placeholder="Unterbrustbreite in cm" autocomplete="name" maxlength="120" focus-first>
+                <input type="number" class="radius" id="unterbrustbreite" name="unterbrustbreite"
+                  placeholder="Unterbrustbreite in cm" autocomplete="name" focus-first>
               </div>
               <div class="form-group" style="margin-left: 1%;">
-                <input class="radius" id="b_umfang" name="brustumfang" type="text" placeholder="Brustumfang in cm"
-                  autocomplete="name" maxlength="120" focus-first>
+                <input class="radius" id="b_umfang" name="brustumfang" type="number" placeholder="Brustumfang in cm"
+                  autocomplete="name" focus-first>
               </div>
             </div>
           </div>
@@ -172,9 +172,12 @@
             <div class="btn-group-toggle m-4" data-toggle="buttons">
               <% optionen.forEach(function(bratragekomfort){ %>
 
-                <button type="button" class="btn btn-outline-info m-1" name="tragekomfortbra-<%= bratragekomfort.id %>" type="checkbox">
-                  <%= bratragekomfort.name %>
-                </button>
+                <label class="btn btn-outline-info m-1">
+                  <input type="checkbox" name="tragekomfortbra<%= bratragekomfort.id %>" value="<%= bratragekomfort.id %>"> <%= bratragekomfort.name %>
+                </label>
+                <!-- <button type="button" class="btn btn-outline-info m-1" value="<%= bratragekomfort.id %>" name="tragekomfortbra<%= bratragekomfort.id %>" type="checkbox">
+                  <%= bratragekomfort.name %> -->
+                <!-- </button> -->
 
                 <% }); %>
             </div>
