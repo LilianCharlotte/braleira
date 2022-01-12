@@ -15,7 +15,7 @@ module.exports.bootstrap = async function() {
   var path = require('path');
 
   // This bootstrap version indicates what version of fake data we're dealing with here.
-  var HARD_CODED_DATA_VERSION = 5;
+  var HARD_CODED_DATA_VERSION = 6;
 
   // This path indicates where to store/look for the JSON file that tracks the "last run bootstrap info"
   // locally on this development computer (if we happen to be on a development computer).
@@ -65,49 +65,51 @@ module.exports.bootstrap = async function() {
   ]);
 
   await BraTragekomfort.createEach([
-    { name: 'soll nicht drücken und nicht eng sein'},
-    { name: 'viel Push-Up'},
-    { name: 'soll genügend Halt geben'},
-    { name: 'meine Brüste sollen kleiner aussehen'},
-    { name: 'Bewegungsfreiheit'},
-    { name: 'der Stoff soll auch für sensible Haut geeignet sein'},
-    { name: 'meine Brüste sollen sehr gleichmäßig aussehen'},
-    { name: 'soll sich möglichst leicht anfühlen'},
-    { name: 'soll nicht verrutschen'},
-    { name: 'bügellos'},
-    { name: 'mit Bügel'},
+    { name: 'soll nicht drücken und nicht eng sein', id: 1},
+    { name: 'viel Push-Up', id: 2},
+    { name: 'soll genügend Halt geben', id: 3},
+    { name: 'meine Brüste sollen kleiner aussehen', id: 4},
+    { name: 'Bewegungsfreiheit', id: 5},
+    { name: 'der Stoff soll auch für sensible Haut geeignet sein', id: 6},
+    { name: 'meine Brüste sollen sehr gleichmäßig aussehen', id: 7},
+    { name: 'soll sich möglichst leicht anfühlen', id: 8},
+    { name: 'soll nicht verrutschen', id: 9,},
+    { name: 'bügellos', id: 10},
+    { name: 'mit Bügel', id: 11},
 
   ]);
 
   await Farbe.createEach([
-    { name: 'schwarz'},
-    { name: 'weiß'},
-    { name: 'neutrale Töne (grau / dunkelblau)'},
-    { name: 'neon Farben'},
-    { name: 'Rosatöne'},
-    { name: 'Rottöne'},
-    { name: 'blau /grün /türkis /lila'},
+    { name: 'rosatöne', id: 1},
+    { name: 'rottöne', id: 2},
+    { name: 'schwarz', id: 3},
+    { name: 'weiß', id: 4},
+    { name: 'neutrale Töne (grau/dunkelblau)', id: 5},
+    { name: 'blau', id: 6},
+    { name: 'grüntöne', id: 7},
+    { name: 'brauntöne', id: 8},
+    { name: 'lilatöne', id: 9},
   ]);
 
   await Muster.createEach([
-    { name: 'einfarbig/ohne'},
-    { name: 'gemustert'},
+    { name: 'einfarbig/ohne', id: 1},
+    { name: 'gemustert', id: 2},
   ]);
 
   await Stoff.createEach([
-    { name: 'Baumwolle'},
-    { name: 'mit Spitze'},
-    { name: 'stretchy Stoffe'},
+    { name: 'Baumwolle', id: 1},
+    { name: 'mit Spitze', id: 2},
+    { name: 'stretchy Stoffe', id: 3},
   ]);
 
   await BhArt.createEach([
-    { name: 'Bralette'},
-    { name: 'Balconette'},
-    { name: 'T-Shirt BH'},
-    { name: 'Push-Up BH'},
-    { name: 'Trägerloser BH'},
-    { name: 'Sport-BH'},
-    { name: 'Plunge Neckline'},
+    { name: 'Bralette', id: 1},
+    { name: 'Balconette', id: 2},
+    { name: 'T-Shirt BH', id: 3},
+    { name: 'Push-Up BH', id: 4},
+    { name: 'Trägerloser BH', id: 5},
+    { name: 'Sport-BH', id: 6},
+    { name: 'Plunge Neckline', id: 7},
   ]);
   
 

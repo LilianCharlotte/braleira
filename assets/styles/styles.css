@@ -75,9 +75,9 @@ header {
     width: 100%;
 }
 
-.half_width{
-    width: 50%;
-}
+/* .half_width{
+    width: 50%; -> kann ich das löschen (?) @Pauly
+} */
 
 /*navigation */
 

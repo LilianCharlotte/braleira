@@ -12,7 +12,7 @@ module.exports = {
         unterbrustbreite: {
             description: 'Unterbrustbreite',
             type: 'number',
-            required: true
+            required: true 
         },
 
         brustumfang: {
@@ -32,6 +32,14 @@ module.exports = {
             type: 'string',
             required: true
         },
+
+        // tragekomfortbra: {
+        //     description: 'Tragekomfort',
+        //     type: 'string',
+        //     required: true
+        // }
+
+
 
         // persoenlicheAngaben: {
         //     description: 'Größe des BHs',
@@ -74,6 +82,7 @@ module.exports = {
 
     fn: async function (inputs) {
         sails.log.debug("quiz...")
+        sails.log.info(inputs)
         const userId = this.req.session.userId;
         inputs.owner = userId;
 
@@ -89,20 +98,23 @@ module.exports = {
 		if (existingMessdaten) {
 			messdaten = await Messdaten.update({ owner: userId }).set({unterbrustbreite:ubb, brustumfang:bu}).fetch();
 		} else {
-			messdaten= await Messdaten.create({unterbrustbreite:ubb, brustumfang:bu, owner:userId}).fetch();
+			messdaten = await Messdaten.create({unterbrustbreite:ubb, brustumfang:bu, owner:userId}).fetch();
 		}
 		
 		const existingBpdaten = await BraPassformdaten.findOne({ owner: userId});
 		if (existingBpdaten) {
 			bpdaten = await BraPassformdaten.update({ owner: userId }).set({cup:cup, groesse:groesse}).fetch();
 		} else {
-			bpdaten= await BraPassformdaten.create({cup:cup, groesse:groesse, owner:userId}).fetch();
+			bpdaten = await BraPassformdaten.create({cup:cup, groesse:groesse, owner:userId}).fetch();
 		}
  		
         sails.log.debug("New Groessenprofil....")
         sails.log.debug(messdaten)
         sails.log.debug(bpdaten)
+
         if (!messdaten) { throw 'notFound'; }
+        if (!bpdaten) { throw 'notFound'; }
+
         return {
           message: "Successfully created.",
           messdaten: messdaten,
