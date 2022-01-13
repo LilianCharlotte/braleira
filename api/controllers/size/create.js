@@ -96,15 +96,22 @@ module.exports = {
         diesesmuster2: {
             description: 'diesesmuster2',
             type: 'number',
+        },
+
+        dieserstoff1: {
+            description: 'dieserstoff1',
+            type: 'number',
+        },
+
+        dieserstoff2: {
+            description: 'dieserstoff2',
+            type: 'number',
+        },
+
+        dieserstoff3: {
+            description: 'dieserstoff3',
+            type: 'number',
         }
-
-        // tragekomfortbra: {
-        //     description: 'Tragekomfort',
-        //     type: 'string',
-        //     required: true
-        // }
-
-
 
         // persoenlicheAngaben: {
         //     description: 'Größe des BHs',

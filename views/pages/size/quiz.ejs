@@ -294,11 +294,10 @@
 
                 <div class="btn-group-toggle m-4" data-toggle="buttons">
                   <% stoffe.forEach(function(stoff){ %>
-
-                    <button type="button" class="btn btn-outline-info m-1" input type="checkbox">
+                    <label class="btn btn-outline-info m-1">
+                      <input type="checkbox" name="dieserstoff<%= stoff.id %>" value="<%= stoff.id %>">
                       <%= stoff.name %>
-                    </button>
-
+                    </label>
                     <% }); %>
                 </div>
 
