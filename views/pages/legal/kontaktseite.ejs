@@ -1,8 +1,8 @@
 <div id = "impressum">
 
     <h3 class = "m-4">Kontaktseite Braleira</h3>
-    <div class="container linksbuendig">
-        <div class = "container">
+    <div class="container linksbuendig" id="main_c">
+       <!--  <div class = "container">
             <p>Bei Fragen kannst du uns gerne kontaktieren! <br>Fülle bitte einfach untenstehendes Formular aus und wir werden uns schnellstmöglich darum bemühen, dein Anliegen zu bearbeiten und zu lösen.</p>
             <div class="form-group ">
                 <input type="text" class="radius kursiv" id="name" name="name"
@@ -21,8 +21,23 @@
              </div>
              <p></p>
         
-        </div> 
+        </div>  -->
    
     </div>
+
+    <script>
+        /*     var elementCount = $( "*" ).css( "border", "3px solid red" ).length;*/
+             var main_c = $("#main_c");
+             var c_formular = document.createElement("div");
+                 c_formular.className = ("container");
+                 main_c.appendChild("c_formular");
+             var para = document.createElement("p");
+                 para.innerHTML = "Bei Fragen kannst du uns gerne kontaktieren! <br>Fülle bitte einfach untenstehendes Formular aus und wir werden uns schnellstmöglich darum bemühen, dein Anliegen zu bearbeiten und zu lösen.</p>";
+                 c_formular.appendChild("para");
+        
+        </script>
 </div>
+
+
+
 <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
