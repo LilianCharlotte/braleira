@@ -88,6 +88,16 @@ module.exports = {
             type: 'number',
         },
 
+        diesesmuster1: {
+            description: 'diesesmuster1',
+            type: 'number',
+        },
+
+        diesesmuster2: {
+            description: 'diesesmuster2',
+            type: 'number',
+        }
+
         // tragekomfortbra: {
         //     description: 'Tragekomfort',
         //     type: 'string',
@@ -170,6 +180,23 @@ module.exports = {
             }
         }
         await User.replaceCollection(userId, 'komfort').members(komfortOptionen);
+
+        const musterOptionen = [];
+        for (i = 1; i <= 3; i++) {
+            if (inputs["diesesmuster" + i]) {
+                musterOptionen.push(i);
+            }
+        }
+        await User.replaceCollection(userId, 'bhmuster').members(musterOptionen);
+
+        const stoffOptionen = [];
+        for (i = 1; i <= 3; i++) {
+            if (inputs["dieserstoff" + i]) {
+                stoffOptionen.push(i);
+            }
+        }
+        await User.replaceCollection(userId, 'bhstoff').members(stoffOptionen);
+
  		
         sails.log.debug("New Groessenprofil....")
         sails.log.debug(messdaten)

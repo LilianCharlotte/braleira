@@ -26,6 +26,12 @@ module.exports = {
       sails.log.debug("Query result for all options")
       sails.log.debug(optionen)
 
+      sails.log("Controller called for getting options in Muster:")
+      let musterplural = await Muster.find();
+      
+      sails.log.debug("Query result for all musterarten")
+      sails.log.debug(musterplural)
+
       sails.log("Controller called for getting options in Stoff:")
       let stoffe = await Stoff.find();
       
@@ -34,7 +40,7 @@ module.exports = {
 
      
 
-      return ( { optionen: optionen, stoffe: stoffe} );
+      return ( { optionen: optionen, musterplural: musterplural, stoffe: stoffe} );
 
 
 
