@@ -1,4 +1,79 @@
-<div id="bra">
-<h3>Der BH wurde erfolgreich in der Datenbank hinterlegt</h3>
+<!-- <div id="bra">
+    <div>
+         <h3>Der BH wurde erfolgreich in der Datenbank hinterlegt</h3>
 </div>
-<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
+<%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %> -->
+
+<div class="container">
+    <div class="m-4">
+        <h3 class="text-4xl font-sans text-gray-500 font-light ml-2 mt-4">Der folgende BH wurde in die Datenbank aufgenommen</h3>
+
+        <div class="">
+            <%= message ? message : "" %>
+        </div>
+
+        <div class = "container">
+            <div class = "row">
+                <div class="menu-title col-sm">
+                    Model:
+                </div> 
+                <div class = "col-sm">
+                    <%= bra.model %>
+                </div>
+            </div>
+            <div class = "row">
+                <div class="menu-title col-sm">
+                    Marke:
+                </div> 
+                <div class = "col-sm">
+                    <%= bra.marke %>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class="menu-title col-sm">
+                    Form:
+                </div> 
+                <div class = "col-sm">
+                    <%= bra.form %>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class="menu-title col-sm">
+                    Größe:
+                </div> 
+                <div class = "col-sm">
+                    <%= bra.groesse %>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class="menu-title col-sm">
+                    Stoff:
+                </div> 
+                <div class = "col-sm">
+                    <%= bra.stoff %>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class="menu-title col-sm">
+                    Farbe:
+                </div> 
+                <div class = "col-sm">
+                    <%= bra.farbe %>
+                </div>
+            </div>
+
+            <div class = "row">
+                <div class="menu-title col-sm">
+                    Muster:
+                </div> 
+                <div class = "col-sm">
+                    <%= bra.muster %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
