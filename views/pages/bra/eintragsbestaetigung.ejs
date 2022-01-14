@@ -11,69 +11,42 @@
         <div class="">
             <%= message ? message : "" %>
         </div>
-
-        <div class = "container">
-            <div class = "row">
-                <div class="menu-title col-sm">
-                    Model:
-                </div> 
-                <div class = "col-sm">
-                    <%= bra.model %>
-                </div>
-            </div>
-            <div class = "row">
-                <div class="menu-title col-sm">
-                    Marke:
-                </div> 
-                <div class = "col-sm">
-                    <%= bra.marke %>
-                </div>
-            </div>
-
-            <div class = "row">
-                <div class="menu-title col-sm">
-                    Form:
-                </div> 
-                <div class = "col-sm">
-                    <%= bra.form %>
-                </div>
-            </div>
-
-            <div class = "row">
-                <div class="menu-title col-sm">
-                    Größe:
-                </div> 
-                <div class = "col-sm">
-                    <%= bra.groesse %>
-                </div>
-            </div>
-
-            <div class = "row">
-                <div class="menu-title col-sm">
-                    Stoff:
-                </div> 
-                <div class = "col-sm">                   
-                    <%= bra.stoff %>
-                </div>
-            </div>
-
-            <div class = "row">
-                <div class="menu-title col-sm">
-                    Farbe:
-                </div> 
-                <div class = "col-sm">
-                    <%= bra.farbe %>
-                </div>
-            </div>
-
-            <div class = "row">
-                <div class="menu-title col-sm">
-                    Muster:
-                </div> 
-                <div class = "col-sm">
-                    <%= bra.muster %>
-                </div>
-            </div>
+        <p></p>
+        <div class = "container card_bh" style = "width:50%; margin:auto">
+            <table class = "table-striped table-bordered" style = "margin:auto;">
+                <tr>
+                  <th>Attribut</th>
+                  <th>Datum</th>
+                </tr>
+                <tr>
+                  <td>Modell</td>
+                  <td> <%= bra.model %></td>
+                </tr>
+                <tr>
+                    <td> Marke</td>
+                    <td> <%= bra.marke %></td>
+                </tr>                 
+                <tr>
+                    <td>Form</td>
+                    <td><%= bra.form %></td>
+                </tr>
+                <tr>
+                    <td>Größe</td>
+                    <td> <%= bra.groesse %></td>
+                </tr>
+                <tr>
+                    <td>Stoff</td>
+                    <td> <%= bra.stoff %></td>
+                </tr>
+                <tr>
+                    <td>Farbe</td>
+                    <td> <%= bra.farbe %></td>
+                </tr>
+                <tr>
+                    <td>Muster</td>
+                    <td> <%= bra.muster %></td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>
