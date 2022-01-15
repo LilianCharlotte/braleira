@@ -12,10 +12,10 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    bra:{
-      collection: 'bra',
-      via: 'owner'
-    },
+    // bra:{
+    //   collection: 'bra',
+    //   via: 'owner'
+    // },
     quiz:{
       collection: 'quiz',
       via:'owner'
