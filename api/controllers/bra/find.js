@@ -21,6 +21,9 @@ module.exports = {
     },
   
     fn: async function (inputs) {
+      if (!inputs.farbe && !inputs.stoff) {
+          return Bra.find();
+      }
       return Bra.find({ farbe: inputs.farbe, stoff: inputs.stoff });
     }
   };

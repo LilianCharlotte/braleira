@@ -28,6 +28,7 @@ module.exports.routes = {
 
  'GET /bra/new':                       { view: 'pages/bra/new'},
  'POST /bra':                          { action: 'bra/create'},
+ 'GET /bra/search':                    { view: 'pages/bra/search'},
 
   'GET /quiz':                          { action: 'size/show' },
   'POST /size':                         { action: 'size/create' },
