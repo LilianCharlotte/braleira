@@ -1,4 +1,4 @@
-<div id = "impressum">
+<div id = "kontaktseite">
     <h3 class = "m-4">Kontaktseite Braleira</h3>
     <div class="container linksbuendig" id="main_c"></div>
 </div>
@@ -6,6 +6,7 @@
 <script>
    window.onload = () => createPage(); 
 
+   
    function createPage(){
 
         var main_c = $("#main_c");
@@ -75,16 +76,24 @@
                         btn_send.style = "border-radius: 5px; margin-bottom : .5em;";
                         btn_send.type = "button";
                         btn_send.innerHTML = "Nachricht senden";
-
+                        btn_send.onclick = sendFunktion;
+                    
                         var umbruch2 = document.createElement("br");
                             eingabe_text.appendChild(umbruch2);
 
                         eingabe_text.appendChild(btn_send);
 
                 c_formular.appendChild(eingabe_text);
-      
+                       
     } 
+
+    function sendFunktion(){
+                                document.getElementById("kontaktseite").innerHTML = "Vielen Dank, deine Anfrage wird von uns bearbeitet. <br>Bei Bedarf melden wir uns bei dir!";
+                            }
+
+
     </script>
+
 
 <!-- Vorzeighalber mit jquery $ zwei Beispeile gemacht, aber persönlich einfacher mit den DOM Elementen  -->
 
