@@ -1,9 +1,16 @@
 <div id="app">
-    <h3>Übersicht der BH Einträge in der Datenbank</h3>
-    <p>
-        <input v-on:keyup.enter="search" type="text" v-model="searchTerm"/>
-        <button v-on:click="search">Suchen</button>
-    </p>
+    <div class="container pt-5 pb-5 mt-2">
+        <div class="pb-2">
+            <h3>Übersicht der BH Einträge in der Datenbank</h3>
+        </div>
+        <div class="input-group mb-3">
+            <input v-on:keyup="search" type="text" v-model="searchTerm" class="form-control"
+                placeholder="Nach Farbe suchen">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Suchen</button>
+            </div>
+        </div>
+    </div>
 
     <!-- array stuff
     https://vuejs.org/v2/guide/list.html -->
@@ -34,7 +41,7 @@
                 <td>{{ item.shoppingLink }}</td>
             </tr>
         </tbody>
-    </ul>
+        </ul>
 </div>
 
 <script>
@@ -45,7 +52,7 @@
             result: []
         },
         methods: {
-            search: function() {
+            search: function () {
                 fetch('/api/v1/bra/find?farbe=' + encodeURIComponent(this.searchTerm))
                     .then(response => response.json())
                     .then(data => (this.result = data))

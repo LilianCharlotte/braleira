@@ -24,7 +24,7 @@ module.exports = {
       if (!inputs.farbe && !inputs.stoff) {
           return Bra.find();
       }
-      return Bra.find({ farbe: inputs.farbe, stoff: inputs.stoff });
+      return Bra.find({ farbe: { contains: inputs.farbe }, stoff: inputs.stoff });
     }
   };
   
