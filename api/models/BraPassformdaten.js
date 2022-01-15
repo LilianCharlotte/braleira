@@ -3,19 +3,19 @@ module.exports = {
         groesse: {type: 'number',  columnType: 'DECIMAL (6,2)', required: true },
         cup: { type: 'string',  columnType: 'varchar(80)', required: true },
         
-        koerbchenZuKlein:{ type: 'boolean', columnType: 'boolean'},
-        koerbchenZuGroß:{ type: 'boolean', columnType: 'boolean'},
-        koerbchenNichtAusgefüllt:{ type: 'boolean', columnType: 'boolean'},
-        koerbchenSehrAusgefüllt:{ type: 'boolean', columnType: 'boolean'},
-        koerbchenZuSchmal:{ type: 'boolean', columnType: 'boolean'},
-        koerbchenPasstSehrGut:{ type: 'boolean', columnType: 'boolean'},
-        koerbchenPassend:{ type: 'boolean', columnType: 'boolean'},
+        k_klein:{ type: 'boolean', columnType: 'boolean'},
+        k_groß:{ type: 'boolean', columnType: 'boolean'},
+        k_n_ausgef:{ type: 'boolean', columnType: 'boolean'},
+        k_z_ausgef:{ type: 'boolean', columnType: 'boolean'},
+        k_zs_ausgef:{ type: 'boolean', columnType: 'boolean'},
+        k_passtSehrGut:{ type: 'boolean', columnType: 'boolean'},
+        k_passt:{ type: 'boolean', columnType: 'boolean'},
 
-        bandSitztZuEng:{ type: 'boolean', columnType: 'boolean'},
-        bandRutschtHinten:{ type: 'boolean', columnType: 'boolean'},
-        bandRutschtVorne:{ type: 'boolean', columnType: 'boolean'},
-        bandTrägerRutschen:{ type: 'boolean', columnType: 'boolean'},
-        bandPassend:{ type: 'boolean', columnType: 'boolean'},
+        b_eng:{ type: 'boolean', columnType: 'boolean'},
+        b_rutscht_h:{ type: 'boolean', columnType: 'boolean'},
+        b_rutscht_v:{ type: 'boolean', columnType: 'boolean'},
+        b_t_rutscht:{ type: 'boolean', columnType: 'boolean'},
+        b_passend:{ type: 'boolean', columnType: 'boolean'},
 
 
         owner:{

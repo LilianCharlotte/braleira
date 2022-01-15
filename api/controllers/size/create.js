@@ -123,63 +123,63 @@ module.exports = {
 
         k_klein: {
             description: 'körbchen zu klein',
-            type: 'boolean'
+            type: 'string'
         },
 
         k_groß: {
             description: 'körbchen zu groß',
-            type: 'boolean'
+            type: 'string'
         },
 
         k_n_ausgef: {
             description: 'körbchen nicht ausgef',
-            type: 'boolean'
+            type: 'string'
         },
 
         k_z_ausgef: {
             description: 'körbchen zu ausgef',
-            type: 'boolean'
+            type: 'string'
         },
 
         k_zs_ausgef: {
             description: 'körbchen zu seitlich ausgef',
-            type: 'boolean'
+            type: 'string'
         },
         k_passtSehrGut: {
             description: 'körbchen passt sehr gut',
-            type: 'boolean'
+            type: 'string'
         },
 
         k_passt: {
             description: 'körbchen passend',
-            type: 'boolean'
+            type: 'string'
         },
 
         //Unterbrustband
 
         b_eng: {
             description: 'band zu eng',
-            type: 'boolean'
+            type: 'string'
         },
 
         b_rutscht_h: {
             description: 'band bewegt sich und rutscht hinten hoch',
-            type: 'boolean'
+            type: 'string'
         },
 
         b_rutscht_v: {
             description: 'band bewegt sich und rutscht vorne hoch',
-            type: 'boolean'
+            type: 'string'
         },
 
         b_t_rutscht: {
             description: 'träger rutschen',
-            type: 'boolean'
+            type: 'string'
         },
 
         b_passend: {
             description: 'band passend',
-            type: 'boolean'
+            type: 'string'
         }
 
         // persoenlicheAngaben: {
@@ -230,11 +230,20 @@ module.exports = {
 			messdaten = await Messdaten.create({unterbrustbreite:ubb, brustumfang:bu, owner:userId}).fetch();
 		}
 		
+        for (const [key, value] of Object.entries(inputs)) {
+            if (value === 'on') {
+                inputs[key] = true;
+            } else if (value === 'off') {
+                inputs[key] = false;
+            }
+        }
+        sails.log.info('bpdaten: ', inputs)
+
 		const existingBpdaten = await BraPassformdaten.findOne({ owner: userId});
 		if (existingBpdaten) {
-			bpdaten = await BraPassformdaten.update({ owner: userId }).set({cup:cup, groesse:groesse}).fetch();
+			bpdaten = await BraPassformdaten.update({ owner: userId }).set(inputs).fetch();
 		} else {
-			bpdaten = await BraPassformdaten.create({cup:cup, groesse:groesse, owner:userId}).fetch();
+			bpdaten = await BraPassformdaten.create({...inputs, owner:userId}).fetch();
 		}
 
         const komfortOptionen = [];
@@ -260,8 +269,7 @@ module.exports = {
             }
         }
         await User.replaceCollection(userId, 'bhstoff').members(stoffOptionen);
-
- 		
+        
         sails.log.debug("New Groessenprofil....")
         sails.log.debug(messdaten)
         sails.log.debug(bpdaten)
