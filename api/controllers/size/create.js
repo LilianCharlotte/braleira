@@ -33,6 +33,8 @@ module.exports = {
             required: true
         },
 
+        //Optionen Tabelle Tragekomfor
+
         tragekomfortbra1: {
             description: 'tragekomfortbra1',
             type: 'number',
@@ -88,6 +90,8 @@ module.exports = {
             type: 'number',
         },
 
+        //Musteroptionen
+
         diesesmuster1: {
             description: 'diesesmuster1',
             type: 'number',
@@ -97,6 +101,8 @@ module.exports = {
             description: 'diesesmuster2',
             type: 'number',
         },
+
+        //Stoff Optionen
 
         dieserstoff1: {
             description: 'dieserstoff1',
@@ -111,7 +117,47 @@ module.exports = {
         dieserstoff3: {
             description: 'dieserstoff3',
             type: 'number',
-        }
+        },
+
+        // Körbchen
+
+        k_klein: {
+            description: 'körbchen zu klein',
+            type: 'boolean'
+        },
+
+        k_groß: {
+            description: 'körbchen zu groß',
+            type: 'boolean'
+        },
+
+        k_n_ausgef: {
+            description: 'körbchen nicht ausgef',
+            type: 'boolean'
+        },
+
+        k_z_ausgef: {
+            description: 'körbchen zu ausgef',
+            type: 'boolean'
+        },
+
+        k_zs_ausgef: {
+            description: 'körbchen zu seitlich ausgef',
+            type: 'boolean'
+        },
+        k_passtSehrGut: {
+            description: 'körbchen passt sehr gut',
+            type: 'boolean'
+        },
+
+        k_passt: {
+            description: 'körbchen passend',
+            type: 'boolean'
+        },
+
+        //Unterbrustband
+
+
 
         // persoenlicheAngaben: {
         //     description: 'Größe des BHs',
@@ -124,18 +170,6 @@ module.exports = {
         //     type: 'string',
         //     required: true
         // },
-
-        // muster: {
-        //     description: 'Muster des BHs',
-        //     type: 'string',
-        //     required: true
-        // }, 
-
-        // stoff: {
-        //     description: 'Stoff des BHs',
-        //     type: 'string',
-        //     required: true
-        // }
 
 
     },
