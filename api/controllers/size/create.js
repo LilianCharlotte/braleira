@@ -33,7 +33,7 @@ module.exports = {
             required: true
         },
 
-        //Optionen Tabelle Tragekomfor
+        //Optionen Tabelle Tragekomfort
 
         tragekomfortbra1: {
             description: 'tragekomfortbra1',
@@ -157,7 +157,30 @@ module.exports = {
 
         //Unterbrustband
 
+        b_eng: {
+            description: 'band zu eng',
+            type: 'boolean'
+        },
 
+        b_rutscht_h: {
+            description: 'band bewegt sich und rutscht hinten hoch',
+            type: 'boolean'
+        },
+
+        b_rutscht_v: {
+            description: 'band bewegt sich und rutscht vorne hoch',
+            type: 'boolean'
+        },
+
+        b_t_rutscht: {
+            description: 'träger rutschen',
+            type: 'boolean'
+        },
+
+        b_passend: {
+            description: 'band passend',
+            type: 'boolean'
+        }
 
         // persoenlicheAngaben: {
         //     description: 'Größe des BHs',
