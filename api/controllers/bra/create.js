@@ -86,7 +86,7 @@ module.exports = {
 
         success: {
             responseType: 'view',
-            viewTemplatePath: 'pages/bra/empfehlungen',
+            viewTemplatePath: 'pages/bra/eintragsbestaetigung',
             description: 'Es wurde erfolgreich ein neuer Eintrag angelegt. '
         },
 
