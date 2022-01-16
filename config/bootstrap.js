@@ -117,7 +117,8 @@ module.exports.bootstrap = async function() {
     {marke: 'etam paris', model: 'PURE FIT Nicht-vorgeformter-BH', form:'T-Shirt Bh', groesse: '75B', stoff: 'stretchy Stoffe', farbe:'weiß', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/bugel-bhs/nicht-vorgeformter-bh-639989601.html', bildpfad:'/images/bra/PURE FIT Nicht-vorgeformter-BH.jpg' },
     {marke: 'etam paris', model: 'HYMNE BH Nr. 2 – Push-up mit tiefem Dekolleté', form:'Push-Up', groesse: '65C', stoff: 'mit Spitze', farbe:'rot', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/bhs-styles/push-up-bhs/bh-nr.-2-%E2%80%93-push-up-mit-tiefem-dekollete%C2%A0-%C2%A0-652949073.html', bildpfad:'/images/bra/HYMNE BH Nr. 2 – Push-up mit tiefem Dekolleté.jpg' },
     {marke: 'etam paris', model: 'STYLE Push-up-BH ohne Bügel', form:'Push-Up', groesse: '70C', stoff: 'mit Spitze', farbe:'weiß', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/alle-triangle/push-up-bh-ohne-bugel-652801680.html', bildpfad:'/images/bra/STYLE Push-up-BH ohne Bügel.jpeg' },
-    
+    {marke: 'hunkemöller', model: 'Vorgeformter Push-up-Bügel-BH Malika - grün', form:'Push-Up', groesse: '80A', stoff:'mit Spitze', farbe:'grün', muster:'einfarbig/ohne', shoppingLink:'https://www.hunkemoller.de/vorgeformter-push-up-buegel-bh-malika-gruen-191715.html', bildpfad:'/images/bra/Vorgeformter Push-up-Bügel-BH Malika - grün.jpg'},
+    {marke: 'hunkemöller', model: 'Vorgeformter Push-up-Bügel-BH Pia - Schwarz', form:'Push-Up', groesse: '65E', stoff:'mit Spitze', farbe:'schwarz', muster:'gemustert', shoppingLink:'https://www.hunkemoller.de/vorgeformter-push-up-buegel-bh-pia-schwarz-112477.html', bildpfad:'/images/bra/Vorgeformter Push-up-Bügel-BH Pia - Schwarz.jpg'},
   
   ]);
 
