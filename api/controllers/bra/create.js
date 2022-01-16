@@ -64,6 +64,12 @@ module.exports = {
             required: true
         },
 
+        bildpfad: {
+            description: 'bildpfad BH',
+            type: 'string',
+            required: true
+        },
+
        /*Beziehungstypen  */ 
        /*  owner: {
             description: 'Form des BHs',

@@ -9,6 +9,7 @@ module.exports = {
         muster: { type: 'string',  columnType: 'varchar(80)'},
         // sternebewertung: { type: 'string',  columnType: 'varchar(80)'},
         shoppingLink: { type: 'string',  columnType: 'varchar(300)'},
+        bildpfad: { type: 'string',  columnType: 'varchar(300)'}
         
         // owner: {
         //   collection: 'user',

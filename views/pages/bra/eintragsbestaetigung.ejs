@@ -10,45 +10,58 @@
             <%= message ? message : "" %>
         </div>
 
-        <h3 class="text-4xl font-sans text-gray-500 font-light ml-2 mt-4">Der folgende BH wurde in die Datenbank aufgenommen</h3>
+        <h3 class="text-4xl font-sans text-gray-500 font-light ml-2 mt-4">Der folgende BH wurde in die Datenbank
+            aufgenommen</h3>
 
-        
+
         <p></p>
-        <div class = "container card_bh" style = "width:50%; margin:auto">
-            <table class = "table-striped table-bordered" style = "margin:auto;">
-                <tr>
-                  <th>Attribut</th>
-                  <th>Datum</th>
-                </tr>
-                <tr>
-                  <td>Model</td>
-                  <td> <%= bra.model %></td>
-                </tr>
-                <tr>
-                    <td> Marke</td>
-                    <td> <%= bra.marke %></td>
-                </tr>                 
-                <tr>
-                    <td>Form</td>
-                    <td><%= bra.form %></td>
-                </tr>
-                <tr>
-                    <td>Größe</td>
-                    <td> <%= bra.groesse %></td>
-                </tr>
-                <tr>
-                    <td>Stoff</td>
-                    <td> <%= bra.stoff %></td>
-                </tr>
-                <tr>
-                    <td>Farbe</td>
-                    <td> <%= bra.farbe %></td>
-                </tr>
-                <tr>
-                    <td>Muster</td>
-                    <td> <%= bra.muster %></td>
-                </tr>
-            </table>
-        </div>
+        <table class="table table-striped table-bordered" style="margin:auto;">
+            <tr>
+                <th>Attribut</th>
+                <th>Datum</th>
+            </tr>
+            <tr>
+                <td>Model</td>
+                <td>
+                    <%= bra.model %>
+                </td>
+            </tr>
+            <tr>
+                <td> Marke</td>
+                <td>
+                    <%= bra.marke %>
+                </td>
+            </tr>
+            <tr>
+                <td>Form</td>
+                <td>
+                    <%= bra.form %>
+                </td>
+            </tr>
+            <tr>
+                <td>Größe</td>
+                <td>
+                    <%= bra.groesse %>
+                </td>
+            </tr>
+            <tr>
+                <td>Stoff</td>
+                <td>
+                    <%= bra.stoff %>
+                </td>
+            </tr>
+            <tr>
+                <td>Farbe</td>
+                <td>
+                    <%= bra.farbe %>
+                </td>
+            </tr>
+            <tr>
+                <td>Muster</td>
+                <td>
+                    <%= bra.muster %>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
