@@ -4,8 +4,20 @@
             <h3>Übersicht der BH Einträge in der Datenbank</h3>
         </div>
         <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                    aria-expanded="false">Filtern nach</button>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Farben</a>
+                    <a class="dropdown-item" href="#">Mustern</a>
+                    <a class="dropdown-item" href="#">Stoffen</a>
+                    <a class="dropdown-item" href="#">Marken</a>
+                    <a class="dropdown-item" href="#">Form</a>
+                    <a class="dropdown-item" href="#">Größe</a>
+                </div>
+            </div>
             <input v-on:keyup="search" type="text" v-model="searchTerm" class="form-control"
-                placeholder="Nach Farbe suchen">
+                placeholder="Hier Suchbegriff eingeben">
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button">Suchen</button>
             </div>
