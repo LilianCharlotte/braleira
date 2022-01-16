@@ -33,6 +33,8 @@ module.exports = {
             required: true
         },
 
+        //Optionen Tabelle Tragekomfort
+
         tragekomfortbra1: {
             description: 'tragekomfortbra1',
             type: 'number',
@@ -88,6 +90,8 @@ module.exports = {
             type: 'number',
         },
 
+        //Musteroptionen
+
         diesesmuster1: {
             description: 'diesesmuster1',
             type: 'number',
@@ -97,6 +101,8 @@ module.exports = {
             description: 'diesesmuster2',
             type: 'number',
         },
+
+        //Stoff Optionen
 
         dieserstoff1: {
             description: 'dieserstoff1',
@@ -111,6 +117,69 @@ module.exports = {
         dieserstoff3: {
             description: 'dieserstoff3',
             type: 'number',
+        },
+
+        // Körbchen
+
+        k_klein: {
+            description: 'körbchen zu klein',
+            type: 'string'
+        },
+
+        k_groß: {
+            description: 'körbchen zu groß',
+            type: 'string'
+        },
+
+        k_n_ausgef: {
+            description: 'körbchen nicht ausgef',
+            type: 'string'
+        },
+
+        k_z_ausgef: {
+            description: 'körbchen zu ausgef',
+            type: 'string'
+        },
+
+        k_zs_ausgef: {
+            description: 'körbchen zu seitlich ausgef',
+            type: 'string'
+        },
+        k_passtSehrGut: {
+            description: 'körbchen passt sehr gut',
+            type: 'string'
+        },
+
+        k_passt: {
+            description: 'körbchen passend',
+            type: 'string'
+        },
+
+        //Unterbrustband
+
+        b_eng: {
+            description: 'band zu eng',
+            type: 'string'
+        },
+
+        b_rutscht_h: {
+            description: 'band bewegt sich und rutscht hinten hoch',
+            type: 'string'
+        },
+
+        b_rutscht_v: {
+            description: 'band bewegt sich und rutscht vorne hoch',
+            type: 'string'
+        },
+
+        b_t_rutscht: {
+            description: 'träger rutschen',
+            type: 'string'
+        },
+
+        b_passend: {
+            description: 'band passend',
+            type: 'string'
         }
 
         // persoenlicheAngaben: {
@@ -124,18 +193,6 @@ module.exports = {
         //     type: 'string',
         //     required: true
         // },
-
-        // muster: {
-        //     description: 'Muster des BHs',
-        //     type: 'string',
-        //     required: true
-        // }, 
-
-        // stoff: {
-        //     description: 'Stoff des BHs',
-        //     type: 'string',
-        //     required: true
-        // }
 
 
     },
@@ -173,11 +230,20 @@ module.exports = {
 			messdaten = await Messdaten.create({unterbrustbreite:ubb, brustumfang:bu, owner:userId}).fetch();
 		}
 		
+        for (const [key, value] of Object.entries(inputs)) {
+            if (value === 'on') {
+                inputs[key] = true;
+            } else if (value === 'off') {
+                inputs[key] = false;
+            }
+        }
+        sails.log.info('bpdaten: ', inputs)
+
 		const existingBpdaten = await BraPassformdaten.findOne({ owner: userId});
 		if (existingBpdaten) {
-			bpdaten = await BraPassformdaten.update({ owner: userId }).set({cup:cup, groesse:groesse}).fetch();
+			bpdaten = await BraPassformdaten.update({ owner: userId }).set(inputs).fetch();
 		} else {
-			bpdaten = await BraPassformdaten.create({cup:cup, groesse:groesse, owner:userId}).fetch();
+			bpdaten = await BraPassformdaten.create({...inputs, owner:userId}).fetch();
 		}
 
         const komfortOptionen = [];
@@ -203,8 +269,7 @@ module.exports = {
             }
         }
         await User.replaceCollection(userId, 'bhstoff').members(stoffOptionen);
-
- 		
+        
         sails.log.debug("New Groessenprofil....")
         sails.log.debug(messdaten)
         sails.log.debug(bpdaten)

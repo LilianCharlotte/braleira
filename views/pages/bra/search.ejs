@@ -1,0 +1,65 @@
+<div id="app">
+    <div class="container pt-5 pb-5 mt-2">
+        <div class="pb-2">
+            <h3>Übersicht der BH Einträge in der Datenbank</h3>
+        </div>
+        <div class="input-group mb-3">
+            <input v-on:keyup="search" type="text" v-model="searchTerm" class="form-control"
+                placeholder="Nach Farbe suchen">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button">Suchen</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- array stuff
+    https://vuejs.org/v2/guide/list.html -->
+
+    <!-- https://www.raymondcamden.com/2018/03/01/an-example-of-ajax-searching-with-vuejs -->
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Marke</th>
+                <th scope="col">Modell</th>
+                <th scope="col">Form</th>
+                <th scope="col">Größe</th>
+                <th scope="col">Stoff</th>
+                <th scope="col">Farbe</th>
+                <th scope="col">Muster</th>
+                <th scope="col">Shopping Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr v-for="item in result" :key="item.id">
+                <td>{{ item.marke }}</td>
+                <td>{{ item.model }}</td>
+                <td>{{ item.form }}</td>
+                <td>{{ item.groesse }}</td>
+                <td>{{ item.stoff }}</td>
+                <td>{{ item.farbe }}</td>
+                <td>{{ item.muster }}</td>
+                <td>{{ item.shoppingLink }}</td>
+            </tr>
+        </tbody>
+        </ul>
+</div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            searchTerm: "",
+            result: []
+        },
+        methods: {
+            search: function () {
+                fetch('/api/v1/bra/find?farbe=' + encodeURIComponent(this.searchTerm))
+                    .then(response => response.json())
+                    .then(data => (this.result = data))
+            }
+        },
+        mounted() {
+            this.search();
+        }
+    })
+</script>

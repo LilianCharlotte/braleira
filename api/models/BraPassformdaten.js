@@ -3,19 +3,19 @@ module.exports = {
         groesse: {type: 'number',  columnType: 'DECIMAL (6,2)', required: true },
         cup: { type: 'string',  columnType: 'varchar(80)', required: true },
         
-        // koerbchenZuKlein:{ type: 'boolean', columnType: 'boolean', required: true },
-        // koerbchenZuGroß:{ type: 'boolean', columnType: 'boolean', required: true },
-        // koerbchenNichtAusgefüllt:{ type: 'boolean', columnType: 'boolean', required: true },
-        // koerbchenSehrAusgefüllt:{ type: 'boolean', columnType: 'boolean', required: true },
-        // koerbchenZuSchmal:{ type: 'boolean', columnType: 'boolean', required: true },
-        // koerbchenPasstSehrGut:{ type: 'boolean', columnType: 'boolean', required: true },
-        // koerbchenPassend:{ type: 'boolean', columnType: 'boolean', required: true },
+        k_klein:{ type: 'boolean', columnType: 'boolean'},
+        k_groß:{ type: 'boolean', columnType: 'boolean'},
+        k_n_ausgef:{ type: 'boolean', columnType: 'boolean'},
+        k_z_ausgef:{ type: 'boolean', columnType: 'boolean'},
+        k_zs_ausgef:{ type: 'boolean', columnType: 'boolean'},
+        k_passtSehrGut:{ type: 'boolean', columnType: 'boolean'},
+        k_passt:{ type: 'boolean', columnType: 'boolean'},
 
-        // bandSitztZuEng:{ type: 'boolean', columnType: 'boolean', required: true },
-        // bandRutschtHinten:{ type: 'boolean', columnType: 'boolean', required: true },
-        // bandRutschtVorne:{ type: 'boolean', columnType: 'boolean', required: true },
-        // bandTrägerRutschen:{ type: 'boolean', columnType: 'boolean', required: true },
-        // bandPassend:{ type: 'boolean', columnType: 'boolean', required: true },
+        b_eng:{ type: 'boolean', columnType: 'boolean'},
+        b_rutscht_h:{ type: 'boolean', columnType: 'boolean'},
+        b_rutscht_v:{ type: 'boolean', columnType: 'boolean'},
+        b_t_rutscht:{ type: 'boolean', columnType: 'boolean'},
+        b_passend:{ type: 'boolean', columnType: 'boolean'},
 
 
         owner:{

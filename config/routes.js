@@ -28,6 +28,7 @@ module.exports.routes = {
 
  'GET /bra/new':                       { view: 'pages/bra/new'},
  'POST /bra':                          { action: 'bra/create'},
+ 'GET /bra/search':                    { view: 'pages/bra/search'},
 
   'GET /quiz':                          { action: 'size/show' },
   'POST /size':                         { action: 'size/create' },
@@ -74,6 +75,7 @@ module.exports.routes = {
   // Note that, in this app, these API endpoints may be accessed using the `Cloud.*()` methods
   // from the Parasails library, or by using those method names as the `action` in <ajax-form>.
   '/api/v1/account/logout':                           { action: 'account/logout' },
+  'GET   /api/v1/bra/find':                           { action: 'bra/find' },
   'PUT   /api/v1/account/update-password':            { action: 'account/update-password' },
   'PUT   /api/v1/account/update-profile':             { action: 'account/update-profile' },
   'PUT   /api/v1/account/update-billing-card':        { action: 'account/update-billing-card' },

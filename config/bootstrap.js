@@ -8,14 +8,13 @@
  * For more information on seeding your app with fake data, check out:
  * https://sailsjs.com/config/bootstrap
  */
-
 module.exports.bootstrap = async function() {
 
   // Import dependencies
   var path = require('path');
 
   // This bootstrap version indicates what version of fake data we're dealing with here.
-  var HARD_CODED_DATA_VERSION = 7;
+  var HARD_CODED_DATA_VERSION = 11;
 
   // This path indicates where to store/look for the JSON file that tracks the "last run bootstrap info"
   // locally on this development computer (if we happen to be on a development computer).
@@ -60,8 +59,8 @@ module.exports.bootstrap = async function() {
 
   // By convention, this is a good place to set up fake data during development.
   await User.createEach([
-    { emailAddress: 'admin@example.com', fullName: 'Ryan Dahl', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('muckefuck') },
-    { emailAddress: 'lisa@lindgren.com', fullName: 'Lisa Lindgren', isSuperAdmin: true, password: await sails.helpers.passwords.hashPassword('muckefuck')}
+    { emailAddress: 'admin@example.com', fullName: 'Ryan Dahl', isSuperAdmin: true, isAdmin: true, password: await sails.helpers.passwords.hashPassword('muckefuck') },
+    { emailAddress: 'lisa@lindgren.com', fullName: 'Lisa Lindgren', isSuperAdmin: true, isAdmin: true, password: await sails.helpers.passwords.hashPassword('muckefuck')}
   ]);
 
   await BraTragekomfort.createEach([
@@ -80,15 +79,15 @@ module.exports.bootstrap = async function() {
   ]);
 
   await Farbe.createEach([
-    { name: 'rosatöne', id: 1},
-    { name: 'rottöne', id: 2},
+    { name: 'rosa', id: 1},
+    { name: 'rot', id: 2},
     { name: 'schwarz', id: 3},
     { name: 'weiß', id: 4},
-    { name: 'neutrale Töne (grau/dunkelblau)', id: 5},
+    { name: 'grau und dunkelblau', id: 5},
     { name: 'blau', id: 6},
-    { name: 'grüntöne', id: 7},
-    { name: 'brauntöne', id: 8},
-    { name: 'lilatöne', id: 9},
+    { name: 'grün', id: 7},
+    { name: 'braun', id: 8},
+    { name: 'lila', id: 9},
   ]);
 
   await Muster.createEach([
@@ -111,6 +110,15 @@ module.exports.bootstrap = async function() {
     { name: 'Sport-BH', id: 6},
     { name: 'Plunge Neckline', id: 7},
   ]);
+
+  await Bra.createEach([
+    {marke: 'etam paris', model: 'SUBLIME BH Nr. 4 – leichter Push-up', form:'Push-Up', groesse: '75F', stoff:'mit Spitze', farbe:'grau und dunkelblau', muster: 'einfarbig/ohne', shoppingLink:'https://www.etam.de/de_DE/bhs/nach-form/klassiker/bh-nr.-4-%E2%80%93-leichter-push-up-652482429.html'},
+    {marke: 'etam paris', model: 'JOJOBA BH Nr. 4 – leichter Push-up', form:'Push-Up', groesse: '70E', stoff: 'stretchy Stoffe', farbe:'schwarz', muster:'gemustert', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/klassiker/bh-nr.-4-%E2%80%93-leichter-push-up-652792605.html' },
+    {marke: 'etam paris', model: 'PURE FIT Nicht-vorgeformter-BH', form:'T-Shirt Bh', groesse: '75B', stoff: 'stretchy Stoffe', farbe:'weiß', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/bugel-bhs/nicht-vorgeformter-bh-639989601.html' },
+    {marke: 'etam paris', model: 'HYMNE BH Nr. 2 – Push-up mit tiefem Dekolleté', form:'Push-Up', groesse: '65C', stoff: 'mit Spitze', farbe:'rot', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/bhs-styles/push-up-bhs/bh-nr.-2-%E2%80%93-push-up-mit-tiefem-dekollete%C2%A0-%C2%A0-652949073.html' },
+  
+  ]);
+
   
 
   // Save new bootstrap version

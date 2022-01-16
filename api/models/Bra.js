@@ -7,12 +7,13 @@ module.exports = {
         stoff: { type: 'string',  columnType: 'varchar(80)'},
         farbe: { type: 'string',  columnType: 'varchar(80)'},
         muster: { type: 'string',  columnType: 'varchar(80)'},
-        sternebewertung: { type: 'string',  columnType: 'varchar(80)'},
+        // sternebewertung: { type: 'string',  columnType: 'varchar(80)'},
         shoppingLink: { type: 'string',  columnType: 'varchar(300)'},
-        owner: {
-          collection: 'user',
-          via:'bra'
-        }
+        
+        // owner: {
+        //   collection: 'user',
+        //   via:'bra'
+        // }
   } 
 
 }

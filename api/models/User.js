@@ -12,10 +12,10 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    bra:{
-      collection: 'bra',
-      via: 'owner'
-    },
+    // bra:{
+    //   collection: 'bra',
+    //   via: 'owner'
+    // },
     quiz:{
       collection: 'quiz',
       via:'owner'
@@ -88,6 +88,11 @@ email status until they click the link in the confirmation email.`
       description: 'Full representation of the user\'s name.',
       maxLength: 120,
       example: 'Mary Sue van der McHenst'
+    },
+
+    isAdmin: {
+      type: 'boolean',
+      description: 'Whether this user is an admin with extra permissions, etc.'
     },
 
     isSuperAdmin: {

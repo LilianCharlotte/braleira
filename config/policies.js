@@ -8,6 +8,7 @@
  * https://sailsjs.com/docs/concepts/policies
  */
 
+
 module.exports.policies = {
 
   '*': 'is-logged-in',
@@ -21,5 +22,12 @@ module.exports.policies = {
   'legal/view-terms': true,
   'legal/view-privacy': true,
   'deliver-contact-form-message': true,
+
+  // Is Admin:
+  'bra/create': 'is-admin',
+  'bra/find': 'is-admin',
+  'bra/edit': 'is-admin',
+  'bra/update': 'is-admin'
+
 
 };

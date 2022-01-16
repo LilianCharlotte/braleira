@@ -52,11 +52,11 @@ module.exports = {
             required: true
         },
 
-        sternebewertung: {
-            description: 'Bewertung des BHs',
-            type: 'string',
-            required: true
-        },
+        // sternebewertung: {
+        //     description: 'Bewertung des BHs',
+        //     type: 'string',
+        //     required: true
+        // },
         
         shoppingLink: {
             description: 'Link zum shoppen des BHs',
