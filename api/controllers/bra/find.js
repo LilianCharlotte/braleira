@@ -8,12 +8,14 @@ module.exports = {
   
   
     inputs: {
-      farbe : {
-        type: 'string'
+      wert : {
+        type: 'string',
       },
-      stoff : {
-        type: 'string'
-      },
+      filterNach: {
+        type: 'string',
+        required: true,
+      }
+
     },
 
     exits: {
@@ -21,10 +23,13 @@ module.exports = {
     },
   
     fn: async function (inputs) {
-      if (!inputs.farbe && !inputs.stoff) {
+      if (!inputs.wert) {
           return Bra.find();
       }
-      return Bra.find({ farbe: { contains: inputs.farbe }, stoff: inputs.stoff });
+
+      const suche = {};
+      suche[inputs.filterNach] = { contains: inputs.wert };
+      return Bra.find(suche);
     }
   };
   

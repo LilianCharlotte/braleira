@@ -5,16 +5,16 @@
         </div>
         <div class="input-group mb-3">
             <div class="input-group-prepend">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
-                    aria-expanded="false">Filtern nach</button>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="#">Farben</a>
-                    <a class="dropdown-item" href="#">Mustern</a>
-                    <a class="dropdown-item" href="#">Stoffen</a>
-                    <a class="dropdown-item" href="#">Marken</a>
-                    <a class="dropdown-item" href="#">Form</a>
-                    <a class="dropdown-item" href="#">Größe</a>
-                </div>
+                <select v-on:change="search" v-model="filterNach" id="filter-nach" name="filter-nach"
+                    class="custom-select">
+                    <option value="farbe">Farbe</option>
+                    <option value="muster">Muster</option>
+                    <option value="stoff">Stoff</option>
+                    <option value="marke">Marke</option>
+                    <option value="model">Modell</option>
+                    <option value="groesse">Größe</option>
+                    <option value="form">Form</option>
+                </select>
             </div>
             <input v-on:keyup="search" type="text" v-model="searchTerm" class="form-control"
                 placeholder="Hier Suchbegriff eingeben">
@@ -28,9 +28,10 @@
     https://vuejs.org/v2/guide/list.html -->
 
     <!-- https://www.raymondcamden.com/2018/03/01/an-example-of-ajax-searching-with-vuejs -->
-    <table class="table">
+    <table class="table table-responsive">
         <thead>
             <tr>
+                <!-- <th scope="col">Bild</th> -->
                 <th scope="col">Marke</th>
                 <th scope="col">Modell</th>
                 <th scope="col">Form</th>
@@ -39,10 +40,12 @@
                 <th scope="col">Farbe</th>
                 <th scope="col">Muster</th>
                 <th scope="col">Shopping Link</th>
+                <th scope="col">Bildpfad</th>
             </tr>
         </thead>
         <tbody>
             <tr v-for="item in result" :key="item.id">
+                <!-- <td> <img v-bind:src="encodeURI(item.bildpfad)" style="height: 5%;"/></td> -->
                 <td>{{ item.marke }}</td>
                 <td>{{ item.model }}</td>
                 <td>{{ item.form }}</td>
@@ -51,6 +54,7 @@
                 <td>{{ item.farbe }}</td>
                 <td>{{ item.muster }}</td>
                 <td>{{ item.shoppingLink }}</td>
+                <td>{{ item.bildpfad }}</td>
             </tr>
         </tbody>
         </ul>
@@ -60,12 +64,13 @@
     var app = new Vue({
         el: '#app',
         data: {
+            result: [],
+            filterNach: 'farbe',
             searchTerm: "",
-            result: []
         },
         methods: {
             search: function () {
-                fetch('/api/v1/bra/find?farbe=' + encodeURIComponent(this.searchTerm))
+                fetch('/api/v1/bra/find?filterNach=' + encodeURIComponent(this.filterNach) + '&wert=' + encodeURIComponent(this.searchTerm))
                     .then(response => response.json())
                     .then(data => (this.result = data))
             }
