@@ -62,16 +62,17 @@
             </p>
             <div class="row justify-content-center">
               <div class="form-group">
-                <input type="number" class="radius" id="unterbrustbreite" name="unterbrustbreite"
+                <input v-model="unterbrustbreite" type="number" class="radius" id="unterbrustbreite" name="unterbrustbreite"
                   placeholder="Unterbrustbreite in cm" autocomplete="name" focus-first>
               </div>
               <div class="form-group" style="margin-left: 1%;">
-                <input class="radius" id="b_umfang" name="brustumfang" type="number" placeholder="Brustumfang in cm"
+                <input v-model="brustumfang" class="radius" id="b_umfang" name="brustumfang" type="number" placeholder="Brustumfang in cm"
                   autocomplete="name" focus-first>
               </div>
             </div>
           </div>
-          <button class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 2</button>
+          <button :disabled="!brustumfang || !unterbrustbreite" class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 2</button>
+          <p v-if="!brustumfang || !unterbrustbreite" class="text-danger small">Unterbrustbreite und/oder Brustumfang fehlt (Schritt 1)</p>
         </div>
         <hr />
         <div v-show="step === 2" class="m-4">
@@ -400,7 +401,8 @@
               </div>
 
               <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 3</button>
-              <button class="btn btn_color m-2" type="submit">Quiz beenden</button>
+              <button :disabled="!brustumfang || !unterbrustbreite" class="btn btn_color m-2" type="submit">Quiz beenden</button>
+              <p v-if="!brustumfang || !unterbrustbreite" class="text-danger small">Unterbrustbreite und/oder Brustumfang fehlt (Schritt 1)</p>
             </div>
           </div>
         </div>
@@ -411,7 +413,9 @@
     var app = new Vue({
       el: '#app',
       data: {
-        step: 1
+        step: 1,
+        brustumfang: '',
+        unterbrustbreite: '',
       },
       methods: {
         inc: function () {
