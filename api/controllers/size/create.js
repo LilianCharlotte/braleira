@@ -180,7 +180,7 @@ module.exports = {
         b_passend: {
             description: 'band passend',
             type: 'string'
-        }
+        },
 
         // persoenlicheAngaben: {
         //     description: 'Größe des BHs',
@@ -188,11 +188,35 @@ module.exports = {
         //     required: true
         // },
 
-        // farbe: {
-        //     description: 'Farbe des BHs',
-        //     type: 'string',
-        //     required: true
-        // },
+        // optionen farben
+        rosa: {
+            type: 'string'
+        },
+        rot: {
+            type: 'string'
+        },
+        schwarz: {
+            type: 'string'
+        },
+        weiß: {
+            type: 'string'
+        },
+        grau: {
+            type: 'string'
+        },
+        blau: {
+            type: 'string'
+        },
+        grün: {
+            type: 'string'
+        },
+        braun: {
+            type: 'string'
+        },
+        lila: {
+            type: 'string'
+        },
+
 
 
     },
@@ -222,6 +246,15 @@ module.exports = {
 
         let messdaten; 
 		let bpdaten;
+
+        const lieblingsFarben = [];
+        for (const farbe of ["rosa", "rot", "schwarz", "weiß", "grau", "blau", "grün", "braun", "lila"]) {
+            if (inputs[farbe]) {
+                lieblingsFarben.push(inputs[farbe]);
+            }
+        }
+        sails.log.debug('Lieblingsfarben: ', lieblingsFarben);
+        await User.replaceCollection(userId, 'bhfarbe').members(lieblingsFarben);
 		
 		const existingMessdaten = await Messdaten.findOne({ owner: userId});
 		if (existingMessdaten) {
@@ -237,7 +270,6 @@ module.exports = {
                 inputs[key] = false;
             }
         }
-        sails.log.info('bpdaten: ', inputs)
 
 		const existingBpdaten = await BraPassformdaten.findOne({ owner: userId});
 		if (existingBpdaten) {

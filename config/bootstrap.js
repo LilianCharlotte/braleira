@@ -14,7 +14,7 @@ module.exports.bootstrap = async function() {
   var path = require('path');
 
   // This bootstrap version indicates what version of fake data we're dealing with here.
-  var HARD_CODED_DATA_VERSION = 15;
+  var HARD_CODED_DATA_VERSION = 16;
 
   // This path indicates where to store/look for the JSON file that tracks the "last run bootstrap info"
   // locally on this development computer (if we happen to be on a development computer).
@@ -83,7 +83,7 @@ module.exports.bootstrap = async function() {
     { name: 'rot', id: 2},
     { name: 'schwarz', id: 3},
     { name: 'weiß', id: 4},
-    { name: 'grau und dunkelblau', id: 5},
+    { name: 'grau', id: 5},
     { name: 'blau', id: 6},
     { name: 'grün', id: 7},
     { name: 'braun', id: 8},
