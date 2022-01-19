@@ -399,6 +399,8 @@ welcome_page_btn:active {
     border: solid var(--clr-secondary) 1px;
     border-radius: 10px;
     box-shadow: 0 0 1em rgba(0, 0, 0, 0.2);
+    max-width: 590px; 
+    display: inline-block;
 }
 
 .product__img {
