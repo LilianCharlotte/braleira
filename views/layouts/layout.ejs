@@ -157,6 +157,123 @@
       <% } %>
 
       <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+      <!--   Modal Aufruf -->
+      <script>
+        window.onload = () => $(window).on('load',function(){
+            //https://stackoverflow.com/a/40449074
+            if (document.cookie.indexOf("cookies_erlaubt=") == -1) {
+              $('#myCookies').modal('show');
+            }
+          });
+        
+          //https://www.w3schools.com/js/js_cookies.asp
+          function cookiesErlauben() {
+              document.cookie = "cookies_erlaubt=ja"
+          }
+        
+        function cookiesKonfigurieren(){
+          $('#myCookies').modal('hide');
+          $('#konfig').modal('show');
+        }
+      </script> 
+
+      <!--  Modal Cookie -->
+      <div class="modal" id ="myCookies" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Cookie Richtlinien</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <img src="images/cookies_1.png" alt="Card image cap">
+              <p>Diese Webseite nutzt Cookies, um sicher zu stellen, dass alle Datenschutzrichtlinien eingehalten werden können und die beste Nutzererfahrung erreicht werden kann </p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn_color" onclick="cookiesErlauben()" data-dismiss="modal">Cookies akzeptieren</button>
+              <button type="button" class="btn btn-secondary" onclick="cookiesKonfigurieren()">Cookies einstellen</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--  Modal Cookie Einstellung--> 
+      <div class="modal" id ="konfig" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Cookie konfigurieren</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>Wir setzen Cookies und sammeln Informationen von Deinem Browser. Dadurch können wir unsere Seiten technisch verbessern sowie Inhalte und Anzeigen personalisieren. </p>
+              <div class = "container">
+                <div class = "row">
+                  <div class = "col-sm">
+                    <p>
+                      Notwendige
+                    </p>
+                  </div>
+                  <div class = "col-sm">
+                    <label class="switch">
+                    <input type="checkbox" checked disabled>
+                    <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class = "row">
+                  <div class = "col-sm">
+                    <p>
+                      Präferenzen
+                    </p>
+                  </div>
+                  <div class = "col-sm">
+                    <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class = "row">
+                  <div class = "col-sm">
+                    <p>
+                      Statistik
+                    </p>
+                  </div>
+                  <div class = "col-sm">
+                    <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+                <div class = "row">
+                  <div class = "col-sm">
+                    <p>
+                      Marketing
+                    </p>
+                  </div>
+                  <div class = "col-sm">
+                    <label class="switch">
+                    <input type="checkbox" checked>
+                    <span class="slider round"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn_color" onclick="cookiesErlauben()" data-dismiss="modal">alle akzeptieren</button>
+              <button type="button" class="btn btn-secondary" onclick="cookiesErlauben()" data-dismiss="modal">Einstellung speichern</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <%- body %>
 
       <% /* %> <!--
