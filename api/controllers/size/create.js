@@ -188,7 +188,7 @@ module.exports = {
         //     required: true
         // },
 
-        // Optionen farben
+        // Optionen Farben
         rosa: {
             type: 'string'
         },
@@ -299,6 +299,7 @@ module.exports = {
 			messdaten = await Messdaten.create({unterbrustbreite:ubb, brustumfang:bu, owner:userId}).fetch();
 		}
 		
+        //https://developer.mozilla.org/de/docs/Web/JavaScript/Reference/Global_Objects/Object/entries
         for (const [key, value] of Object.entries(inputs)) {
             if (value === 'on') {
                 inputs[key] = true;
