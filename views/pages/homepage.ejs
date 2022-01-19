@@ -2,7 +2,17 @@
 
 <!--   Modal Aufruf -->
    <script>
-       window.onload = () => $(window).on('load',function(){$('#myCookies').modal('show');});
+       window.onload = () => $(window).on('load',function(){
+           //https://stackoverflow.com/a/40449074
+           if (document.cookie.indexOf("cookies_erlaubt=") == -1) {
+            $('#myCookies').modal('show');
+           }
+        });
+
+        //https://www.w3schools.com/js/js_cookies.asp
+        function cookiesErlauben() {
+            document.cookie = "cookies_erlaubt=ja"
+        }
 
        function cookiesKonfigurieren(){
         $('#myCookies').modal('hide');
@@ -26,7 +36,7 @@
                 <p>Diese Webseite nutzt Cookies, um sicher zu stellen, dass alle Datenschutzrichtlinien eingehalten werden können und die beste Nutzererfahrung erreicht werden kann </p>
             </div>
             <div class="modal-footer">
-            <button type="button" class="btn btn_color" data-dismiss="modal">Cookies akzeptieren</button>
+            <button type="button" class="btn btn_color" onclick="cookiesErlauben()" data-dismiss="modal">Cookies akzeptieren</button>
             <button type="button" class="btn btn-secondary" onclick=cookiesKonfigurieren()>Cookies einstellen</button>
             </div>
         </div>
@@ -103,8 +113,8 @@
               </div>
           </div>
           <div class="modal-footer">
-          <button type="button" class="btn btn_color" data-dismiss="modal">alle akzeptieren</button>
-          <button type="button" class="btn btn-secondary"  data-dismiss="modal">Einstellung speichern</button>
+          <button type="button" class="btn btn_color" onclick="cookiesErlauben()" data-dismiss="modal">alle akzeptieren</button>
+          <button type="button" class="btn btn-secondary" onclick="cookiesErlauben()" data-dismiss="modal">Einstellung speichern</button>
           </div>
       </div>
    </div>
