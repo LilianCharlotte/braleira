@@ -14,7 +14,7 @@ module.exports.bootstrap = async function() {
   var path = require('path');
 
   // This bootstrap version indicates what version of fake data we're dealing with here.
-  var HARD_CODED_DATA_VERSION = 17;
+  var HARD_CODED_DATA_VERSION = 18;
 
   // This path indicates where to store/look for the JSON file that tracks the "last run bootstrap info"
   // locally on this development computer (if we happen to be on a development computer).
@@ -106,9 +106,10 @@ module.exports.bootstrap = async function() {
     { name: 'Balconette', id: 2},
     { name: 'T-Shirt BH', id: 3},
     { name: 'Push-Up BH', id: 4},
-    { name: 'Trägerloser BH', id: 5},
-    { name: 'Sport-BH', id: 6},
-    { name: 'Plunge Neckline', id: 7},
+    { name: 'Bustier', id: 5},
+    { name: 'Trägerloser BH', id: 6},
+    { name: 'Sport-BH', id: 7},
+    { name: 'Plunge', id: 8},
   ]);
 
   await Bra.createEach([

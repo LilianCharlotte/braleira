@@ -188,7 +188,7 @@ module.exports = {
         //     required: true
         // },
 
-        // optionen farben
+        // Optionen farben
         rosa: {
             type: 'string'
         },
@@ -218,6 +218,31 @@ module.exports = {
         },
 
 
+        // Optionen BhArten
+        bralette: {
+            type: 'string'
+        },
+        balconette: {
+            type: 'string'
+        },
+        tshirtbh: {
+            type: 'string'
+        },
+        pushupbh: {
+            type: 'string'
+        },
+        bustier: {
+            type: 'string'
+        },
+        traegerlos: {
+            type: 'string'
+        },
+        sportbh: {
+            type: 'string'
+        },
+        plunge: {
+            type: 'string'
+        }
 
     },
 
@@ -255,6 +280,18 @@ module.exports = {
         }
         sails.log.debug('Lieblingsfarben: ', lieblingsFarben);
         await User.replaceCollection(userId, 'bhfarbe').members(lieblingsFarben);
+
+        const lieblingsBhArten = [];
+        for (const art of ["bralette", "balconette", "tshirtbh", "pushupbh", "bustier", "traegerlos", "sportbh", "plunge"]) {
+            if (inputs[art]) {
+                lieblingsBhArten.push(inputs[art]);
+            }
+        }
+        sails.log.debug('LieblingsBhArten: ', lieblingsBhArten);
+        await User.replaceCollection(userId, 'bhArt').members(lieblingsBhArten);
+
+
+        
 		
 		const existingMessdaten = await Messdaten.findOne({ owner: userId});
 		if (existingMessdaten) {

@@ -28,7 +28,7 @@ module.exports = {
       collection: 'braTragekomfort',
       via:'users'
     },
-    bhArten:{
+    bhArt:{
       collection:'bhArt',
       via: 'users'
     },

@@ -62,17 +62,19 @@
             </p>
             <div class="row justify-content-center">
               <div class="form-group">
-                <input v-model="unterbrustbreite" type="number"  step="0.01" class="radius" id="unterbrustbreite" name="unterbrustbreite"
-                  placeholder="Unterbrustbreite in cm" autocomplete="name" focus-first>
+                <input v-model="unterbrustbreite" type="number" step="0.01" class="radius" id="unterbrustbreite"
+                  name="unterbrustbreite" placeholder="Unterbrustbreite in cm" autocomplete="name" focus-first>
               </div>
               <div class="form-group" style="margin-left: 1%;">
-                <input v-model="brustumfang" class="radius" id="b_umfang" name="brustumfang" type="number"  step="0.01" placeholder="Brustumfang in cm"
-                  autocomplete="name" focus-first>
+                <input v-model="brustumfang" class="radius" id="b_umfang" name="brustumfang" type="number" step="0.01"
+                  placeholder="Brustumfang in cm" autocomplete="name" focus-first>
               </div>
             </div>
           </div>
-          <button :disabled="!brustumfang || !unterbrustbreite" class="btn btn_color m-2" v-on:click.prevent="inc">Weiter zu Schritt 2</button>
-          <p v-if="!brustumfang || !unterbrustbreite" class="text-danger small">Unterbrustbreite und/oder Brustumfang fehlt (Schritt 1)</p>
+          <button :disabled="!brustumfang || !unterbrustbreite" class="btn btn_color m-2"
+            v-on:click.prevent="inc">Weiter zu Schritt 2</button>
+          <p v-if="!brustumfang || !unterbrustbreite" class="text-danger small">Unterbrustbreite und/oder Brustumfang
+            fehlt (Schritt 1)</p>
         </div>
         <hr />
         <div v-show="step === 2" class="m-4">
@@ -108,7 +110,7 @@
               <div class="col-sm" style="text-align: left;">
                 <p> <b>Körbchen sind eher:</b> </p>
                 <div>
-                  <input type="checkbox" id="k_klein" name="k_klein" >
+                  <input type="checkbox" id="k_klein" name="k_klein">
                   <label for="klein">zu klein</label>
                 </div>
                 <div>
@@ -139,7 +141,7 @@
               <div class="col-sm" style="text-align: left;">
                 <p> <b>Unterbrustband:</b></p>
                 <div>
-                  <input type="checkbox" id="b_eng" name="b_eng" >
+                  <input type="checkbox" id="b_eng" name="b_eng">
                   <label for="eng">sitzt zu eng</label>
                 </div>
                 <div>
@@ -204,16 +206,15 @@
                       </small>
                     </div>
                     <div>
-                      <input type="checkbox" class="fancy-checkbox fancy-checkbox-rot" name="rot" value="2"
-                        id="rot" />
+                      <input type="checkbox" class="fancy-checkbox fancy-checkbox-rot" name="rot" value="2" id="rot" />
                       <label for="rot"></label>
                       <small>
                         <p>rot</p>
                       </small>
                     </div>
                     <div>
-                      <input type="checkbox" class="fancy-checkbox fancy-checkbox-schwarz" name="schwarz"
-                        value="3" id="schwarz" />
+                      <input type="checkbox" class="fancy-checkbox fancy-checkbox-schwarz" name="schwarz" value="3"
+                        id="schwarz" />
                       <label for="schwarz"></label>
                       <small>
                         <p>schwarz</p>
@@ -313,7 +314,9 @@
                     <img class="card-img-top" src="images/bralette.jpg" alt="Card image cap">
                     <div class="card-body">
                       <div class="btn-group-toggle" data-toggle="buttons">
-                        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Bralette</button>
+                        <label class="btn btn-outline-info m-1">
+                          <input type="checkbox" name="bralette" value="1" id="bralette">Bralette
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -324,7 +327,9 @@
                     <img class="card-img-top" src="images/balconette-bh.jpg" alt="Card image cap">
                     <div class="card-body">
                       <div class="btn-group-toggle" data-toggle="buttons">
-                        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Balconette</button>
+                        <label class="btn btn-outline-info m-1">
+                          <input type="checkbox" name="balconette" value="2" id="balconette">Balconette
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -335,7 +340,9 @@
                     <img class="card-img-top" src="images/t-shirt-bra.jpg" alt="Card image cap">
                     <div class="card-body">
                       <div class="btn-group-toggle" data-toggle="buttons">
-                        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">T-Shirt BH</button>
+                        <label class="btn btn-outline-info m-1">
+                          <input type="checkbox" name="tshirtbh" value="3" id="tshirtbh">T-Shirt BH
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -346,7 +353,9 @@
                     <img class="card-img-top" src="images/push-up-bh.jpg" alt="Card image cap">
                     <div class="card-body">
                       <div class="btn-group-toggle" data-toggle="buttons">
-                        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Push-Up</button>
+                        <label class="btn btn-outline-info m-1">
+                          <input type="checkbox" name="pushupbh" value="4" id="pushupbh">Push-Up
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -357,7 +366,9 @@
                     <img class="card-img-top" src="images/bustier.jpg" alt="Card image cap">
                     <div class="card-body">
                       <div class="btn-group-toggle" data-toggle="buttons">
-                        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Bustier</button>
+                        <label class="btn btn-outline-info m-1">
+                          <input type="checkbox" name="bustier" value="5" id="bustier">Bustier
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -370,7 +381,9 @@
                     <img class="card-img-top" src="images/trägerloser-bh.jpg" alt="Card image cap">
                     <div class="card-body">
                       <div class="btn-group-toggle" data-toggle="buttons">
-                        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Trägerlos</button>
+                        <label class="btn btn-outline-info m-1">
+                          <input type="checkbox" name="traegerlos" value="6" id="traegerlos">Trägerlos
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -381,7 +394,9 @@
                     <img class="card-img-top" src="images/sport-bh_1.jpg" alt="Card image cap">
                     <div class="card-body">
                       <div class="btn-group-toggle" data-toggle="buttons">
-                        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Sport BH</button>
+                        <label class="btn btn-outline-info m-1">
+                          <input type="checkbox" name="sportbh" value="7" id="sportbh">Sport BH
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -392,8 +407,9 @@
                     <img class="card-img-top" src="images/plunge-bh.jpg" alt="Card image cap">
                     <div class="card-body">
                       <div class="btn-group-toggle" data-toggle="buttons">
-                        <button type="button" class="btn btn-outline-info m-1" input type="checkbox">Plunge
-                        </button>
+                        <label class="btn btn-outline-info m-1">
+                          <input type="checkbox" name="plunge" value="8" id="plunge">Plunge
+                        </label>
                       </div>
                     </div>
                   </div>
@@ -401,8 +417,10 @@
               </div>
 
               <button class="btn btn_color m-2" v-on:click.prevent="dec">Zurück zu Schritt 3</button>
-              <button :disabled="!brustumfang || !unterbrustbreite" class="btn btn_color m-2" type="submit">Quiz beenden</button>
-              <p v-if="!brustumfang || !unterbrustbreite" class="text-danger small">Unterbrustbreite und/oder Brustumfang fehlt (Schritt 1)</p>
+              <button :disabled="!brustumfang || !unterbrustbreite" class="btn btn_color m-2" type="submit">Quiz
+                beenden</button>
+              <p v-if="!brustumfang || !unterbrustbreite" class="text-danger small">Unterbrustbreite und/oder
+                Brustumfang fehlt (Schritt 1)</p>
             </div>
           </div>
         </div>
