@@ -249,9 +249,8 @@ module.exports = {
 
     exits: {
 
-        success: {
-            responseType: 'view',
-            viewTemplatePath: 'pages/size/empfehlungen',
+        redirect: {
+            responseType: 'redirect',
             description: 'Es wurde erfolgreich ein neuer Eintrag angelegt. '
         },
 
@@ -346,11 +345,7 @@ module.exports = {
         if (!messdaten) { throw 'notFound'; }
         if (!bpdaten) { throw 'notFound'; }
 
-        return {
-          message: "Successfully created.",
-          messdaten: messdaten,
-          bpdaten: bpdaten
-        };
+        throw { redirect: '/empfehlungen' };
       }
 
 };

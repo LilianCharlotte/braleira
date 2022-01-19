@@ -32,6 +32,7 @@ module.exports.routes = {
 
   'GET /quiz':                          { action: 'size/show' },
   'POST /size':                         { action: 'size/create' },
+  'GET /empfehlungen':                  { action: 'size/match' },
 
  'GET /bra/:id/edit':                   { action: 'bra/edit'},
  'POST /bra/:id/update':                { action: 'bra/update'},
@@ -53,7 +54,7 @@ module.exports.routes = {
 
  'GET /account':            { action: 'account/view-account-overview' },
  'GET /account/password':   { action: 'account/view-edit-password' },
-'GET /account/profile':    { action: 'account/view-edit-profile' },
+ 'GET /account/profile':    { action: 'account/view-edit-profile' },
 
 
  //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗

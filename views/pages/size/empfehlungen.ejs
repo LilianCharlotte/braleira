@@ -1,66 +1,56 @@
-<div id="bra">
-    <div id="app">
-        <div class="row">
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
+<div id="empfehlungen" class="text-left">
+  <div class="container mt-3 mb-3">
+    <h5>Deine Präferenzen</h5>
+    <table class="table table-borderless">
+      <tr>
+        <th>Farben</th>
+        <td>
+          <% for (const farbe of lieblingsFarben) { %>
+            <span class="badge btn_color mr-1"><%= farbe %></span>
+          <% } %>
+        </td>
+      </tr>
+      <tr>
+        <th>Formen</th>
+        <td>
+          <% for (const form of lieblingsFormen) { %>
+            <span class="badge btn_color mr-1"><%= form %></span>
+          <% } %>
+        </td>
+      </tr>
+    </table>
+
+    <h5>Unsere Empfehlungen</h5>
+    <div class="card-deck">
+      <% for (const bra of bras) { %>
+        <div class="col-md-6 col-xl-4 mt-3">
+          <div class="card">
+            <img class="card-img-top" src="<%= bra.bildpfad %>" alt="Model wearing the bra">
+            <div class="card-body">
+              <h5 class="card-title"><%= bra.model %></h5>
+              <p class="card-text">
+                <table class="table table-sm">
+                  <tr>
+                    <th>Marke</th>
+                    <td><%= bra.marke %></td>
+                  </tr>
+                  <tr>
+                    <th>Form</th>
+                    <td><%= bra.form %></td>
+                  </tr>
+                  <tr>
+                    <th>Stoff</th>
+                    <td><%= bra.stoff %></td>
+                  </tr>
+                </table>
+              </p>
             </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
+            <div class="card-footer">
+              <a href="<%= bra.shoppingLink %>" class="btn btn_color">Zum Shop</a>
             </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-3">
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the
-                            card's content.</p>
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+        <% } %>
     </div>
+  </div>
 </div>
