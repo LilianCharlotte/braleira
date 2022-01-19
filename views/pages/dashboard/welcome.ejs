@@ -1,10 +1,10 @@
 <div id="welcome">
   <account-notification-banner></account-notification-banner>
   <div class="container pt-5 pb-5">
-    <h1>Willkommen!</h1>
+    <h3>Willkommen!</h3>
     <hr />
     <p>
-      Du bist nun eingeloggt. Unten kannst du deine E-Mail-Adressen ändern oder das Größenquiz ausfüllen. <br>Wir wünschen dir viel Spaß beim herumstöbern.
+      Hallo <%= me.fullName %>, du bist nun eingeloggt. Unten kannst du deine E-Mail-Adressen ändern oder das Größenquiz ausfüllen. <br>Wir wünschen dir viel Spaß beim herumstöbern.
       <% if(me && (me.isAdmin || me.isSuperAdmin)) { %> <p>Übrigens, du bist als Admin oder als Super-Admin angemeldet.</p>
         <% } %>
     </p>
