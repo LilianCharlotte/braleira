@@ -9,13 +9,86 @@ module.exports = {
 
     inputs: {
 
+        id: {
+            description: 'The id of the bra.',
+            type: 'number',
+            required: true
+        },
+
         model: {
-            type: 'string'
+            description: 'Name des BH-Models',
+            type: 'string',
+            required: true
         },
 
         marke: {
-            type: 'string'
+            description: 'Markenname des BHs',
+            type: 'string',
+            required: true
         },
+
+        form: {
+            description: 'Form des BHs',
+            type: 'string',
+            required: true
+        },
+
+        groesse: {
+            description: 'Größe des BHs',
+            type: 'string',
+            required: true
+        },
+
+        stoff: {
+            description: 'BH Stoff',
+            type: 'string',
+            required: true
+        },
+
+        farbe: {
+            description: 'Farbe des BHs',
+            type: 'string',
+            required: true
+        },
+
+        muster: {
+            description: 'Muster des BHs',
+            type: 'string',
+            required: true
+        },
+
+        // sternebewertung: {
+        //     description: 'Bewertung des BHs',
+        //     type: 'string',
+        //     required: true
+        // },
+
+        shoppingLink: {
+            description: 'Link zum shoppen des BHs',
+            type: 'string',
+            required: true
+        },
+
+        bildpfad: {
+            description: 'bildpfad BH',
+            type: 'string',
+            required: true
+        },
+
+        /*Beziehungstypen  */
+        /*  owner: {
+             description: 'Form des BHs',
+             type: 'string',
+             required: true
+         },
+ 
+         pf_bewertung: {
+             description: 'Form des BHs',
+             type: 'string',
+             required: true
+         }, */
+
+
 
     },
 
@@ -23,33 +96,31 @@ module.exports = {
     exits: {
 
         success: {
-            viewTemplatePath: 'pages/admin/bra',
-            description: 'Display the admin page for authenticated users.'
+            responseType: 'view',
+            viewTemplatePath: 'pages/bra/eintragsbestaetigung',
+            description: 'Es wurde erfolgreich ein neuer Eintrag angelegt. '
         },
 
     },
 
 
-    fn: async function ({model, marke}) {
+    fn: async function (inputs) {
+        sails.log.debug("Update bra....")
+        sails.log(inputs);
+        let bra = await Bra.updateOne({ id: inputs.id }).set(inputs);
+        sails.log.debug("Updated bra....")
+        sails.log.debug(bra)
+        if (!bra) { throw 'notFound'; }
+        return {
+            message: "Successfully created.",
+            bra: bra
 
-        return {};
+        }
 
 
-
- //Start building the values to set in the db.
-    // (We always set the fullName if provided.)
-    var valuesToSet = {
-        model,
-        marke
-      };
 
 
 
     }
-
-
-   
-
-
-};
+}
 

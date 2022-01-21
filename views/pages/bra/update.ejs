@@ -2,6 +2,7 @@
     <div class="container pt-5 pb-5">
       <form action="/bra/<%= bra.id %>/update" method="post">
         <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+        <input type="hidden" name="id" value="<%= bra.id %>" />
         <div class = linksbuendig>
           <h4>Hier kannst du ein Bh-Model aktualisieren:</h4>
   
