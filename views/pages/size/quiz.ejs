@@ -1,21 +1,21 @@
-<div id="bra">
+<div id="quiz">
   <div id="app">
     <div class="container pt-5 pb-5 mt-2">
       <div class="row">
         <div class="col-sm">
-          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 1 }" v-on:click.disable="goto(1)">Schritt
+          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 1 }" v-on:click.disable="gotoPage(1)">Schritt
             1</button>
         </div>
         <div class="col-sm">
-          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 2 }" v-on:click.disable="goto(2)">Schritt
+          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 2 }" v-on:click.disable="gotoPage(2)">Schritt
             2</button>
         </div>
         <div class="col-sm">
-          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 3 }" v-on:click.disable="goto(3)">Schritt
+          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 3 }" v-on:click.disable="gotoPage(3)">Schritt
             3</button>
         </div>
         <div class="col-sm">
-          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 4 }" v-on:click.disable="goto(4)">Schritt
+          <button class="btn max_width" v-bind:class="{ 'btn_color': step === 4 }" v-on:click.disable="gotoPage(4)">Schritt
             4</button>
         </div>
       </div>
@@ -413,26 +413,5 @@
       </form>
     </div>
   </div>
-  <script>
-    var app = new Vue({
-      el: '#app',
-      data: {
-        step: 1,
-        brustumfang: '',
-        unterbrustbreite: '',
-      },
-      methods: {
-        inc: function () {
-          this.step = this.step + 1;
-        },
-        dec: function () {
-          this.step = this.step - 1;
-        },
-        goto: function (n) {
-          this.step = n;
-        }
-      }
-    })
-  </script>
 </div>
 <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
