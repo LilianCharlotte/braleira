@@ -9,16 +9,16 @@
         
         <div class="form-group">
           <input class="form-control" id="bh-marke" name="marke" type="text" placeholder="BH-Markenname"
-            autocomplete="name" maxlength="120" focus-first>
+            autocomplete="name" maxlength="120" required focus-first>
         </div>
 
         <div class="form-group">
           <input type="text" class="form-control" id="bh-model" name="model" placeholder="BH-Model"
-            autocomplete="name" maxlength="120" focus-first>
+            autocomplete="name" maxlength="120" required focus-first>
         </div>
 
         <div class="form-group">
-            <select class = "form-control" name="form" id="form">
+            <select class = "form-control" name="form" id="form" required>
               <option value="" disabled selected>BH-Form</option>
               <option value="Push-Up">Push-Up</option>
               <option value="T-Shirt">T-Shirt</option>
@@ -32,11 +32,11 @@
           </div>
  
         <div class="form-group">
-            <input class="form-control" id="bh-groesse" name="groesse" type="text" placeholder="BH-Größe" autocomplete="name" focus-first>
+            <input class="form-control" id="bh-groesse" name="groesse" type="text" placeholder="BH-Größe" autocomplete="name" required focus-first>
           </div>
         
           <div class="form-group">
-            <select class = "form-control" name="stoff" id="stoff">
+            <select class = "form-control" name="stoff" id="stoff" required>
               <option value="" disabled selected>Stoff</option>
               <option value="Baumwolle">Baumwolle</option>
               <option value="mit Spitze">mit Spitze</option>
@@ -45,7 +45,7 @@
           </div>
 
           <div class="form-group">
-            <select class = "form-control" name="farbe" id="farbe">
+            <select class = "form-control" name="farbe" id="farbe" required>
               <option value="" disabled selected>Farbe</option>
               <option value="rosa">rosa</option>
               <option value="rot">rot</option>
@@ -60,7 +60,7 @@
           </div>
 
           <div class="form-group">
-              <select class = "form-control" name="muster" id="muster">
+              <select class = "form-control" name="muster" id="muster" required>
                 <option value="" disabled selected>Muster</option>
                 <option value="gemustert">gemustert</option>
                 <option value="einfarbig/ohne">einfarbig/ohne</option>
@@ -68,15 +68,15 @@
           </div>
 
           <!-- <div class="form-group">
-            <input class="form-control" id="bh-bewertung" name="sternebewertung" type="text" placeholder="BH-Bewertung" autocomplete="name" focus-first>
+            <input class="form-control" id="bh-bewertung" name="sternebewertung" type="text" placeholder="BH-Bewertung" autocomplete="name" required focus-first>
           </div> -->
 
           <div class="form-group">
-            <input class="form-control" id="bh-link" name="shoppingLink" type="text" placeholder="Shopping-Link" autocomplete="name" focus-first>
+            <input class="form-control" id="bh-link" name="shoppingLink" type="text" placeholder="Shopping-Link" autocomplete="name" required focus-first>
           </div>
 
           <div class="form-group">
-            <input class="form-control" id="bh-bildpfad" name="bildpfad" type="text" placeholder="Bildpfad" autocomplete="name" focus-first>
+            <input class="form-control" id="bh-bildpfad" name="bildpfad" type="text" placeholder="Bildpfad" autocomplete="name" required focus-first>
           </div>
 
           <button type="submit" class="btn btn-primary btn_color">Hinzufügen</button>
