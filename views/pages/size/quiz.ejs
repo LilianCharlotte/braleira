@@ -73,7 +73,7 @@
           </div>
           <button :disabled="!brustumfang || !unterbrustbreite" class="btn btn_color m-2"
             v-on:click.prevent="inc">Weiter zu Schritt 2</button>
-          <p v-if="!brustumfang || !unterbrustbreite" class="text-danger small">Unterbrustbreite und/oder Brustumfang
+          <p v-if="brustumfang === '' || unterbrustbreite === ''" class="text-danger small">Unterbrustbreite und/oder Brustumfang
             fehlt (Schritt 1)</p>
           <p v-if="brustumfang < 0 || brustumfang > 300" class="text-danger small">Brustumfang muss zwischen 0 und 300 sein (Schritt 1)</p>
           <p v-if="unterbrustbreite < 0 || unterbrustbreite > 300" class="text-danger small">Unterbrustbreite muss zwischen 0 und 300 sein (Schritt 1)</p>

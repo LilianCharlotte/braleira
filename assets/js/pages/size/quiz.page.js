@@ -1,8 +1,8 @@
 parasails.registerPage('quiz', {
     data: {
         step: 1,
-        brustumfang: '',
-        unterbrustbreite: '',
+        brustumfang: null,
+        unterbrustbreite: null,
     },
     methods: {
         inc: function () {
