@@ -12,13 +12,17 @@ module.exports = {
         unterbrustbreite: {
             description: 'Unterbrustbreite',
             type: 'number',
-            required: true 
+            required: true,
+            min: 0,
+            max: 300
         },
 
         brustumfang: {
             description: 'Brustumfang',
             type: 'number',
-            required: true
+            required: true,
+            min: 0,
+            max: 300
         },
 
         groesse: {
