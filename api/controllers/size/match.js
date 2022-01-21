@@ -41,9 +41,14 @@ module.exports = {
     }
 
     const bras = await Bra.find({
-      farbe: { in: lieblingsFarben },
-      form: { in: lieblingsFormen },
-    });
+      or: [
+        { farbe: { in: lieblingsFarben } },
+        { form: { in: lieblingsFormen } },
+      ]
+    }).sort([
+      { farbe: 'ASC' },
+      { form: 'ASC' },
+    ]);
 
     return {
       'lieblingsFarben': lieblingsFarben,
