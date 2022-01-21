@@ -3,7 +3,7 @@ module.exports = {
         marke: { type: 'string', columnType: 'varchar (200)'},
         model: { type: 'string', columnType: 'varchar(200)' },
         form: { type: 'string',  columnType: 'varchar(80)'},
-        groesse: { type: 'string',  columnType: 'varchar(80)'},
+        groesse: { type: 'string',  columnType: 'varchar(10)'},
         stoff: { type: 'string',  columnType: 'varchar(80)'},
         farbe: { type: 'string',  columnType: 'varchar(80)'},
         muster: { type: 'string',  columnType: 'varchar(80)'},

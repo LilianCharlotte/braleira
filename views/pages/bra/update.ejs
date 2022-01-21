@@ -10,12 +10,12 @@
           
           <div class="form-group">
             <input class="form-control" id="bh-marke" name="marke" type="text" placeholder="BH-Markenname"
-              autocomplete="name" maxlength="120" value="<%= bra.marke %>" focus-first required>
+              autocomplete="name" maxlength="200" value="<%= bra.marke %>" focus-first required>
           </div>
   
           <div class="form-group">
             <input type="text" class="form-control" id="bh-model" name="model" placeholder="BH-Model"
-              autocomplete="name" maxlength="120" value="<%= bra.model %>" focus-first required>
+              autocomplete="name" maxlength="200" value="<%= bra.model %>" focus-first required>
           </div>
   
           <div class="form-group">
@@ -32,7 +32,7 @@
             </div>
    
           <div class="form-group">
-              <input class="form-control" id="bh-groesse" name="groesse" type="text" placeholder="BH-Größe" autocomplete="name" value="<%= bra.groesse %>" focus-first required>
+              <input class="form-control" id="bh-groesse" name="groesse" type="text" placeholder="BH-Größe" autocomplete="name" value="<%= bra.groesse %>" focus-first required maxlength="10">
             </div>
           
             <div class="form-group">
@@ -70,11 +70,11 @@
             </div> -->
   
             <div class="form-group">
-              <input class="form-control" id="bh-link" name="shoppingLink" type="text" placeholder="Shopping-Link" autocomplete="name" value="<%= bra.shoppingLink %>" focus-first required>
+              <input class="form-control" id="bh-link" name="shoppingLink" type="text" placeholder="Shopping-Link" autocomplete="name" value="<%= bra.shoppingLink %>" focus-first required maxlength="300">
             </div>
   
             <div class="form-group">
-              <input class="form-control" id="bh-bildpfad" name="bildpfad" type="text" placeholder="Bildpfad" autocomplete="name" value="<%= bra.bildpfad %>" focus-first required>
+              <input class="form-control" id="bh-bildpfad" name="bildpfad" type="text" placeholder="Bildpfad" autocomplete="name" value="<%= bra.bildpfad %>" focus-first required maxlength="300">
             </div>
   
             <button type="submit" class="btn btn-primary btn_color">Aktualisieren</button>
