@@ -1,55 +1,29 @@
 module.exports = {
 
+    friendlyName: 'Edit a bra',
 
-    friendlyName: 'View admin page',
-
-
-    description: 'Display the dashboard "Admin" page.',
-
+    description: 'Edits a bra',
 
     inputs: {
-
-        model: {
-            type: 'string'
-        },
-
-        marke: {
-            type: 'string'
-        },
-
+        id: {
+            type: 'number',
+            required: true,
+        }
     },
-
 
     exits: {
-
         success: {
-            viewTemplatePath: 'pages/admin/bra',
+            viewTemplatePath: 'pages/bra/update',
             description: 'Display the admin page for authenticated users.'
         },
-
     },
 
-
-    fn: async function ({model, marke}) {
-
-        return {};
-
-
-
- //Start building the values to set in the db.
-    // (We always set the fullName if provided.)
-    var valuesToSet = {
-        model,
-        marke
-      };
-
-
-
+    fn: async function (inputs) {
+        let bra = await Bra.findOne({ id: inputs.id })
+        if (!bra) { throw 'notFound'; }
+        return {
+            bra: bra
+        }
     }
 
-
-   
-
-
 };
-

@@ -1,0 +1,88 @@
+<div id="bra">
+    <div class="container pt-5 pb-5">
+      <form action="/bra/<%= bra.id %>/update" method="post">
+        <input type="hidden" name="_csrf" value="<%= _csrf %>" />
+        <div class = linksbuendig>
+          <h4>Hier kannst du ein Bh-Model aktualisieren:</h4>
+  
+          <hr class="mt-4 mb-4" />
+          
+          <div class="form-group">
+            <input class="form-control" id="bh-marke" name="marke" type="text" placeholder="BH-Markenname"
+              autocomplete="name" maxlength="120" value="<%= bra.marke %>" focus-first>
+          </div>
+  
+          <div class="form-group">
+            <input type="text" class="form-control" id="bh-model" name="model" placeholder="BH-Model"
+              autocomplete="name" maxlength="120" value="<%= bra.model %>" focus-first>
+          </div>
+  
+          <div class="form-group">
+              <select class = "form-control" name="form" id="form">
+                <option <% if (bra.form == "Push-Up") { %>selected<% } %> value="Push-Up">Push-Up</option>
+                <option <% if (bra.form == "T-Shirt") { %>selected<% } %> value="T-Shirt">T-Shirt</option>
+                <option <% if (bra.form == "Bralette") { %>selected<% } %> value="Bralette">Bralette</option>
+                <option <% if (bra.form == "Balconette") { %>selected<% } %> value="Balconette">Balconette</option>
+                <option <% if (bra.form == "Bustier") { %>selected<% } %> value="Bustier">Bustier</option>
+                <option <% if (bra.form == "Trägerloser BH") { %>selected<% } %> value="Trägerloser BH">Trägerloser BH</option>
+                <option <% if (bra.form == "Sport-BH") { %>selected<% } %> value="Sport-BH">Sport-BH</option>
+                <option <% if (bra.form == "Plunge") { %>selected<% } %> value="Plunge">Plunge Neckline</option>
+              </select>
+            </div>
+   
+          <div class="form-group">
+              <input class="form-control" id="bh-groesse" name="groesse" type="text" placeholder="BH-Größe" autocomplete="name" value="<%= bra.groesse %>" focus-first>
+            </div>
+          
+            <div class="form-group">
+              <select class = "form-control" name="stoff" id="stoff">
+                <option <% if (bra.stoff == "Baumwolle") { %>selected<% } %> value="Baumwolle">Baumwolle</option>
+                <option <% if (bra.stoff == "mit Spitze") { %>selected<% } %> value="mit Spitze">mit Spitze</option>
+                <option <% if (bra.stoff == "stretchy Stoffe") { %>selected<% } %> value="stretchy Stoffe">stretchy Stoffe</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <select class = "form-control" name="farbe" id="farbe">
+                <option <% if (bra.farbe == "rosa") { %>selected<% } %> value="rosa">rosa</option>
+                <option <% if (bra.farbe == "rot") { %>selected<% } %> value="rot">rot</option>
+                <option <% if (bra.farbe == "schwarz") { %>selected<% } %> value="schwarz">schwarz</option>
+                <option <% if (bra.farbe == "weiß") { %>selected<% } %> value="weiß">weiß</option>
+                <option <% if (bra.farbe == "grau und dunkelblau") { %>selected<% } %> value="grau und dunkelblau">grau und dunkelblau</option>
+                <option <% if (bra.farbe == "blau") { %>selected<% } %> value="blau">blau</option>
+                <option <% if (bra.farbe == "grün") { %>selected<% } %> value="grün">grün</option>
+                <option <% if (bra.farbe == "braun") { %>selected<% } %> value="braun">braun</option>
+                <option <% if (bra.farbe == "lila") { %>selected<% } %> value="lila">lila</option>
+                
+              </select>
+            </div>
+  
+            <div class="form-group">
+                <select class = "form-control" name="muster" id="muster">
+                  <option <% if (bra.muster == "gemustert") { %>selected<% } %> value="gemustert">gemustert</option>
+                  <option <% if (bra.muster == "einfarbig/ohne") { %>selected<% } %> value="einfarbig/ohne">einfarbig/ohne</option>
+                </select>
+            </div>
+  
+            <!-- <div class="form-group">
+              <input class="form-control" id="bh-bewertung" name="sternebewertung" type="text" placeholder="BH-Bewertung" autocomplete="name" focus-first>
+            </div> -->
+  
+            <div class="form-group">
+              <input class="form-control" id="bh-link" name="shoppingLink" type="text" placeholder="Shopping-Link" autocomplete="name" value="<%= bra.shoppingLink %>" focus-first>
+            </div>
+  
+            <div class="form-group">
+              <input class="form-control" id="bh-bildpfad" name="bildpfad" type="text" placeholder="Bildpfad" autocomplete="name" value="<%= bra.bildpfad %>" focus-first>
+            </div>
+  
+            <button type="submit" class="btn btn-primary btn_color">Aktualisieren</button>
+  
+        </div>
+  
+    </div>
+  
+    </form>
+  </div>
+  </div>
+  <%- /* Expose locals as `window.SAILS_LOCALS` :: */ exposeLocalsToBrowser() %>
