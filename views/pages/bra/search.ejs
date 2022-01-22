@@ -57,7 +57,7 @@
                 <td>{{ item.shoppingLink }}</td>
                 <td>{{ item.bildpfad }}</td>
                 <td>
-                    <a class="btn btn-outline-primary m-1" :href="`/bra/${item.id}/edit`">Bearbeiten</a>
+                    <a class="btn btn_color m-1" :href="`/bra/${item.id}/edit`">Bearbeiten</a>
                     <button type="button" class="btn btn-outline-danger m-1"
                         v-on:click="deleteBra(item.id)">Löschen</button>
                 </td>
