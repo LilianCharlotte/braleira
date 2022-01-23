@@ -30,5 +30,28 @@ Note:  Generators are usually run using the globally-installed `sails` CLI (comm
 ## Dokumentation braleira 
 
 ### Webtechnologien Wintersemester 2021/2022 
-### Dozent: Prof. Eiglsperger
+#### Dozent: Prof. Eiglsperger
 
+#### Umsetzung der Arbeitsaufträge
+#### Zusammenfassung, Beschreibung der Funktionalität
+#### Highlights und WOW-Faktor der Seite
+#### Technische Implementierung
+###### - Quiz mit VUE zur Single Page Application 
+###### Javascript + jQuery
+###### Style mit Bootstrap und CSS
+###### Tafelaufschriebe -> zwei Arten Backend zu machen
+###### Datenbank - Aufbau, Fremdschlüsselbeziehungen
+###### Data Validation
++ ###### Frontend
++ ###### Backend
+
+###### Benutzergruppen und Rechte
+###### Cookies
+###### Geschäftsprozess (?) 
+#### Funktionalität
+###### Geschäftsprozesse auflisten:
++ ###### Benutzer füllt Quiz aus
++ ###### Admin lässt sich liste angeben
++ ###### admin löscht bh eintrag
++ ###### admin bearbeitet bh 
++ ###### admin erstellt bh
