@@ -228,12 +228,60 @@ footer .footer-nav {
 }
 /*button */
 
+/* Großansicht anpassen */
+@media screen and (min-width: 450px) {
+    .modal-footer{ 
+        flex-wrap: nowrap!important;
+        display: flex;
+        -ms-flex-align: center;
+        align-items: center;
+        -ms-flex-pack: end;
+        justify-content: flex-end;
+        padding: 1rem;
+        border-top: 1px solid #e9ecef;
+        flex-direction: row!important;
+    }
+    #ak{
+        margin-bottom: 0!important;
+    }
+    
+}
+
+@media screen and (min-width: 500px) {
+    .buttons {
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        margin: 0 5em!important;
+        align-content: normal!important;
+    } 
+}
+
+.modal-footer{ 
+    flex-wrap: wrap;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    padding: 1rem;
+    border-top: 1px solid #e9ecef;
+    flex-direction: column;
+}
+
+#ak{
+    margin-bottom: 0.25em;
+}
+
+
 .buttons {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: column;
-    margin: 0 5em;
+   /*  margin: 0 5em; */
+   align-content: center;
 }
+
 
 .button {
     padding: .75em 2.5em;
