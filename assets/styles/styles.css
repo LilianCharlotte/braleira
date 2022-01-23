@@ -228,12 +228,25 @@ footer .footer-nav {
 }
 /*button */
 
+/* Großansicht anpassen */
+@media screen and (min-width: 500px) {
+    .buttons {
+        display: flex;
+        /* flex-wrap: wrap; */
+        flex-direction: column;
+        margin: 0 5em!important;
+        align-content: normal!important;
+    } 
+}
+
 .buttons {
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     flex-direction: column;
-    margin: 0 5em;
+   /*  margin: 0 5em; */
+   align-content: center;
 }
+
 
 .button {
     padding: .75em 2.5em;
