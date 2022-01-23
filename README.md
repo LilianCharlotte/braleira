@@ -17,9 +17,9 @@ Text
 ##### Style mit Bootstrap und CSS
 ##### Tafelaufschriebe -> zwei Arten Backend zu machen
 
-| | Client | Verbindung  | Server |
+| | Client |   | Server |
 | -----       |    -----   |          ----- | ----- |
-| P1      | HTML   | Link $\longrightarrow$ $\quad$  $\quad $ $\quad$ $\quad$ $\longleftarrow$ HTML| Routen $\quad$ $\quad$ Action/Controller $\quad$ $\quad$ $\quad$ View $\quad$  |
+| P1      | HTML   | Link  HTML| Routen, Action/Controller, View  |
 | P2   | Javascript |       | Database      |
 
 
