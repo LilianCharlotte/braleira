@@ -20,7 +20,7 @@ Text
 | | Client |   | Server |
 | -----       |    -----   |          ----- | ----- |
 | P1      | HTML   | Link  HTML| Routen, Action/Controller, View  |
-| P2   | Javascript |       | Database      |
+| P2   | Javascript |  AJAX / Post; JSON     | DB     |
 
 
 ##### Datenbank - Aufbau, Fremdschlüsselbeziehungen
