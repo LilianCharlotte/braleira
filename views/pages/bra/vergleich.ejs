@@ -1,0 +1,60 @@
+<div class="container mt-5 mb-5">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th></th>
+                <th>Alt</th>
+                <th>Neu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr <% if (alterBra.marke != aktualisierterBra.marke) { %>class="table-info"<% } %>>
+                <th>Marke</th>
+                <td><%= alterBra.marke %></td>
+                <td><%= aktualisierterBra.marke %></td>
+            </tr>
+            <tr <% if (alterBra.model != aktualisierterBra.model) { %>class="table-info"<% } %>>
+                <th>Model</th>
+                <td><%= alterBra.model %></td>
+                <td><%= aktualisierterBra.model %></td>
+            </tr>
+            <tr <% if (alterBra.form != aktualisierterBra.form) { %>class="table-info"<% } %>>
+                <th>Form</th>
+                <td><%= alterBra.form %></td>
+                <td><%= aktualisierterBra.form %></td>
+            </tr>
+            <tr <% if (alterBra.groesse != aktualisierterBra.groesse) { %>class="table-info"<% } %>>
+                <th>Größe</th>
+                <td><%= alterBra.groesse %></td>
+                <td><%= aktualisierterBra.groesse %></td>
+            </tr>
+            <tr <% if (alterBra.stoff != aktualisierterBra.stoff) { %>class="table-info"<% } %>>
+                <th>Stoff</th>
+                <td><%= alterBra.stoff %></td>
+                <td><%= aktualisierterBra.stoff %></td>
+            </tr>
+            <tr <% if (alterBra.farbe != aktualisierterBra.farbe) { %>class="table-info"<% } %>>
+                <th>Farbe</th>
+                <td><%= alterBra.farbe %></td>
+                <td><%= aktualisierterBra.farbe %></td>
+            </tr>
+            <tr <% if (alterBra.muster != aktualisierterBra.muster) { %>class="table-info"<% } %>>
+                <th>Muster</th>
+                <td><%= alterBra.muster %></td>
+                <td><%= aktualisierterBra.muster %></td>
+            </tr>
+            <tr <% if (alterBra.shoppingLink != aktualisierterBra.shoppingLink) { %>class="table-info"<% } %>>
+                <th>Shopping-Lnk</th>
+                <td><%= alterBra.shoppingLink %></td>
+                <td><%= aktualisierterBra.shoppingLink %></td>
+            </tr>
+            <tr <% if (alterBra.bildpfad != aktualisierterBra.bildpfad) { %>class="table-info"<% } %>>
+                <th>Bildpfad</th>
+                <td><%= alterBra.bildpfad %></td>
+                <td><%= aktualisierterBra.bildpfad %></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn_color" href="/bra/eintragsbestaetigung">Speichern</a>
+</div>

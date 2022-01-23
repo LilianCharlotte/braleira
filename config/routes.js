@@ -36,6 +36,8 @@ module.exports.routes = {
 
  'GET /bra/:id/edit':                   { action: 'bra/edit'},
  'POST /bra/:id/update':                { action: 'bra/update'},
+ 'GET /bra/vergleich':                  { action: 'bra/vergleich' },
+ 'GET /bra/eintragsbestaetigung':       { action: 'bra/eintragsbestaetigung' },
 
  'GET /faq':                { action:   'view-faq' },
  'GET /legal/terms':        { action:   'legal/view-terms' },

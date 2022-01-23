@@ -116,9 +116,8 @@ module.exports = {
 
     exits: {
 
-        success: {
-            responseType: 'view',
-            viewTemplatePath: 'pages/bra/eintragsbestaetigung',
+        redirect: {
+            responseType: 'redirect',
             description: 'Es wurde erfolgreich ein neuer Eintrag angelegt. '
         },
 
@@ -128,19 +127,10 @@ module.exports = {
     fn: async function (inputs) {
         sails.log.debug("Update bra....")
         sails.log(inputs);
-        let bra = await Bra.updateOne({ id: inputs.id }).set(inputs);
-        sails.log.debug("Updated bra....")
-        sails.log.debug(bra)
-        if (!bra) { throw 'notFound'; }
-        return {
-            message: "Successfully created.",
-            bra: bra
 
-        }
-
-
-
-
+    
+        this.req.session.aktualisierterBra = inputs;
+        throw {redirect: '/bra/vergleich'};
 
     }
 }
