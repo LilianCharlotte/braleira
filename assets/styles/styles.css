@@ -395,7 +395,7 @@ welcome_page_btn:active {
 }
 
 .quiz-intro {
-    background-image: url(Bilder/Maßband.jpg);
+    /* background-image: url(/images/Maßband.jpg); */
     padding: 3em 1em 1.5em;
     background-repeat: no-repeat;
     background-size: 100%;
