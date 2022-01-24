@@ -100,14 +100,17 @@ Zu finden ist die Programmierung unter `view/layouts/layout.ejs`.
 Das Aktualisieren von BH-Einträgen haben wir als mehrseitiges Formular implementiert. Im Gegensatz zum Größenquiz haben wir hier nicht VUE verwendet, sondern das Formular über mehrere Actions und Views verteilt. Um dabei die Daten des aktualisierten BHs nicht zu verlieren, speichern wir diese in der Session. Wenn der Nutzer auf der ersten Seite Aktualisieren drückt, bekommt er eine neue Seite angezeigt, die die neuen Werte mit den alten Werten vergleicht. Erst wenn der Nutzer diese Werte geprüft und bestätigt hat, werden diese tatsächlich in der Datenbank gespeichert.
 #### Funktionalität
 ##### Geschäftsprozesse auflisten:
-+ ###### Benutzer füllt Quiz aus
-+ ###### Admin lässt sich liste angeben (CRUD)
++ ###### Benutzer füllt Quiz aus und Empfehlungen werden angezeigt 
++ ###### Admin lässt sich Liste anzeigen (CRUD)
 + ###### Admin löscht BH-Eintrag (CRUD)
 + ###### Admin bearbeitet BH-Eintrag (CRUD) 
 + ###### Admin erstellt BH-Eintrag (CRUD)
 ##### Inhaltliche Anforderungen
-+ ###### Impressum ->Link
-+ ###### Kontaktseite -> Link
++ ###### Impressum 
+Impressum: `views/pages/legal/impressum.ejs`
++ ###### Kontaktseite 
+Kontaktseite: `views/pages/legal/kontaktseite.ejs`
+Die Kontaktseite ist auf der Registierungsseite unten verlinkt. 
 + ###### Optimieren Sie die Begrüßungsseite nach SEO Kriterien 
 Der Analyse mit Google Lighthouse entsprechend haben wir noch weitere Meta-Tags in die Layout-Datei `view/layouts/layout.ejs` unserer Website geschrieben. Mit Hilfe dieser Tags machen wir es dem Nutzer so leichter, uns durch eine Suche der folgenden Schlüsselwörter zu finden:
 
@@ -125,6 +128,7 @@ Der Analyse mit Google Lighthouse entsprechend haben wir noch weitere Meta-Tags 
 Man sollte nicht mehr als 10 Keywords verwenden, weswegen wir uns auf die oben gelisteten beschränkt haben. 
 Außerdem haben wir eine Beschreibung unserer Website hinzugefügt: “Finde einen perfekt passenden BH mit Hilfe unseres Größenquizzes.”
 + ###### Verlinken Sie Ihre Webseite mit Social Media Accounts
+Siehe `Homepage`.
 + ###### Analysiere die Webanwendung mit Google Lighthouse 
 
 
