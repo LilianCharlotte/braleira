@@ -30,17 +30,13 @@ Bei Problemen haben wir die zur Verfügung gestellten Demos aus Git herangezogen
 ### Highlights und WOW-Faktor der Seite
  
 Es gibt sehr viele Seiten, die Frauen generell suggerieren, sie hätten die falsche BH-Größe und der BH muss anders sitzen. Die meisten Webseiten, Marken oder professionelle Beratungen im Laden, beginnen mit einer Messung und dem Kommentar “die Größe, die sie tragen, ist die falsche”. 
- 
 In unseren Augen gibt es jedoch keine “perfekte” BH-Größe, also ein richtig und ein falsch, sondern jede Frau entscheidet am besten selbst, was sie mag und was sie nicht mag, was ihr wichtig ist und welcher BH ihrer Meinung nach gut passt.
  
 Mit unserem Quiz, dem Highlight der Webseite, ändern wir also den Ansatz, wie solche Beratungen ablaufen.
 Einerseits schaffen wir das, indem wir der Kundin die Möglichkeit geben, anzugeben, was ihr bei der Passform des BHs wichtig ist, was die Kriterien sind, nachdem sie beurteilt, ob ein BH gut passt und welche Wünsche sie bezüglich der Passform eines BHs hat. 
- 
 Andererseits sammeln wir Passformdaten zu bereits gekauften und getragenen BHs der Kundin. Dabei stellen wir Fragen wie, welche Größe in welchem Modell bereits gut passen und was vielleicht trotzdem noch stört und verbessert werden kann. 
  
 Aus diesen persönlichen Angaben und gesammelten Erfahrungsberichten können wir die in den Augen der Kundin perfekte BH-Größe empfehlen, was wir in unserer Empfehlungsseite am Ende des Quizzes andeuten. 
- 
- 
  
  
 ### Technische Implementierung
@@ -74,7 +70,12 @@ P1 haben wir beim Quiz verwendet, P2 bei der Übersicht der BH-Einträge, sowie 
 
 ###### Benutzergruppen und Rechte
 ###### Cookies
-###### (Geschäftsprozess -> noch machen(?))
+Cookies haben wir ebenfalls auf der Seite implementiert. Beim ersten Laden der Seite poppen diese auf. Sie können direkt akzeptiert oder durch Klicken auf “Cookies einstellen” noch individuell angepasst werden.
+Sind sie einmal akzeptiert, muss der User kein weiteres Mal akzeptieren, da sie an den Browser gekoppelt sind.
+Umgesetzt haben wir dies mit zwei Modalen, die auf “show” oder “hide” gesetzt werden, je nachdem welche Funktion aufgerufen wird bzw. welcher Button gedrückt wird.
+Zu finden ist die Programmierung unter `view/layouts/layout.ejs`.
+
+###### Geschäftsprozess mit Session über mehrere Seitenaufrufe
 #### Funktionalität
 ##### Geschäftsprozesse auflisten:
 + ###### Benutzer füllt Quiz aus
