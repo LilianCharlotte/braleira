@@ -41,13 +41,19 @@ Aus diesen persönlichen Angaben und gesammelten Erfahrungsberichten können wir
  
 ### Technische Implementierung
 ##### Quiz mit VUE zur Single Page Application
+Unser Quiz haben wir mit Hilfe von VUE als Single Page Application implementiert. Es gibt vier Seiten, zwischen denen der Nutzer wechseln kann, ohne dass die Seite neu geladen wird.
+Wir haben zuerst versucht, VUE direkt in einem `<script>` auf der Seite  einzubinden, aber hatten so Probleme mit dem VUE import. Nach längerem Googlen haben wir dann rausgefunden, dass man in Sails VUE über `parasails.registerPage` unter `assets/js/pages` einbindet, was wir dann unter `assets/js/pages/size/quiz.pages.js` gemacht haben.
+
+##### Dynamische Suche mit AJAX + VUE
+Unsere Bra-Suche für Admins haben wir ebenfalls mit VUE implementiert. Bei jeder Eingabe im Suchfeld wird automatisch eine Anfrage an den `bra/find` controller geschickt.
+Es werden zwei Parameter (`filterNach` und `wert`) mitgeschickt, mit denen dann Datenbankanfragen gemacht werden. Der Nutzer kann den `filterNach`-Wert über ein Dropdown auswählen.
  
 ##### Javascript + jQuery
 wurden von uns zum einen für das setzen der Verbindungen zum Backend verwendet und zum anderen um Funktionen aus dem Frontend durchführen zu können. Des weiteren haben wir außerdem beispielsweise die Kontaktseite dynamisch mit den beiden “Helfern” erzeugt.
 Allgemein haben wir die Verwendung von vue jedoch jQuery vorgezogen, da wir dieses Framework besser und einfacher fanden. 
  
 ##### Style mit Bootstrap und CSS
-Unsere Webseite haben wir größtenteils mit Bootstrap designt, was vieles vereinfacht hat und Content direkt dynamischer reagieren lies.
+Unsere Webseite haben wir größtenteils mit Bootstrap designed, was vieles vereinfacht hat und Content direkt dynamischer reagieren lies.
 Natürlich haben wir auch eigene CSS-Klassen erstellt, welche im style.css zu finden sind.
 Alles haben wir jedoch nicht als Klasse erzeugt, da wir das Sheet nicht mit nur einmal gebrauchten Klassen “zumüllen” wollten.
 Das responsive Anpassen des Seitenlayouts auf unterschiedliche Bildschirmgrößen wie z.B. ein Handy haben wir nach dem Desktop First Ansatz integriert und dann mit Media Queries an verschiedene Bildschirme angepasst. 
@@ -65,14 +71,21 @@ P1 haben wir beim Quiz verwendet, P2 bei der Übersicht der BH-Einträge, sowie 
 
 ##### Datenbank - Aufbau, Fremdschlüsselbeziehungen
 ##### Data Validation
-+ ###### Frontend
-+ ###### Backend
+###### Frontend
+Im Frontend haben wir die einegebenen Daten auf zwei Arten validiert. Zum Einen haben wir unsere `<input>` Elemente wo möglich mit Attributen wie `required`, `maxLength`, und `min` versehen.
+
+Im Größenquiz war das allerdings nicht ausreichend, da dieses über mehrere Seiten geht und die Fehler auf den ersten Seiten für den Nutzer beim Absenden des Formulars nicht sichtbar wären.
+Deswegen haben wir hier zusätzlich Vue eingesezt, um auf der letzten Seite unter dem Button Fehlermeldungen einzublenden wenn Eingabefehler bestehen.
+
+###### Backend
+Im Backend verwenden wir die `inputs` von unseren Actions um sicherzustellen, dass die Daten korrekt sind. Trotz der Validierung im Frontend validieren wir hier zur Sicherheit alle Daten nochmal.
 
 ##### Benutzergruppen und Rechte
 ##### Cookies
-Cookies haben wir ebenfalls auf der Seite implementiert. Beim ersten Laden der Seite poppen diese auf. Sie können direkt akzeptiert oder durch Klicken auf “Cookies einstellen” noch individuell angepasst werden.
+Ein Cookie-Banner haben wir ebenfalls auf der Seite implementiert. Beim ersten Laden der Seite poppt dieses auf. Sie können direkt akzeptiert oder durch Klicken auf “Cookies einstellen” noch individuell angepasst werden.
 Sind sie einmal akzeptiert, muss der User kein weiteres Mal akzeptieren, da sie an den Browser gekoppelt sind.
 Umgesetzt haben wir dies mit zwei Modalen, die auf “show” oder “hide” gesetzt werden, je nachdem welche Funktion aufgerufen wird bzw. welcher Button gedrückt wird.
+Wenn der Nutzer die Cookies akzeptiert, setzen wir in seinem Browser einen `cookies_erlaubt` Cookie, der verhindert, dass das Banner beim nächsten mal wieder angezeigt wird.
 Zu finden ist die Programmierung unter `view/layouts/layout.ejs`.
 
 ##### Geschäftsprozess mit Session über mehrere Seitenaufrufe
