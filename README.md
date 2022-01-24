@@ -45,8 +45,10 @@ Unser Quiz haben wir mit Hilfe von VUE als Single Page Application implementiert
 Wir haben zuerst versucht, VUE direkt in einem `<script>` auf der Seite  einzubinden, aber hatten so Probleme mit dem VUE import. Nach längerem Googlen haben wir dann rausgefunden, dass man in Sails VUE über `parasails.registerPage` unter `assets/js/pages` einbindet, was wir dann unter `assets/js/pages/size/quiz.pages.js` gemacht haben.
 
 ##### Dynamische Suche mit AJAX + VUE
-Unsere Bra-Suche für Admins haben wir ebenfalls mit VUE implementiert. Bei jeder Eingabe im Suchfeld wird automatisch eine Anfrage an den `bra/find` controller geschickt.
+Unsere Bra-Suche für Admins haben wir ebenfalls mit VUE implementiert. Bei jeder Eingabe im Suchfeld wird automatisch eine Anfrage an den `bra/find` controller geschickt. Der Controller schickt dann die passenden Bras als JSON zurück.
 Es werden zwei Parameter (`filterNach` und `wert`) mitgeschickt, mit denen dann Datenbankanfragen gemacht werden. Der Nutzer kann den `filterNach`-Wert über ein Dropdown auswählen.
+
+Hier hatten wir zuerst noch Probleme, weil die Tabelle sich trotz neuen Sucheingaben nicht aktualisiert hat. Nach einigem Recherchieren im Internet haben wir das Problem dann gelöst bekommen, indem wir `{ cache: "no-cache" }` mit an die `fetch` Funktion übergeben haben.
  
 ##### Javascript + jQuery
 wurden von uns zum einen für das setzen der Verbindungen zum Backend verwendet und zum anderen um Funktionen aus dem Frontend durchführen zu können. Des weiteren haben wir außerdem beispielsweise die Kontaktseite dynamisch mit den beiden “Helfern” erzeugt.
@@ -66,7 +68,10 @@ Das responsive Anpassen des Seitenlayouts auf unterschiedliche Bildschirmgröße
 | P1      | HTML   | Link  HTML| Routen, Action/Controller, View  |
 | P2   | Javascript |  AJAX / Post; JSON     | DB     |
 
-P1 haben wir beim Quiz verwendet, P2 bei der Übersicht der BH-Einträge, sowie beim Ändern und Löschen der Einträge und bei der Suche eines spezifischen Eintrags.
+P1 haben wir beispielsweise beim Quiz verwendet. Der Nutzer bekommt von unserer App das Formular geschickt, das er dann ausfüllt. Wenn der Nutzer das Formular am Ende abschickt, wird dieses über einen POST-Request an die `/size` Route geschickt. Dadurch wird die `size/create`-Action gestartet, die diese Formulardaren bekommt, validiert, verarbeitet und dann in der Datenbank abspeichert. Anschließend wird ein Redirect auf die `/empfehlungen` Route zurückgegeben.
+
+Im Gegensatz dazu verwendet unsere Suche den Ablauf P2. Anstatt bei jeder Änderung der Suche die ganze Site neu zu laden, schicken wir die Anfragen über AJAX (mit der `fetch` Funktion) an die `bra/find` Action, die dann die entsprechenden Bras aus der Datenbank als JSON zurückgibt. Vue nimmt dann diese Daten und aktualisiert die Tabelle dynamisch. 
+Außerdem haben wir eine Lösch-Funktion implementiert, die ebenfalls mit `fetch` eine Anfrage an unser Backend schickt.
 
 
 ##### Datenbank - Aufbau, Fremdschlüsselbeziehungen
@@ -76,6 +81,7 @@ Im Frontend haben wir die einegebenen Daten auf zwei Arten validiert. Zum Einen 
 
 Im Größenquiz war das allerdings nicht ausreichend, da dieses über mehrere Seiten geht und die Fehler auf den ersten Seiten für den Nutzer beim Absenden des Formulars nicht sichtbar wären.
 Deswegen haben wir hier zusätzlich Vue eingesezt, um auf der letzten Seite unter dem Button Fehlermeldungen einzublenden wenn Eingabefehler bestehen.
+Zusätzlich haben wir, um das Problem zu umgehen, auf der ersten Seite den Weiter-Button deaktiviert, bis die Felder für Unterbrustbreite und Brustumfang ausgefüllt wurden. Wir haben uns aber entscheiden die Buttons für die individuellen Seiten oben auf der Seite nicht zu deaktivieren, damit Nutzer sich wenn sie das wollen die nächsten Seiten trotzdem schon anschauen können.
 
 ###### Backend
 Im Backend verwenden wir die `inputs` von unseren Actions um sicherzustellen, dass die Daten korrekt sind. Trotz der Validierung im Frontend validieren wir hier zur Sicherheit alle Daten nochmal.
@@ -89,6 +95,7 @@ Wenn der Nutzer die Cookies akzeptiert, setzen wir in seinem Browser einen `cook
 Zu finden ist die Programmierung unter `view/layouts/layout.ejs`.
 
 ##### Geschäftsprozess mit Session über mehrere Seitenaufrufe
+Das aktualisieren von Bras haben wir als mehrseitiges Formular implementiert. Im gegensatz zum Größenquiz haben wir hier nicht VUE verwendet, sondern das Formular über mehrere Actions und Views verteilt. Um dabei die Daten des aktualisierten Bras nicht zu verlieren, speichern wir diese in der Session. Wenn der Nutzer auf der ersten Seite aktualisieren drückt, bekommt er eine neue Seite angezeigt, die die neuen Werte mit den alten Werten vergleicht. Erst wenn der Nutzer diese Werte geprüft und bestätigt hat, werden diese tatsächlich in der Datenbank gespeichert.
 #### Funktionalität
 ##### Geschäftsprozesse auflisten:
 + ###### Benutzer füllt Quiz aus
