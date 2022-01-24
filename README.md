@@ -49,6 +49,8 @@ Unsere Bra-Suche für Admins haben wir ebenfalls mit VUE implementiert. Bei jede
 Es werden zwei Parameter (`filterNach` und `wert`) mitgeschickt, mit denen dann Datenbankanfragen gemacht werden. Der Nutzer kann den `filterNach`-Wert über ein Dropdown auswählen.
 
 Hier hatten wir zuerst noch Probleme, weil die Tabelle sich trotz neuen Sucheingaben nicht aktualisiert hat. Nach einigem Recherchieren im Internet haben wir das Problem dann gelöst bekommen, indem wir `{ cache: "no-cache" }` mit an die `fetch` Funktion übergeben haben.
+
+Außerdem haben wir, ebenfalls mit Vue, in den Ergebnissen unserer Suche eine Löschfunktion eingebaut. Wenn der Nutzer auf den "Löschen" Knopf drückt, wird über AJAX eine Anfrage an das Backend geschickt und der Bra aus der Datenbank gelöscht. Danach entfernen wir den Bra mit der gelöschten ID aus unserer Tabelle, so dass diese sich aktualisiert ohne die Seite neu zu laden.
  
 ##### Javascript + jQuery
 wurden von uns zum einen für das setzen der Verbindungen zum Backend verwendet und zum anderen um Funktionen aus dem Frontend durchführen zu können. Des weiteren haben wir außerdem beispielsweise die Kontaktseite dynamisch mit den beiden “Helfern” erzeugt.
@@ -95,7 +97,7 @@ Wenn der Nutzer die Cookies akzeptiert, setzen wir in seinem Browser einen `cook
 Zu finden ist die Programmierung unter `view/layouts/layout.ejs`.
 
 ##### Geschäftsprozess mit Session über mehrere Seitenaufrufe
-Das aktualisieren von Bras haben wir als mehrseitiges Formular implementiert. Im gegensatz zum Größenquiz haben wir hier nicht VUE verwendet, sondern das Formular über mehrere Actions und Views verteilt. Um dabei die Daten des aktualisierten Bras nicht zu verlieren, speichern wir diese in der Session. Wenn der Nutzer auf der ersten Seite aktualisieren drückt, bekommt er eine neue Seite angezeigt, die die neuen Werte mit den alten Werten vergleicht. Erst wenn der Nutzer diese Werte geprüft und bestätigt hat, werden diese tatsächlich in der Datenbank gespeichert.
+Das Aktualisieren von BH-Einträgen haben wir als mehrseitiges Formular implementiert. Im Gegensatz zum Größenquiz haben wir hier nicht VUE verwendet, sondern das Formular über mehrere Actions und Views verteilt. Um dabei die Daten des aktualisierten BHs nicht zu verlieren, speichern wir diese in der Session. Wenn der Nutzer auf der ersten Seite Aktualisieren drückt, bekommt er eine neue Seite angezeigt, die die neuen Werte mit den alten Werten vergleicht. Erst wenn der Nutzer diese Werte geprüft und bestätigt hat, werden diese tatsächlich in der Datenbank gespeichert.
 #### Funktionalität
 ##### Geschäftsprozesse auflisten:
 + ###### Benutzer füllt Quiz aus
