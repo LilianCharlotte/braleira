@@ -87,6 +87,19 @@ Zu finden ist die Programmierung unter `view/layouts/layout.ejs`.
 + ###### Impressum ->Link
 + ###### Kontaktseite -> Link
 + ###### Optimieren Sie die Begrüßungsseite nach SEO Kriterien 
+Der Analyse mit Google Lighthouse entsprechend haben wir noch weitere Meta-Tags in die Layout-Datei `view/layouts/layout.ejs` unserer Website geschrieben. Mit Hilfe dieser Tags machen wir es dem Nutzer so leichter, uns durch eine Suche der folgenden Schlüsselwörter zu finden:
++ bra,
++ BHs,
++ BH,
++ BH-Größe,
++ bhgröße,
++ passender Bh,
++ bh-Quiz,
++ braleira, 
++ bhgröße ausmessen, 
++ richtige größe bh
+Man sollte nicht mehr als 10 Keywords verwenden, weswegen wir uns auf die oben gelisteten beschränkt haben. 
+Außerdem haben wir eine Beschreibung unserer Website hinzugefügt: “Finde einen perfekt passenden BH mit Hilfe unseres Größenquizzes.”
 + ###### Verlinken Sie Ihre Webseite mit Social Media Accounts
 + ###### Analysiere die Webanwendung mit Google Lighthouse 
 
