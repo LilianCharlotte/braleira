@@ -16,15 +16,15 @@ Bei Problemen haben wir die zur Verfügung gestellten Demos aus Git herangezogen
 
 
 ### Zusammenfassung, Beschreibung der Funktionalität
-+BH-Größenquiz, dass die passenden Größen verschiedener Marken heraussucht 
-	zu finden unter: views/pages/size/quiz.ejs & ../empfehlungen.ejs
-+Anleitung für richtiges Vermessen + Auswerten an Hand der Größentabelle
-	zu finden unter: views/pages/size/quiz.ejs & ../empfehlungen.ejs
-+Angabe von Passformproblemen und Präferenzen
-	zu finden unter: views/pages/size/quiz.ejs & ../empfehlungen.ejs
-+BH Einträge in Datenbank pflegen (CRUD)
-	zu finden unter den Seiten bei: views/pages/bra/
-+Zusätzliche Funktionen wie Login, Impressum und Kontaktseite 
++ BH-Größenquiz, dass die passenden Größen verschiedener Marken heraussucht 
+	zu finden unter: `views/pages/size/quiz.ejs` und `views/pages/size/empfehlungen.ejs`
++ Anleitung für richtiges Vermessen + Auswerten an Hand der Größentabelle
+	zu finden unter: `views/pages/size/quiz.ejs` und `views/pages/size/empfehlungen.ejs`
++ Angabe von Passformproblemen und Präferenzen
+	zu finden unter: `views/pages/size/quiz.ejs` und `views/pages/size/empfehlungen.ejs`
++ BH Einträge in Datenbank anzeigen, suchen und pflegen (CRUD)
+	zu finden unter den Seiten bei: `views/pages/bra/`
++ Zusätzliche Funktionen wie Login, Impressum und Kontaktseite 
  
  
 ### Highlights und WOW-Faktor der Seite
