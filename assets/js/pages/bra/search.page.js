@@ -13,7 +13,15 @@ parasails.registerPage('search', {
         deleteBra: function (id) {
             fetch('/api/v1/bra/delete?id=' + id)
                 .then(function (data) { alert('Der BH Eintrag wurde aus der Datenbank gelöscht.') })
-                .then(function () { location.reload() })
+                .then(() => { 
+                    const resultOhneBra = []
+                    for (const bra of this.result) {
+                        if (bra.id != id) {
+                            resultOhneBra.push(bra);
+                        }
+                    }
+                    this.result = resultOhneBra;
+                });
         }
     },
     mounted() {
