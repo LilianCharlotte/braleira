@@ -68,14 +68,14 @@ P1 haben wir beim Quiz verwendet, P2 bei der Übersicht der BH-Einträge, sowie 
 + ###### Frontend
 + ###### Backend
 
-###### Benutzergruppen und Rechte
-###### Cookies
+##### Benutzergruppen und Rechte
+##### Cookies
 Cookies haben wir ebenfalls auf der Seite implementiert. Beim ersten Laden der Seite poppen diese auf. Sie können direkt akzeptiert oder durch Klicken auf “Cookies einstellen” noch individuell angepasst werden.
 Sind sie einmal akzeptiert, muss der User kein weiteres Mal akzeptieren, da sie an den Browser gekoppelt sind.
 Umgesetzt haben wir dies mit zwei Modalen, die auf “show” oder “hide” gesetzt werden, je nachdem welche Funktion aufgerufen wird bzw. welcher Button gedrückt wird.
 Zu finden ist die Programmierung unter `view/layouts/layout.ejs`.
 
-###### Geschäftsprozess mit Session über mehrere Seitenaufrufe
+##### Geschäftsprozess mit Session über mehrere Seitenaufrufe
 #### Funktionalität
 ##### Geschäftsprozesse auflisten:
 + ###### Benutzer füllt Quiz aus
