@@ -14,6 +14,7 @@ module.exports = {
       filterNach: {
         type: 'string',
         required: true,
+        isIn: ['marke', 'model', 'form', 'groesse', 'stoff', 'farbe', 'muster', 'shoppingLink', 'bildpfad'],
       }
 
     },
