@@ -16,14 +16,11 @@ module.exports = {
     //   collection: 'bra',
     //   via: 'owner'
     // },
-    quiz:{
-      collection: 'quiz',
-      via:'owner'
-    },
-    options:{
-      collection: 'passformwohlfuehl',
-      via: 'users'
-    },
+    // quiz:{
+    //   collection: 'quiz',
+    //   via:'owner'
+    // },
+  
     komfort:{
       collection: 'braTragekomfort',
       via:'users'
