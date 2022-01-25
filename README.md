@@ -76,27 +76,26 @@ Im Gegensatz dazu verwendet unsere Suche den Ablauf P2. Anstatt bei jeder Änder
 Außerdem haben wir eine Lösch-Funktion implementiert, die ebenfalls mit `fetch` eine Anfrage an unser Backend schickt.
 
 
-##### Datenbank - Aufbau, Fremdschlüsselbeziehungen
-##### Data Validation
-###### Frontend
+#### Datenbank - Aufbau, Fremdschlüsselbeziehungen
+#### Data Validation
+
 Im Frontend haben wir die einegebenen Daten auf zwei Arten validiert. Zum Einen haben wir unsere `<input>` Elemente wo möglich mit Attributen wie `required`, `maxLength`, und `min` versehen.
 
 Im Größenquiz war das allerdings nicht ausreichend, da dieses über mehrere Seiten geht und die Fehler auf den ersten Seiten für den Nutzer beim Absenden des Formulars nicht sichtbar wären.
 Deswegen haben wir hier zusätzlich Vue eingesezt, um auf der letzten Seite unter dem Button Fehlermeldungen einzublenden wenn Eingabefehler bestehen.
 Zusätzlich haben wir, um das Problem zu umgehen, auf der ersten Seite den Weiter-Button deaktiviert, bis die Felder für Unterbrustbreite und Brustumfang ausgefüllt wurden. Wir haben uns aber entscheiden die Buttons für die individuellen Seiten oben auf der Seite nicht zu deaktivieren, damit Nutzer sich wenn sie das wollen die nächsten Seiten trotzdem schon anschauen können.
 
-###### Backend
 Im Backend verwenden wir die `inputs` von unseren Actions um sicherzustellen, dass die Daten korrekt sind. Trotz der Validierung im Frontend validieren wir hier zur Sicherheit alle Daten nochmal.
 
-##### Benutzergruppen und Rechte
-##### Cookies
+#### Benutzergruppen und Rechte
+#### Cookies
 Ein Cookie-Banner haben wir ebenfalls auf der Seite implementiert. Beim ersten Laden der Seite poppt dieses auf. Sie können direkt akzeptiert oder durch Klicken auf “Cookies einstellen” noch individuell angepasst werden.
 Sind sie einmal akzeptiert, muss der User kein weiteres Mal akzeptieren, da sie an den Browser gekoppelt sind.
 Umgesetzt haben wir dies mit zwei Modalen, die auf “show” oder “hide” gesetzt werden, je nachdem welche Funktion aufgerufen wird bzw. welcher Button gedrückt wird.
 Wenn der Nutzer die Cookies akzeptiert, setzen wir in seinem Browser einen `cookies_erlaubt` Cookie, der verhindert, dass das Banner beim nächsten mal wieder angezeigt wird.
 Zu finden ist die Programmierung unter `view/layouts/layout.ejs`.
 
-##### Geschäftsprozess mit Session über mehrere Seitenaufrufe
+#### Geschäftsprozess mit Session über mehrere Seitenaufrufe
 Das Aktualisieren von BH-Einträgen haben wir als mehrseitiges Formular implementiert. Im Gegensatz zum Größenquiz haben wir hier nicht VUE verwendet, sondern das Formular über mehrere Actions und Views verteilt. Um dabei die Daten des aktualisierten BHs nicht zu verlieren, speichern wir diese in der Session. Wenn der Nutzer auf der ersten Seite Aktualisieren drückt, bekommt er eine neue Seite angezeigt, die die neuen Werte mit den alten Werten vergleicht. Erst wenn der Nutzer diese Werte geprüft und bestätigt hat, werden diese tatsächlich in der Datenbank gespeichert.
 #### Funktionalität
 ##### Geschäftsprozesse auflisten:
