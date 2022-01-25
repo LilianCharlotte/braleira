@@ -394,10 +394,18 @@ footer .footer-nav {
 
 .quiz {
     background: #cea59b;
+    background-image: url('/images/quiz_bg.png');
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     color: white;
     padding: 0;
+}
+
+.quiz-text {
+    background: #cea59b;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 10px #cea59b;
 }
 
 .radius{
