@@ -77,6 +77,8 @@ Außerdem haben wir eine Lösch-Funktion implementiert, die ebenfalls mit `fetch
 
 
 #### Datenbank - Aufbau, Fremdschlüsselbeziehungen
+Die Informationen, die über den User im Quiz gesammelt werden, landen bei uns in verschiedenen Tabellen mit Fremdschlüsselbeziehungen zum User (Messdaten, BraPassformdaten, BraTragekomfort, Farbe, Muster, Stoff, BHArt. Aus Vereinfachungsgründen werden die BH-Einträge gesammelt in einer Tabelle Bra gespeichert. 
+
 #### Data Validation
 
 Im Frontend haben wir die einegebenen Daten auf zwei Arten validiert. Zum Einen haben wir unsere `<input>` Elemente wo möglich mit Attributen wie `required`, `maxLength`, und `min` versehen.
@@ -127,7 +129,7 @@ Der Analyse mit Google Lighthouse entsprechend haben wir noch weitere Meta-Tags 
 Man sollte nicht mehr als 10 Keywords verwenden, weswegen wir uns auf die oben gelisteten beschränkt haben. 
 Außerdem haben wir eine Beschreibung unserer Website hinzugefügt: “Finde einen perfekt passenden BH mit Hilfe unseres Größenquizzes.”
 + ###### Verlinken Sie Ihre Webseite mit Social Media Accounts
-Siehe `Homepage`.
+Auf unserer Homepage sind drei Social Media Links und auf unserer Empehlungsseite ganz am Ende geben wir dem User die Möglichkeit auf drei Social Media Plattformen über uns zu posten (Twitter, Pinterest und Facebook).
 + ###### Analysiere die Webanwendung mit Google Lighthouse 
 
 
