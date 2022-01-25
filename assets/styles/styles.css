@@ -424,7 +424,10 @@ footer .footer-nav {
 }
 
 .social-media {
-    background: #f0f0f0;
+    background-color: #faead3;
+    background-image: url('/images/socialmedia_bg.jpg');
+    background-repeat: no-repeat;
+    background-position: 100%;
     padding: 0 10em;
     
 
