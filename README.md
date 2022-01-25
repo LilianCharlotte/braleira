@@ -130,10 +130,11 @@ Der Analyse mit Google Lighthouse entsprechend haben wir noch weitere Meta-Tags 
 + passender Bh,
 + bh-Quiz,
 + braleira
+
 Man sollte nicht mehr als 10 Keywords verwenden, weswegen wir uns auf 10 beschränkt haben. 
 Außerdem haben wir einen Meta Tag mit einer kurzen und passenden Beschreibung unserer Website hinzugefügt: “Finde einen perfekt passenden BH mit Hilfe unseres Größenquizzes.”
 
-Die Analyse mit Google Lighthouse hat eine Performance von 100% in der Desktop Version ergeben und 93% in der Mobile Version.
+Die Analyse mit Google Lighthouse hat eine Performance von 100 in der Desktop Version ergeben und 93 in der Mobile Version.
 
 
 Off Page Optimization
