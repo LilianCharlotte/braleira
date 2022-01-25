@@ -128,10 +128,10 @@ module.exports.bootstrap = async function() {
     {marke: 'hunkemöller', model: 'Vorgeformter Push-up-Bügel-BH Pia - Schwarz', form:'Push-Up BH', groesse: '65E', stoff:'mit Spitze', farbe:'schwarz', muster:'gemustert', shoppingLink:'https://www.hunkemoller.de/vorgeformter-push-up-buegel-bh-pia-schwarz-112477.html', bildpfad:'/images/bra/Vorgeformter Push-up-Bügel-BH Pia - Schwarz.jpg'},
     {marke: 'hunkemöller', model: 'Nahtloser Bralette Dunkelblau', form:'Bralette', groesse:'75B', stoff:'stretchy Stoffe', farbe:'grau', muster: 'einfarbig/ohne', shoppingLink:'https://www.hunkemoller.de/nahtloser-bralette-rose-blau-181401.html', bildpfad:'/images/bra/Nahtloser Bralette Dunkelblau.jpg'},
     {marke: 'Lascana',     model:'Bügel BH blau', form: 'Push-Up BH', groesse: '75E', stoff:'mit Spitze', farbe:'blau', muster:'einfarbig/ohne', shoppingLink:'https://www.zalando.de/lascana-wire-bra-buegel-bh-royal-blue-l8381a069-k12.html', bildpfad:'images/bra/Bügel BH blau.jpg'},
- 
+
   ]);
 
-  
+
 
   // Save new bootstrap version
   await sails.helpers.fs.writeJson.with({

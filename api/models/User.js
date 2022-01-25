@@ -20,7 +20,7 @@ module.exports = {
     //   collection: 'quiz',
     //   via:'owner'
     // },
-  
+
     komfort:{
       collection: 'braTragekomfort',
       via:'users'

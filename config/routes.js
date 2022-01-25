@@ -15,51 +15,51 @@ module.exports.routes = {
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
 
 
-//'/': { view: 'pages/homepage' }, 
-//'GET /test': {view: 'test'},
-//'POST /neueruser': {action: 'useranlegen'}
-// 'GET /meal/:id/edit': { action: 'meal/edit' },
-//'POST /meal/:id/update': { action: 'meal/update' },
+  //'/': { view: 'pages/homepage' },
+  //'GET /test': {view: 'test'},
+  //'POST /neueruser': {action: 'useranlegen'}
+  // 'GET /meal/:id/edit': { action: 'meal/edit' },
+  //'POST /meal/:id/update': { action: 'meal/update' },
 
 
 
- 'GET /':                                 { action: 'view-homepage-or-redirect' },
- 'GET /welcome/:unused?':                 { action: 'dashboard/view-welcome' },
+  'GET /':                                 { action: 'view-homepage-or-redirect' },
+  'GET /welcome/:unused?':                 { action: 'dashboard/view-welcome' },
 
- 'GET /bra/new':                       { view: 'pages/bra/new'},
- 'POST /bra':                          { action: 'bra/create'},
- 'GET /bra/search':                    { view: 'pages/bra/search'},
+  'GET /bra/new':                       { view: 'pages/bra/new'},
+  'POST /bra':                          { action: 'bra/create'},
+  'GET /bra/search':                    { view: 'pages/bra/search'},
 
   'GET /quiz':                          { action: 'size/show' },
   'POST /size':                         { action: 'size/create' },
   'GET /empfehlungen':                  { action: 'size/match' },
 
- 'GET /bra/:id/edit':                   { action: 'bra/edit'},
- 'POST /bra/:id/update':                { action: 'bra/update'},
- 'GET /bra/vergleich':                  { action: 'bra/vergleich' },
- 'GET /bra/eintragsbestaetigung':       { action: 'bra/eintragsbestaetigung' },
+  'GET /bra/:id/edit':                   { action: 'bra/edit'},
+  'POST /bra/:id/update':                { action: 'bra/update'},
+  'GET /bra/vergleich':                  { action: 'bra/vergleich' },
+  'GET /bra/eintragsbestaetigung':       { action: 'bra/eintragsbestaetigung' },
 
- 'GET /faq':                { action:   'view-faq' },
- 'GET /legal/terms':        { action:   'legal/view-terms' },
- 'GET /legal/privacy':      { action:   'legal/view-privacy' },
- 'GET /impressum':          { view:     'pages/legal/impressum'},
- 'GET /kontakt':            { view:     'pages/legal/kontaktseite'},
- 'GET /contact':            { action:   'view-contact' },
+  'GET /faq':                { action:   'view-faq' },
+  'GET /legal/terms':        { action:   'legal/view-terms' },
+  'GET /legal/privacy':      { action:   'legal/view-privacy' },
+  'GET /impressum':          { view:     'pages/legal/impressum'},
+  'GET /kontakt':            { view:     'pages/legal/kontaktseite'},
+  'GET /contact':            { action:   'view-contact' },
 
- 'GET /signup':             { action: 'entrance/view-signup' },
- 'GET /email/confirm':      { action: 'entrance/confirm-email' },
- 'GET /email/confirmed':    { action: 'entrance/view-confirmed-email' },
+  'GET /signup':             { action: 'entrance/view-signup' },
+  'GET /email/confirm':      { action: 'entrance/confirm-email' },
+  'GET /email/confirmed':    { action: 'entrance/view-confirmed-email' },
 
- 'GET /login':              { action: 'entrance/view-login' },
- 'GET /password/forgot':    { action: 'entrance/view-forgot-password' },
- 'GET /password/new':       { action: 'entrance/view-new-password' },
+  'GET /login':              { action: 'entrance/view-login' },
+  'GET /password/forgot':    { action: 'entrance/view-forgot-password' },
+  'GET /password/new':       { action: 'entrance/view-new-password' },
 
- 'GET /account':            { action: 'account/view-account-overview' },
- 'GET /account/password':   { action: 'account/view-edit-password' },
- 'GET /account/profile':    { action: 'account/view-edit-profile' },
+  'GET /account':            { action: 'account/view-account-overview' },
+  'GET /account/password':   { action: 'account/view-edit-password' },
+  'GET /account/profile':    { action: 'account/view-edit-profile' },
 
 
- //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
+  //  ╔╦╗╦╔═╗╔═╗  ╦═╗╔═╗╔╦╗╦╦═╗╔═╗╔═╗╔╦╗╔═╗   ┬   ╔╦╗╔═╗╦ ╦╔╗╔╦  ╔═╗╔═╗╔╦╗╔═╗
   //  ║║║║╚═╗║    ╠╦╝║╣  ║║║╠╦╝║╣ ║   ║ ╚═╗  ┌┼─   ║║║ ║║║║║║║║  ║ ║╠═╣ ║║╚═╗
   //  ╩ ╩╩╚═╝╚═╝  ╩╚═╚═╝═╩╝╩╩╚═╚═╝╚═╝ ╩ ╚═╝  └┘   ═╩╝╚═╝╚╩╝╝╚╝╩═╝╚═╝╩ ╩═╩╝╚═╝
   '/terms':                   '/legal/terms',
