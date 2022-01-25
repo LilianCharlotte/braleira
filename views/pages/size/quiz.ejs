@@ -1,20 +1,20 @@
 <div id="quiz">
   <div id="app">
-    <div class="container pt-5 pb-5 mt-2">
+    <div class="container pt-5 pb-5 mt-1">
       <div class="row">
-        <div class="col-sm">
+        <div class="col-sm-12 col-md-3 mt-1">
           <button class="btn max_width" v-bind:class="{ 'btn_color': step === 1 }" v-on:click.disable="gotoPage(1)">Schritt
             1</button>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-12 col-md-3 mt-1">
           <button class="btn max_width" v-bind:class="{ 'btn_color': step === 2 }" v-on:click.disable="gotoPage(2)">Schritt
             2</button>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-12 col-md-3 mt-1">
           <button class="btn max_width" v-bind:class="{ 'btn_color': step === 3 }" v-on:click.disable="gotoPage(3)">Schritt
             3</button>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-12 col-md-3 mt-1">
           <button class="btn max_width" v-bind:class="{ 'btn_color': step === 4 }" v-on:click.disable="gotoPage(4)">Schritt
             4</button>
         </div>
