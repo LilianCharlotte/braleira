@@ -90,6 +90,10 @@ Zusätzlich haben wir, um das Problem zu umgehen, auf der ersten Seite den Weite
 Im Backend verwenden wir die `inputs` von unseren Actions um sicherzustellen, dass die Daten korrekt sind. Trotz der Validierung im Frontend validieren wir hier zur Sicherheit alle Daten nochmal.
 
 #### Benutzergruppen und Rechte
+Die Benutzergruppen sind folgende:
+Der nicht-angemeldete-User darf unsere Homepage, das Impressum und die Kontaktseite anschauen, sowie sich registrieren und anmelden.
+Der angemeldete-User kann das Größenquiz ausfüllen und sich daraus dann Empfehlungen anzeigen lassen.
+Die Admins(und auch die Super-Admins natürlich) der Webseite können zusätzlich die BH-Einträge der Datenbank verwalten. Dies geschieht auf der Übersicht, über die BH-Einträge gesucht, bearbeitet und gelöscht werden können und über "neuen BH erstellen" `bra/new.ejs`. 
 #### Cookies
 Ein Cookie-Banner haben wir ebenfalls auf der Seite implementiert. Beim ersten Laden der Seite poppt dieses auf. Sie können direkt akzeptiert oder durch Klicken auf “Cookies einstellen” noch individuell angepasst werden.
 Sind sie einmal akzeptiert, muss der User kein weiteres Mal akzeptieren, da sie an den Browser gekoppelt sind.
@@ -112,25 +116,30 @@ Impressum: `views/pages/legal/impressum.ejs`
 + ###### Kontaktseite 
 Kontaktseite: `views/pages/legal/kontaktseite.ejs`
 Die Kontaktseite ist auf der Impressumsseite unten verlinkt. 
-+ ###### Optimieren Sie die Begrüßungsseite nach SEO Kriterien 
-Der Analyse mit Google Lighthouse entsprechend haben wir noch weitere Meta-Tags in die Layout-Datei `view/layouts/layout.ejs` unserer Website geschrieben. Mit Hilfe dieser Tags machen wir es dem Nutzer so leichter, uns durch eine Suche der folgenden Schlüsselwörter zu finden:
++ ###### SEO & Performance
 
-+ bra,
-+ BHs,
+On-Page SEO
+
+Die Inhalte unserer Homepage erhalten durch den Abschnitt "Unsere Philosophie" und der Beschreibung unseres Größenquizzes viele Keywords und Phrasen, die das Ranking in allgemeinen Suchmaschinen beeinflussen. Außerdem sind unsere URLs aussagekräftig und somit für den Nutzer leicht lesbar.
+
+Technische SEO & Performance
+
+Der Analyse mit Google Lighthouse entsprechend haben wir noch weitere Meta-Tags in die Layout-Datei `view/layouts/layout.ejs` unserer Website geschrieben. Mit Hilfe dieser Tags machen wir es dem Nutzer so leichter, uns durch eine Suche der z.B. folgenden Schlüsselwörter zu finden:
 + BH,
 + BH-Größe,
-+ bhgröße,
 + passender Bh,
 + bh-Quiz,
-+ braleira, 
-+ bhgröße ausmessen, 
-+ richtige größe bh
++ braleira
+Man sollte nicht mehr als 10 Keywords verwenden, weswegen wir uns auf 10 beschränkt haben. 
+Außerdem haben wir einen Meta Tag mit einer kurzen und passenden Beschreibung unserer Website hinzugefügt: “Finde einen perfekt passenden BH mit Hilfe unseres Größenquizzes.”
 
-Man sollte nicht mehr als 10 Keywords verwenden, weswegen wir uns auf die oben gelisteten beschränkt haben. 
-Außerdem haben wir eine Beschreibung unserer Website hinzugefügt: “Finde einen perfekt passenden BH mit Hilfe unseres Größenquizzes.”
-+ ###### Verlinken Sie Ihre Webseite mit Social Media Accounts
-Auf unserer Homepage sind drei Social Media Links und auf unserer Empehlungsseite ganz am Ende geben wir dem User die Möglichkeit auf drei Social Media Plattformen über uns zu posten (Twitter, Pinterest und Facebook).
-+ ###### Analysiere die Webanwendung mit Google Lighthouse 
+Die Analyse mit Google Lighthouse hat eine Performance von 100% in der Desktop Version ergeben und 93% in der Mobile Version.
+
+
+Off Page Optimization
++ ###### Social Media Accounts
+Auf unserer Empehlungsseite ganz am Ende geben wir dem User die Möglichkeit auf drei Social Media Plattformen über uns zu posten (Twitter, Pinterest und Facebook) und auf der Homepage sind die Social Media Links sehr präsent.
+
 
 
 

@@ -21,9 +21,9 @@ module.exports = {
         owner:{
           model:'user',
           unique: true 
-          /*--> eigentlich wäre unique true nicht korrekt, 
+          /*--> eigentlich wäre unique true nicht korrekt und die Verwendung der Collection hier besser, 
           weil ein User in der Theorie unterschiedliche Bewertungen zu unterschiedlichen BHs anlegen dürfte, 
-          aus Vereinfachungsgründen ist das Feature allerdings weggefallen
+          aus Zeitgründen ist dies allerdings weggefallen
           */
         }
       },

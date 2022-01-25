@@ -112,11 +112,11 @@
               <div class="col-sm" style="text-align: left;">
                 <p> <b>Körbchen sind eher:</b> </p>
                 <div>
-                  <input type="checkbox" id="k_klein" name="k_klein">
+                  <input type="checkbox" id="k_klein" name="k_klein" v-model="k_klein" :disabled="k_groß">
                   <label for="klein">zu klein</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="k_groß" name="k_groß">
+                  <input type="checkbox" id="k_groß" name="k_groß" v-model="k_groß" :disabled="k_klein">
                   <label for="groß">zu groß</label>
                 </div>
                 <div>
@@ -132,11 +132,11 @@
                   <label for="zs_ausgef">zu schmal, Brust fällt an der Seite raus</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="k_passtSehrGut" name="k_passtSehrGut">
+                  <input type="checkbox" id="k_passtSehrGut" name="k_passtSehrGut" v-model="k_passtSehrGut" :disabled="k_passt">
                   <label for="gut">passt sehr gut</label>
                 </div>
                 <div>
-                  <input type="checkbox" id="k_passt" name="k_passt">
+                  <input type="checkbox" id="k_passt" name="k_passt" v-model="k_passt" :disabled="k_passtSehrGut">
                   <label for="gut">passend</label>
                 </div>
               </div>

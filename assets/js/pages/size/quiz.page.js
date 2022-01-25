@@ -3,6 +3,10 @@ parasails.registerPage('quiz', {
         step: 1,
         brustumfang: null,
         unterbrustbreite: null,
+        k_klein: false,
+        k_groß: false,
+        k_passt: false,
+        k_passtSehrGut: false,
     },
     methods: {
         inc: function () {
