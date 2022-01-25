@@ -14,7 +14,7 @@ module.exports.bootstrap = async function() {
   var path = require('path');
 
   // This bootstrap version indicates what version of fake data we're dealing with here.
-  var HARD_CODED_DATA_VERSION = 21;
+  var HARD_CODED_DATA_VERSION = 22;
 
   // This path indicates where to store/look for the JSON file that tracks the "last run bootstrap info"
   // locally on this development computer (if we happen to be on a development computer).
@@ -59,7 +59,9 @@ module.exports.bootstrap = async function() {
 
   // By convention, this is a good place to set up fake data during development.
   await User.createEach([
-    { emailAddress: 'lisa@lindgren.com', fullName: 'Lisa Lindgren', isSuperAdmin: true, isAdmin: true, password: await sails.helpers.passwords.hashPassword('muckefuck')}
+    { emailAddress: 'lisa@lindgren.com', fullName: 'Lisa Lindgren', isSuperAdmin: true, isAdmin: true, password: await sails.helpers.passwords.hashPassword('muckefuck')},
+    { emailAddress: 'ada@lindgren.com', fullName: 'Ada Lindgren', isSuperAdmin: false, isAdmin: true, password: await sails.helpers.passwords.hashPassword('muckefuck')},
+    { emailAddress: 'norma@lindgren.com', fullName: 'Norma Lindgren', isSuperAdmin: false, isAdmin: false, password: await sails.helpers.passwords.hashPassword('muckefuck')}
   ]);
 
   await BraTragekomfort.createEach([

@@ -109,7 +109,7 @@ Das Aktualisieren von BH-Einträgen haben wir als mehrseitiges Formular implemen
 Impressum: `views/pages/legal/impressum.ejs`
 + ###### Kontaktseite 
 Kontaktseite: `views/pages/legal/kontaktseite.ejs`
-Die Kontaktseite ist auf der Registierungsseite unten verlinkt. 
+Die Kontaktseite ist auf der Impressumsseite unten verlinkt. 
 + ###### Optimieren Sie die Begrüßungsseite nach SEO Kriterien 
 Der Analyse mit Google Lighthouse entsprechend haben wir noch weitere Meta-Tags in die Layout-Datei `view/layouts/layout.ejs` unserer Website geschrieben. Mit Hilfe dieser Tags machen wir es dem Nutzer so leichter, uns durch eine Suche der folgenden Schlüsselwörter zu finden:
 
