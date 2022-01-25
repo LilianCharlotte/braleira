@@ -40,11 +40,11 @@ Aus diesen persönlichen Angaben und gesammelten Erfahrungsberichten können wir
  
  
 ### Technische Implementierung
-##### Quiz mit VUE zur Single Page Application
+#### Quiz mit VUE zur Single Page Application
 Unser Quiz haben wir mit Hilfe von VUE als Single Page Application implementiert. Es gibt vier Seiten, zwischen denen der Nutzer wechseln kann, ohne dass die Seite neu geladen wird.
 Wir haben zuerst versucht, VUE direkt in einem `<script>` auf der Seite  einzubinden, aber hatten so Probleme mit dem VUE import. Nach längerem Googlen haben wir dann rausgefunden, dass man in Sails VUE über `parasails.registerPage` unter `assets/js/pages` einbindet, was wir dann unter `assets/js/pages/size/quiz.pages.js` gemacht haben.
 
-##### Dynamische Suche mit AJAX + VUE
+#### Dynamische Suche mit AJAX + VUE
 Unsere Bra-Suche für Admins haben wir ebenfalls mit VUE implementiert. Bei jeder Eingabe im Suchfeld wird automatisch eine Anfrage an den `bra/find` controller geschickt. Der Controller schickt dann die passenden Bras als JSON zurück.
 Es werden zwei Parameter (`filterNach` und `wert`) mitgeschickt, mit denen dann Datenbankanfragen gemacht werden. Der Nutzer kann den `filterNach`-Wert über ein Dropdown auswählen.
 
@@ -52,11 +52,11 @@ Hier hatten wir zuerst noch Probleme, weil die Tabelle sich trotz neuen Sucheing
 
 Außerdem haben wir, ebenfalls mit Vue, in den Ergebnissen unserer Suche eine Löschfunktion eingebaut. Wenn der Nutzer auf den "Löschen" Knopf drückt, wird über AJAX eine Anfrage an das Backend geschickt und der Bra aus der Datenbank gelöscht. Danach entfernen wir den Bra mit der gelöschten ID aus unserer Tabelle, so dass diese sich aktualisiert ohne die Seite neu zu laden.
  
-##### Javascript + jQuery
+#### Javascript + jQuery
 wurden von uns zum einen für das setzen der Verbindungen zum Backend verwendet und zum anderen um Funktionen aus dem Frontend durchführen zu können. Des weiteren haben wir außerdem beispielsweise die Kontaktseite dynamisch mit den beiden “Helfern” erzeugt.
 Allgemein haben wir die Verwendung von vue jedoch jQuery vorgezogen, da wir dieses Framework besser und einfacher fanden. 
  
-##### Style mit Bootstrap und CSS
+#### Style mit Bootstrap und CSS
 Unsere Webseite haben wir größtenteils mit Bootstrap designed, was vieles vereinfacht hat und Content direkt dynamischer reagieren lies.
 Natürlich haben wir auch eigene CSS-Klassen erstellt, welche im style.css zu finden sind.
 Alles haben wir jedoch nicht als Klasse erzeugt, da wir das Sheet nicht mit nur einmal gebrauchten Klassen “zumüllen” wollten.
