@@ -114,6 +114,8 @@ and exposed as \`req.me\`.)`
       await sails.helpers.broadcastSessionChange(this.req);
     }
 
+    this.req.session.geradeAngemeldet = true;
+
   }
 
 };

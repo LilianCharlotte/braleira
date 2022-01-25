@@ -1,5 +1,10 @@
 <body>
   <main>
+      <% if (geradeAngemeldet) { %>
+      <div class="alert alert-success" style="margin-bottom: 0;" role="alert">
+        Hey <%= me.fullName.split(' ')[0] %>, dubist jetzt angemeldet.
+      </div>
+      <% } %>
       <section class="slogan">
           <h2 class="section-title">Find the perfect fit.</h2>
       </section>

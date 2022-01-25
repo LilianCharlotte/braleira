@@ -29,7 +29,12 @@ module.exports = {
       throw {redirect:'/welcome'};
     }
 
-    return {};
+    let geradeAngemeldet = this.req.session.geradeAngemeldet;
+    this.req.session.geradeAngemeldet = false;
+
+    return {
+      geradeAngemeldet: geradeAngemeldet
+    };
 
   }
 
