@@ -6,16 +6,20 @@
         <th>Farben</th>
         <td>
           <% for (const farbe of lieblingsFarben) { %>
-            <span class="badge btn_color mr-1"><%= farbe %></span>
-          <% } %>
+            <span class="badge btn_color mr-1">
+              <%= farbe %>
+            </span>
+            <% } %>
         </td>
       </tr>
       <tr>
         <th>Formen</th>
         <td>
           <% for (const form of lieblingsFormen) { %>
-            <span class="badge btn_color mr-1"><%= form %></span>
-          <% } %>
+            <span class="badge btn_color mr-1">
+              <%= form %>
+            </span>
+            <% } %>
         </td>
       </tr>
     </table>
@@ -27,22 +31,30 @@
           <div class="card">
             <img class="card-img-top" src="<%= bra.bildpfad %>" alt="Model wearing the bra">
             <div class="card-body">
-              <h5 class="card-title"><%= bra.model %></h5>
+              <h5 class="card-title">
+                <%= bra.model %>
+              </h5>
               <p class="card-text">
-                <table class="table table-sm">
-                  <tr>
-                    <th>Marke</th>
-                    <td><%= bra.marke %></td>
-                  </tr>
-                  <tr>
-                    <th>Form</th>
-                    <td><%= bra.form %></td>
-                  </tr>
-                  <tr>
-                    <th>Stoff</th>
-                    <td><%= bra.stoff %></td>
-                  </tr>
-                </table>
+              <table class="table table-sm">
+                <tr>
+                  <th>Marke</th>
+                  <td>
+                    <%= bra.marke %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Form</th>
+                  <td>
+                    <%= bra.form %>
+                  </td>
+                </tr>
+                <tr>
+                  <th>Stoff</th>
+                  <td>
+                    <%= bra.stoff %>
+                  </td>
+                </tr>
+              </table>
               </p>
             </div>
             <!-- Info, die Links wären dann in einem echten Geschäftsmodell Affiliate-Links -->
@@ -52,9 +64,24 @@
           </div>
         </div>
         <% } %>
+        <div class="container p-7 m-3 mt-2 p-3 socialmediabox">
+          <img src="images/SocialMedia.jpg" alt="socialmedia" />
+          <h5 class="mt-3">Haben dir deine Empfehlungen gefallen? </h5>
+          <img src="images/koreanheart.jpg" class="heart_img" alt="Herzchen" />
+          <h6>Dann gib das doch gerne weiter! </h6>
+            Auf Twitter
+            <!--Twitter -->
+            <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>, Pinterest
+            <!--Pinterest-->
+            <a data-pin-do="buttonBookmark" href="https://www.pinterest.com/pin/create/button/"></a>
+            und Facebook
+            <!-- Facebook -->
+          <div class="fb-share-button" data-href="https://www.facebook.com/HTWGkonstanz/" data-layout="button"
+            data-size="small"><a target="_blank"
+              href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FHTWGkonstanz%2F&amp;src=sdkpreparse"
+              class="fb-xfbml-parse-ignore">Teilen</a></div>
+          freuen wir uns sehr über deine Meinung und dein Feedback! 
+        </div>
     </div>
-
-    <h5 class="mt-3">Teile deine Empfehlungen</h5>
-    <a class="twitter-share-button" href="https://twitter.com/intent/tweet">Tweet</a>
   </div>
 </div>
