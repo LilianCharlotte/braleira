@@ -14,7 +14,7 @@ module.exports.bootstrap = async function() {
   var path = require('path');
 
   // This bootstrap version indicates what version of fake data we're dealing with here.
-  var HARD_CODED_DATA_VERSION = 22;
+  var HARD_CODED_DATA_VERSION = 23;
 
   // This path indicates where to store/look for the JSON file that tracks the "last run bootstrap info"
   // locally on this development computer (if we happen to be on a development computer).
@@ -116,9 +116,9 @@ module.exports.bootstrap = async function() {
   await Bra.createEach([
     {marke: 'etam paris', model: 'SUBLIME BH Nr. 4 – leichter Push-up', form:'Push-Up BH', groesse: '75F', stoff:'mit Spitze', farbe:'grau und dunkelblau', muster: 'einfarbig/ohne', shoppingLink:'https://www.etam.de/de_DE/bhs/nach-form/klassiker/bh-nr.-4-%E2%80%93-leichter-push-up-652482429.html', bildpfad:'/images/bra/SUBLIME BH Nr. 4 – leichter Push-up.jpg'},
     {marke: 'etam paris', model: 'JOJOBA BH Nr. 4 – leichter Push-up', form:'Push-Up BH', groesse: '70E', stoff: 'stretchy Stoffe', farbe:'schwarz', muster:'gemustert', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/klassiker/bh-nr.-4-%E2%80%93-leichter-push-up-652792605.html', bildpfad:'/images/bra/JOJOBA BH Nr. 4 – leichter Push-up.jpg' },
-    {marke: 'etam paris', model: 'PURE FIT Nicht-vorgeformter-BH', form:'T-Shirt Bh', groesse: '75B', stoff: 'stretchy Stoffe', farbe:'weiß', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/bugel-bhs/nicht-vorgeformter-bh-639989601.html', bildpfad:'/images/bra/PURE FIT Nicht-vorgeformter-BH.jpg' },
+    {marke: 'etam paris', model: 'PURE FIT Nicht-vorgeformter-BH', form:'T-Shirt BH', groesse: '75B', stoff: 'stretchy Stoffe', farbe:'weiß', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/bugel-bhs/nicht-vorgeformter-bh-639989601.html', bildpfad:'/images/bra/PURE FIT Nicht-vorgeformter-BH.jpg' },
     {marke: 'etam paris', model: 'HYMNE BH Nr. 2 – Push-up mit tiefem Dekolleté', form:'Push-Up BH', groesse: '65C', stoff: 'mit Spitze', farbe:'rot', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/bhs-styles/push-up-bhs/bh-nr.-2-%E2%80%93-push-up-mit-tiefem-dekollete%C2%A0-%C2%A0-652949073.html', bildpfad:'/images/bra/HYMNE BH Nr. 2 – Push-up mit tiefem Dekolleté.jpg' },
-    {marke: 'etam paris', model: 'STYLE Push-up-BH ohne Bügel', form:'Push-Up', groesse: '70C', stoff: 'mit Spitze', farbe:'weiß', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/alle-triangle/push-up-bh-ohne-bugel-652801680.html', bildpfad:'/images/bra/STYLE Push-up-BH ohne Bügel.jpeg' },
+    {marke: 'etam paris', model: 'STYLE Push-up-BH ohne Bügel', form:'Push-Up BH', groesse: '70C', stoff: 'mit Spitze', farbe:'weiß', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/alle-triangle/push-up-bh-ohne-bugel-652801680.html', bildpfad:'/images/bra/STYLE Push-up-BH ohne Bügel.jpeg' },
     {marke: 'etam paris', model: 'COTON 360 Wende-Bustier aus dehnbarer Bio-Baumwolle lila', form:'Bustier', groesse: '75B', stoff: 'Baumwolle', farbe:'lila', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bhs/nach-form/alle-triangle/wende-bustier-aus-dehnbarer-bio-baumwolle-652451911.html', bildpfad:'/images/bra/COTON 360 Wende-Bustier aus dehnbarer Bio-Baumwolle lila.jpg' },
     {marke: 'etam paris', model: 'COTON 360 Wende-Bustier aus dehnbarer Bio-Baumwolle rosa', form:'Bustier', groesse: '75B', stoff: 'Baumwolle', farbe:'rosa', muster:'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/bh/nach-form/bralettes-und-racerback-bhs/wende-bustier-aus-dehnbarer-bio-baumwolle-652451962.html', bildpfad:'images/bra/COTON 360 Wende-Bustier aus dehnbarer Bio-Baumwolle rosa.jpg' },
     {marke: 'etam paris', model: 'MAYLIS Yoga-Bustier – mittlerer Halt schwarz', form:'Sport-BH', groesse: '75B', stoff: 'stretchy Stoffe', farbe: 'schwarz', muster: 'einfarbig/ohne', shoppingLink: 'https://www.etam.de/de_DE/sportkollektion/sport-bhs/alle-sport-bhs/yoga-bustier-–-mittlerer-halt-651644905.html', bildpfad: 'images/bra/MAYLIS Yoga-Bustier – mittlerer Halt schwarz.jpg'},
