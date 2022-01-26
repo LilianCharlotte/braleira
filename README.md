@@ -148,10 +148,10 @@ und in der Mobilen Ansicht
 + Total Blocking Time 
 + Largest Contentful Paint
 
-Folgend die Bilder der Analyse:
-![Mobile Version](/images/lighthouse_mobile.PNG)
+Folgend der Link zu den Bildern der Analyse:
++ Desktop zu finden unter `assets/images/lighthouse_desktop.png`
++ Mobil zu finden unter `assets/images/lighthouse_mobile.png`
 
-![Desktop Version](/images/lighthouse_desktop.PNG)
 
 
 Off Page Optimization
