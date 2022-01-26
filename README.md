@@ -96,6 +96,12 @@ Zusätzlich haben wir, um das Problem zu umgehen, auf der ersten Seite den Weite
 
 Im Backend verwenden wir die `inputs` von unseren Actions um sicherzustellen, dass die Daten korrekt sind. Trotz der Validierung im Frontend validieren wir hier zur Sicherheit alle Daten nochmal.
 
+Was zur Data Validation vielleicht noch als Frage aufkommen könnte, ist warum wir auf der Admin - create a bra oder auch bei update a bra - Seite(n) nicht die Eingabe der Größe auf z.B. alles von 70-100 und dann A-H beschränkt haben, wie auch bei der Eingabe der Passformdaten des normalen Users. 
+
+1. Es gibt viele unterschiedliche Größen und Marken haben auch oft ihre eigenen Größensysteme. Wir wollen theoretisch in der Lage sein, alle BH-Modelle einpflegen zu können. Besonders häufig bei Sport-Bhs sind auch die Größen S, M und L; die könnte man dann ebenfalls nicht verwenden.
+
+2. Die Seite ist nur für Admins zugänglich, daher ist die Gefahr, dass Quatsch eingetragen wird geringer. Deswegen haben wir uns auch bei den Passformdaten des Users innerhalb des Quizzes dafür entschieden, diese Eingabe erst einmal zu beschränken. Mit mehr Zeit, könnte man dem User dann noch genauer andere Größen anbieten.
+
 #### Benutzergruppen und Rechte
 Die Benutzergruppen sind folgende:
 Der nicht-angemeldete-User darf unsere Homepage, das Impressum und die Kontaktseite anschauen, sowie sich registrieren und anmelden.
