@@ -77,7 +77,14 @@ Außerdem haben wir eine Lösch-Funktion implementiert, die ebenfalls mit `fetch
 
 
 #### Datenbank - Aufbau, Fremdschlüsselbeziehungen
-Die Informationen, die über den User im Quiz gesammelt werden, landen bei uns in verschiedenen Tabellen mit Fremdschlüsselbeziehungen zum User (Messdaten, BraPassformdaten, BraTragekomfort, Farbe, Muster, Stoff, BHArt. Aus Vereinfachungsgründen werden die BH-Einträge gesammelt in einer Tabelle Bra gespeichert. 
+Die Informationen, die über den User im Quiz gesammelt werden, landen bei uns in verschiedenen Tabellen mit Fremdschlüsselbeziehungen zum `User` (`Messdaten`, `BraPassformdaten`, `BraTragekomfort`, `Farbe`, `Muster`, `Stoff`, `BhArt`). Daher verwenden wir hier jeweils einen Join mit den `collection` und `via` Attribute. Diese Beziehungen haben wir in beiden Modellen angelegt, der `User` zeigt also auf `Farbe` und umgekehrt. 
+Aus Vereinfachungsgründen werden die BH-Einträge gesammelt in einer einzigen Tabelle `Bra` gespeichert. 
+Die Passformdaten (Daten, die der User angibt, die einen bereits gekauften BH des Users betreffen und die Passform des gedachten BHs beschreiben) werden in einer One-to-One-Beziehung gespeichert, da wir uns entschieden hatten aus Vereinfachungsgründen, dass wir nur implementieren, dass der Nutzer einmal Passformdaten angeben kann (Siehe Kommentar im Model). Daher verwenden wir hier einen Fremdschlüssel auf das `User` Modell. Das machen wir, indem wir das `model` Attribut in Kombination mit `unique: true` verwenden.
+Wenn man das Datenbankmodell vollumfänglich und korrekt gestalten wollen würden, mit mehr Zeit als im Rahmen einer Webtech-Vorlesung, würde man:
+
+1. die Daten wie Farbe, Muster und Stoff etc. zusätzlich in eine Collection mit dem Bra tun, wie sie mit dem User sind und dann somit mit dem User und mit dem Bra verbinden. 
+2. die Passformdaten ebenfalls in eine Collection mit User packen
+3. die Passformdaten vielleicht eleganter in mehrere Tabellen aufteilen, als einen Haufen booleans am Ende und unterteilen in z.B. eine Tabelle Körbchenpassform, eine Unterbrustbandpassform und dann zusätzlich noch die Passformgröße und dann alles durch Collections mit dem User verbinden. 
 
 #### Data Validation
 
