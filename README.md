@@ -134,7 +134,24 @@ Der Analyse mit Google Lighthouse entsprechend haben wir noch weitere Meta-Tags 
 Man sollte nicht mehr als 10 Keywords verwenden, weswegen wir uns auf 10 beschränkt haben. 
 Außerdem haben wir einen Meta Tag mit einer kurzen und passenden Beschreibung unserer Website hinzugefügt: “Finde einen perfekt passenden BH mit Hilfe unseres Größenquizzes.”
 
-Die Analyse mit Google Lighthouse hat eine Performance von 100 in der Desktop Version ergeben und 93 in der Mobile Version.
+Die Analyse mit Google Lighthouse hat eine Performance von 91 in der Desktop Version ergeben und 45 in der Mobile Version, weswegen wir in weiteren Schritten die Mobile Ansicht der Seite in Bezug auf Laufzeit, Dynamik und Optik optimieren würden.
+SEO Kriterien befinden sich bei 100, was sehr gut ist. 
+Weitere Parameter könnten ebenfalls verbessert werden:
+
+Desktop:
++ Accecibility
++ Best Practice 
++ Cumulative Layout Shift
+
+und in der Mobilen Ansicht 
++ Time to interactive 
++ Total Blocking Time 
++ Largest Contentful Paint
+
+Folgend die Bilder der Analyse:
+![Mobile Version](/images/lighthouse_mobile.png)
+
+![Desktop Version](/images/lighthouse_desktop.png)
 
 
 Off Page Optimization
