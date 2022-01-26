@@ -133,7 +133,7 @@ Die Kontaktseite ist auf der Impressumsseite unten verlinkt.
 
 On-Page SEO
 
-Die Inhalte unserer Homepage erhalten durch den Abschnitt "Unsere Philosophie" und der Beschreibung unseres Größenquizzes viele Keywords und Phrasen, die das Ranking in allgemeinen Suchmaschinen beeinflussen. Außerdem sind unsere URLs aussagekräftig und somit für den Nutzer leicht lesbar.
+Die Inhalte unserer Homepage erhalten durch den Abschnitt "Unsere Philosophie" und der Beschreibung unseres Größenquizzes viele Keywords und Phrasen, die das Ranking in allgemeinen Suchmaschinen beeinflussen. Außerdem sind unsere URLs aussagekräftig und somit für den Nutzer leicht lesbar. Unsere Seite ist freundlich und ansprechend gestaltet.
 
 Technische SEO & Performance
 
@@ -151,6 +151,8 @@ Die Analyse mit Google Lighthouse hat eine Performance von 100 in der Desktop Ve
 
 
 Off Page Optimization
+
+Unser Social Media.
 + ###### Social Media Accounts
 Auf unserer Empehlungsseite ganz am Ende geben wir dem User die Möglichkeit auf drei Social Media Plattformen über uns zu posten (Twitter, Pinterest und Facebook) und auf der Homepage sind die Social Media Links sehr präsent.
 
