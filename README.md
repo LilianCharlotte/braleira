@@ -65,10 +65,10 @@ Das responsive Anpassen des Seitenlayouts auf unterschiedliche Bildschirmgröße
 
 ##### Tafelaufschriebe -> zwei Arten Verbindungen zum Backend zu machen
 
-| | Client |   | Server |
-| -----       |    -----   |          ----- | ----- |
-| P1      | HTML   | Link  HTML| Routen, Action/Controller, View  |
-| P2   | Javascript |  AJAX / Post; JSON     | DB     |
+|    | Client     |                   | Server                          |
+|----|------------|-------------------|---------------------------------|
+| P1 | HTML       | Link  HTML        | Routen, Action/Controller, View |
+| P2 | Javascript | AJAX / Post; JSON | DB                              |
 
 P1 haben wir beispielsweise beim Quiz verwendet. Der Nutzer bekommt von unserer App das Formular geschickt, das er dann ausfüllt. Wenn der Nutzer das Formular am Ende abschickt, wird dieses über einen POST-Request an die `/size` Route geschickt. Dadurch wird die `size/create`-Action gestartet, die diese Formulardaren bekommt, validiert, verarbeitet und dann in der Datenbank abspeichert. Anschließend wird ein Redirect auf die `/empfehlungen` Route zurückgegeben.
 
