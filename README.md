@@ -12,7 +12,7 @@ Mit dem Fortschreiten der Vorlesung und den dazukommenden technischen Neuerungen
 Das Dokument hat uns zusätzlich immer ermöglicht zu sehen was für Programmiersprachen und Anwendungsarten als Anforderung der Seite gestellt waren.
  
 In täglichen Webex-Meetings haben wir Ansätze besprochen, gemeinsam weitere Lösungen programmiert und Aufgabenteilung betrieben. 
-Bei Problemen haben wir die zur Verfügung gestellten Demos aus Git herangezogen und recherchiert.
+Bei Problemen haben wir die zur Verfügung gestellten Demos aus Git herangezogen, viel gegoogelt und recherchiert.
 
 
 ### Zusammenfassung, Beschreibung der Funktionalität
