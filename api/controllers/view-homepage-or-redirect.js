@@ -24,13 +24,12 @@ module.exports = {
 
 
   fn: async function () {
+    let geradeAngemeldet = this.req.session.geradeAngemeldet;
+    this.req.session.geradeAngemeldet = false;
 
     if (this.req.me && (this.req.me.isAdmin || this.req.me.isSuperAdmin)) {
       throw {redirect:'/welcome'};
     }
-
-    let geradeAngemeldet = this.req.session.geradeAngemeldet;
-    this.req.session.geradeAngemeldet = false;
 
     return {
       geradeAngemeldet: geradeAngemeldet
