@@ -149,9 +149,9 @@ und in der Mobilen Ansicht
 + Largest Contentful Paint
 
 Folgend die Bilder der Analyse:
-![Alt-Text](/assets/images/lighthouse_mobile.png)
+![Mobile Version](/images/lighthouse_mobile.PNG)
 
-![Alt-Text](/assets/images/lighthouse_desktop.png)
+![Desktop Version](/images/lighthouse_desktop.PNG)
 
 
 Off Page Optimization
