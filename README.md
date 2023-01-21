@@ -4,8 +4,6 @@
 Dozent: Prof. Eiglsperger
 
 
-https://braleira.herokuapp.com
-
 ### Umsetzung der Arbeitsaufträge - Unser Vorgehen
 Zu Anfang des Semesters haben wir viel Brainstorming betrieben und auf Papier skizziert, wie unsere Seite umgesetzt werden soll und wie unsere Funktionalitäten gestaltet und eingebunden werden sollten.
 Mit dem Fortschreiten der Vorlesung und den dazukommenden technischen Neuerungen und Funktionalitäten haben wir angefangen ein GoogleDocs Dokument als ToDo Liste zu pflegen. Dieses haben wir dann nach dem Kanban Modell bearbeitet und fertige Punkte der Liste unter den Reiter Done geschoben.
@@ -161,6 +159,6 @@ Unser Social Media.
 Auf unserer Empehlungsseite ganz am Ende geben wir dem User die Möglichkeit auf drei Social Media Plattformen über uns zu posten (Twitter, Pinterest und Facebook) und auf der Homepage sind die Social Media Links sehr präsent.
 
 
-
+https://braleira.herokuapp.com   //originally deployed on heroku, link not working anymore
 
 
