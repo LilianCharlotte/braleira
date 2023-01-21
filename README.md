@@ -1,5 +1,5 @@
 # Braleïra
-##  Dokumentation
+##  Dokumentation - Hochschulprojekt mit Sails.js und Vue.js
  Webtechnologien Wintersemester 2021/2022 
 Dozent: Prof. Eiglsperger
 
