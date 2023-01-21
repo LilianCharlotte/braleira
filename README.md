@@ -4,7 +4,7 @@
 Dozent: Prof. Eiglsperger
 
 
-[Link Braleïra](https://braleira.herokuapp.com)
+https://braleira.herokuapp.com
 
 ### Umsetzung der Arbeitsaufträge - Unser Vorgehen
 Zu Anfang des Semesters haben wir viel Brainstorming betrieben und auf Papier skizziert, wie unsere Seite umgesetzt werden soll und wie unsere Funktionalitäten gestaltet und eingebunden werden sollten.
